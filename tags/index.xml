@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on My Journey</title>
-    <link>https://omarcloud2020.github.io/tags/</link>
+    <link>https://omar2cloud.github.io/tags/</link>
     <description>Recent content in Tags on My Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Nov 2018 08:41:44 +0100</lastBuildDate><atom:link href="https://omarcloud2020.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Nov 2018 08:41:44 +0100</lastBuildDate><atom:link href="https://omar2cloud.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>documentation</title>
-      <link>https://omarcloud2020.github.io/tags/documentation/</link>
+      <link>https://omar2cloud.github.io/tags/documentation/</link>
       <pubDate>Thu, 29 Nov 2018 08:41:44 +0100</pubDate>
       
-      <guid>https://omarcloud2020.github.io/tags/documentation/</guid>
+      <guid>https://omar2cloud.github.io/tags/documentation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tutorial</title>
-      <link>https://omarcloud2020.github.io/tags/tutorial/</link>
+      <link>https://omar2cloud.github.io/tags/tutorial/</link>
       <pubDate>Thu, 29 Nov 2018 08:41:44 +0100</pubDate>
       
-      <guid>https://omarcloud2020.github.io/tags/tutorial/</guid>
+      <guid>https://omar2cloud.github.io/tags/tutorial/</guid>
       <description></description>
     </item>
     

@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jun 2020 13:31:12 +0100</lastBuildDate><atom:link href="https://omar2cloud.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Install and Run Portainer on EC2 Instance</title>
+      <link>https://omar2cloud.github.io/aws/portainer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/portainer/</guid>
+      <description>Road Trip 1 Building my first Twitter bot My journey to building a Twitter bot.</description>
+    </item>
+    
+    <item>
       <title>Archetypes</title>
       <link>https://omar2cloud.github.io/cont/archetypes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -129,17 +138,6 @@ List all the tags In the config.toml file you can add a shortcut to display all 
       <description>Contributors Thanks to them for making Open Source Software a better place !
 And a special thanks to @vjeantet for his work on docdock, a fork of hugo-theme-learn. v2.0.0 of this theme is inspired by his work.
 Packages and libraries  mermaid - generation of diagram and flowchart from text in a similar manner as markdown font awesome - the iconic font and CSS framework jQuery - The Write Less, Do More, JavaScript Library lunr - Lunr enables you to provide a great search experience without the need for external, server-side, search services&amp;hellip; horsey - Progressive and customizable autocomplete component clipboard.</description>
-    </item>
-    
-    <item>
-      <title>Crédits</title>
-      <link>https://omar2cloud.github.io/credits.fr/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/credits.fr/</guid>
-      <description>Contributeurs Merci à eux de rendre le monde Open Source meilleur !
-Et un grand merci à @vjeantet pour son travail sur docdock, un fork de hugo-theme-learn. La v2.0.0 du thème est en grande partie inspirée de son travail.
-Packages et librairies  mermaid - géneration de diagrames et graphiques à partir de texte similaire à Markdown font awesome - Le framework de polices iconiques jQuery - La plus connue des librairies Javascript lunr - Lunr fournit des fonctions de recherche sans service externe horsey - Autocomplétion de composants (utiliser pour les suggestions de recherche) clipboard.</description>
     </item>
     
     <item>
@@ -299,15 +297,6 @@ Par exemple, dans ce site, le paramètre editURL est utilisé dans le fichier co
 [params] editURL = &amp;#34;https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/&amp;#34; Utilisez le shortcode siteparam pour affichier sa valeur.
 Valeur de `editURL` : {{% siteparam &amp;quot;editURL&amp;quot; %}}s&amp;rsquo;affiche comme
 Valeur de editURL :</description>
-    </item>
-    
-    <item>
-      <title>Vitrine</title>
-      <link>https://omar2cloud.github.io/vitrine/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/vitrine/</guid>
-      <description>TAT par OVH Tshark.dev par Ross Jacobs inteliver by Amir Lavasani </description>
     </item>
     
   </channel>

@@ -8,6 +8,15 @@
   </url>
   
   <url>
+    <loc>https://omar2cloud.github.io/basics/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/aws/portainer/</loc>
+  </url>
+  
+  <url>
     <loc>https://omar2cloud.github.io/cont/archetypes/</loc>
   </url>
   
@@ -89,12 +98,6 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/basics/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://omar2cloud.github.io/shortcodes/</loc>
     <priority>0</priority>
   </url>
@@ -105,6 +108,10 @@
   
   <url>
     <loc>https://omar2cloud.github.io/shortcodes/attachments.fr/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/aws/</loc>
   </url>
   
   <url>
@@ -125,10 +132,6 @@
   
   <url>
     <loc>https://omar2cloud.github.io/credits/</loc>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/credits.fr/</loc>
   </url>
   
   <url>
@@ -217,10 +220,6 @@
   
   <url>
     <loc>https://omar2cloud.github.io/shortcodes/siteparam.fr/</loc>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/vitrine/</loc>
   </url>
   
 </urlset>

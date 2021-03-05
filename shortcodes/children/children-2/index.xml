@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>page 2 on My Journey</title>
-    <link>https://omarcloud2020.github.io/shortcodes/children/children-2/</link>
+    <link>https://omar2cloud.github.io/shortcodes/children/children-2/</link>
     <description>Recent content in page 2 on My Journey</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://omarcloud2020.github.io/shortcodes/children/children-2/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://omar2cloud.github.io/shortcodes/children/children-2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>page test 3</title>
-      <link>https://omarcloud2020.github.io/shortcodes/children/children-2/test3/</link>
+      <link>https://omar2cloud.github.io/shortcodes/children/children-2/test3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://omarcloud2020.github.io/shortcodes/children/children-2/test3/</guid>
+      <guid>https://omar2cloud.github.io/shortcodes/children/children-2/test3/</guid>
       <description>This is a test 3 demo child page</description>
     </item>
     
     <item>
       <title>page test 3</title>
-      <link>https://omarcloud2020.github.io/shortcodes/children/children-2/test3.fr/</link>
+      <link>https://omar2cloud.github.io/shortcodes/children/children-2/test3.fr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://omarcloud2020.github.io/shortcodes/children/children-2/test3.fr/</guid>
+      <guid>https://omar2cloud.github.io/shortcodes/children/children-2/test3.fr/</guid>
       <description>Ceci est une page de demo test 3</description>
     </item>
     

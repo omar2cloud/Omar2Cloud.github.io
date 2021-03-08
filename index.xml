@@ -8,12 +8,31 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jun 2020 13:31:12 +0100</lastBuildDate><atom:link href="https://omar2cloud.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Install and Run Portainer on EC2 Instance</title>
-      <link>https://omar2cloud.github.io/aws/portainer/</link>
+      <title>Install Portainer on Ubuntu</title>
+      <link>https://omar2cloud.github.io/aws/portainer/portainer/_portainer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://omar2cloud.github.io/aws/portainer/</guid>
-      <description>Road Trip 1 Building my first Twitter bot My journey to building a Twitter bot.</description>
+      <guid>https://omar2cloud.github.io/aws/portainer/portainer/_portainer/</guid>
+      <description>What is Portainer? Portainer is the definitive open source container management tool for Kubernetes, Docker, Docker Swarm and Azure ACI. It allows anyone to deploy and manage containers without the need to write codes. To learn more about Portainer.
+Updating the Operating System Now, we have a secured connection with our instance, let&amp;rsquo;s update and upgrade the operating system. Updating and upgrading the operating system of the instance is always a good habit to have.</description>
+    </item>
+    
+    <item>
+      <title>Install WordPress Docker</title>
+      <link>https://omar2cloud.github.io/aws/portainer/wordpress/_wordpress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/portainer/wordpress/_wordpress/</guid>
+      <description>What is WordPress? WordPress is an open source software, which is widely used to create a beautiful website, blog, or app. To learn more about Wordpress.</description>
+    </item>
+    
+    <item>
+      <title>My Raspberry Pi</title>
+      <link>https://omar2cloud.github.io/rasp/pi/_raspberrypi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/pi/_raspberrypi/</guid>
+      <description>What is Raspberry Pi (RPI)? The Raspberry Pi is a small single-board computer capable of doing almost everything that an ordinary Linux-based computer can do. Once it connects to an HDMI display, a keyboard, and a mouse, we have have a fully functional computer for a pice of $35 (or even way less for the Raspberry Pi Zero). The Raspberry Pi is widely known and used for home lab environments, where anyone can experiment safely.</description>
     </item>
     
     <item>
@@ -99,17 +118,6 @@ List all the tags In the config.toml file you can add a shortcut to display all 
     </item>
     
     <item>
-      <title>Attachments (Pièces jointes)</title>
-      <link>https://omar2cloud.github.io/shortcodes/attachments.fr/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/shortcodes/attachments.fr/</guid>
-      <description>Le shortcode Attachments affiche une liste de pièces jointes d&amp;rsquo;une page.
-AttachmentsBachGavotteShort.mp3(357 kb)Carroll_AliceAuPaysDesMerveilles.pdf(175 kb)adivorciarsetoca00cape.pdf(361 kb)hugo.png(17 kb)movieselectricsheep-flock-244-32500-2.mp4(340 kb)Utilisation Le shortcode affiche la liste de fichiers trouvés dans un dossier spécifique A l&amp;rsquo;heure actuelle, il supporte deux implémentations
-  Si votre page est un fichier Markdown, les pièces jointes doivent être placée dans un dossier nommé comme le nom de la page et suffixé par .</description>
-    </item>
-    
-    <item>
       <title>Button</title>
       <link>https://omar2cloud.github.io/shortcodes/button/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -117,16 +125,6 @@ List all the tags In the config.toml file you can add a shortcut to display all 
       <guid>https://omar2cloud.github.io/shortcodes/button/</guid>
       <description>A button is a just a clickable button with optional icon.
 {{% button href=&amp;quot;https://getgrav.org/&amp;quot; %}}Get Grav{{% /button %}}{{% button href=&amp;quot;https://getgrav.org/&amp;quot; icon=&amp;quot;fas fa-download&amp;quot; %}}Get Grav with icon{{% /button %}}{{% button href=&amp;quot;https://getgrav.org/&amp;quot; icon=&amp;quot;fas fa-download&amp;quot; icon-position=&amp;quot;right&amp;quot; %}}Get Grav with icon right{{% /button %}}Get GravGet Grav with iconGet Grav with icon right</description>
-    </item>
-    
-    <item>
-      <title>Button (Bouton)</title>
-      <link>https://omar2cloud.github.io/shortcodes/button.fr/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/shortcodes/button.fr/</guid>
-      <description>Le shortcode button est simplement un bouton cliquable avec une icône optionnelle.
-{{% button href=&amp;quot;https://getgrav.org/&amp;quot; %}}Téléchargez Grav{{% /button %}}{{% button href=&amp;quot;https://getgrav.org/&amp;quot; icon=&amp;quot;fas fa-download&amp;quot; %}}Téléchargez Grav avec icône{{% /button %}}{{% button href=&amp;quot;https://getgrav.org/&amp;quot; icon=&amp;quot;fas fa-download&amp;quot; icon-position=&amp;quot;right&amp;quot; %}}Téléchargez Grav avec icône à droite{{% /button %}}Téléchargez GravTéléchargez Grav avec icôneTéléchargez Grav avec icône à droite</description>
     </item>
     
     <item>
@@ -147,16 +145,6 @@ Packages and libraries  mermaid - generation of diagram and flowchart from text 
       
       <guid>https://omar2cloud.github.io/shortcodes/expand/</guid>
       <description>The Expand shortcode displays an expandable/collapsible section of text on your page. Here is an example
-Expand me...Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</description>
-    </item>
-    
-    <item>
-      <title>Expand</title>
-      <link>https://omar2cloud.github.io/shortcodes/expand.fr/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/shortcodes/expand.fr/</guid>
-      <description>Le shortcode Expand affiche une section de texte qui se plie et se déplie. Ci-dessous un exemple.
 Expand me...Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</description>
     </item>
     
@@ -187,18 +175,6 @@ graph LR;A[Hard edge] --|Link text| B(Round edge)B -- C{Decision}C --|One| D[
     </item>
     
     <item>
-      <title>Mermaid</title>
-      <link>https://omar2cloud.github.io/shortcodes/mermaid.fr/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/shortcodes/mermaid.fr/</guid>
-      <description>Mermaid est une bibliothèque Javascript qui permet de générer des diagrammes (séquence, état, gantt, etc.) à partir de texte, dans le même style que Markdown.
-Insérer votre code Mermaid dans un shortcode mermaid et c&amp;rsquo;est tout.
-Flowchart example {{&amp;lt;mermaid align=&amp;quot;left&amp;quot;&amp;gt;}}graph LR;A[Bords droits] --&amp;gt;|Lien texte| B(Bords arondis)B --&amp;gt; C{Décision}C --&amp;gt;|Un| D[Résultat un]C --&amp;gt;|Deux| E[Résultat deux]{{&amp;lt; /mermaid &amp;gt;}} renders as
-graph LR;A[Bords droits] --|Lien texte| B(Bords arondis)B -- C{Décision}C --|Un| D[Résultat un]C --|Deux| E[Résultat deux]Sequence example {{&amp;lt;mermaid&amp;gt;}}sequenceDiagramparticipant Aliceparticipant BobAlice-&amp;gt;&amp;gt;John: Salut John, comment vas-tu?</description>
-    </item>
-    
-    <item>
       <title>Notice</title>
       <link>https://omar2cloud.github.io/shortcodes/notice/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -212,20 +188,6 @@ An information disclaimer
 Tip {{% notice tip %}}A tip disclaimer{{% /notice %}}renders as
 A tip disclaimer
 Warning {{% notice warning %}}A warning disclaimer{{% /notice %}}renders as</description>
-    </item>
-    
-    <item>
-      <title>Notice</title>
-      <link>https://omar2cloud.github.io/shortcodes/notice.fr/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/shortcodes/notice.fr/</guid>
-      <description>Le shortcode Notice permet d&amp;rsquo;afficher 4 types de message pour vous aider à structurer votre contenu.
-Note {{% notice note %}}Une notice de type *note*{{% /notice %}}s&amp;rsquo;affiche comme
-Une notice de type note
-Info {{% notice info %}}Une notice de type *info*{{% /notice %}}s&amp;rsquo;affiche comme
-Une notice de type info
-Tip {{% notice tip %}}Une notice de type *tip*{{% /notice %}}s&amp;rsquo;affiche comme</description>
     </item>
     
     <item>
@@ -284,19 +246,6 @@ For instance, in this current site, the editURL variable is used in config.toml
 [params] editURL = &amp;#34;https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/&amp;#34; Use the siteparam shortcode to display its value.
 `editURL` Value : {{% siteparam &amp;quot;editURL&amp;quot; %}}is displayed as
 editURL Value :</description>
-    </item>
-    
-    <item>
-      <title>Site param</title>
-      <link>https://omar2cloud.github.io/shortcodes/siteparam.fr/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/shortcodes/siteparam.fr/</guid>
-      <description>Les shortcode siteparam est utilisé pour vous aider à afficher des valeurs provenant des paramètres globaux du site.
-Par exemple, dans ce site, le paramètre editURL est utilisé dans le fichier config.toml
-[params] editURL = &amp;#34;https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/&amp;#34; Utilisez le shortcode siteparam pour affichier sa valeur.
-Valeur de `editURL` : {{% siteparam &amp;quot;editURL&amp;quot; %}}s&amp;rsquo;affiche comme
-Valeur de editURL :</description>
     </item>
     
   </channel>

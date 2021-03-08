@@ -3,13 +3,35 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://omar2cloud.github.io/cont/pages/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <loc>https://omar2cloud.github.io/aws/</loc>
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/basics/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <loc>https://omar2cloud.github.io/aws/portainer/portainer/_portainer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/aws/portainer/wordpress/_wordpress/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/rasp/pi/_raspberrypi/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/aws/portainer/spin-ubuntu-instance/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/rasp/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/aws/portainer/spin-ubuntu-instance/ec2-ubuntu/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/aws/portainer/portainer/</loc>
   </url>
   
   <url>
@@ -17,15 +39,20 @@
   </url>
   
   <url>
+    <loc>https://omar2cloud.github.io/aws/portainer/spin-ubuntu-instance/ssh-into-ubuntu-ec2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/aws/portainer/wordpress/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/cont/pages/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://omar2cloud.github.io/cont/archetypes/</loc>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/basics/new-folder/</loc>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/basics/requirements/</loc>
   </url>
   
   <url>
@@ -34,26 +61,12 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/basics/installation/</loc>
-  </url>
-  
-  <url>
     <loc>https://omar2cloud.github.io/cont/syntaxhighlight/</loc>
     <lastmod>2020-06-01T13:31:12+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/basics/configuration/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://omar2cloud.github.io/cont/menushortcuts/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/basics/style-customization/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
@@ -98,6 +111,22 @@
   </url>
   
   <url>
+    <loc>https://omar2cloud.github.io/aws/new-folder/configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/aws/new-folder/installation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/aws/new-folder/requirements/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/aws/new-folder/style-customization/</loc>
+  </url>
+  
+  <url>
     <loc>https://omar2cloud.github.io/shortcodes/</loc>
     <priority>0</priority>
   </url>
@@ -107,19 +136,7 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/shortcodes/attachments.fr/</loc>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/aws/</loc>
-  </url>
-  
-  <url>
     <loc>https://omar2cloud.github.io/shortcodes/button/</loc>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/shortcodes/button.fr/</loc>
   </url>
   
   <url>
@@ -139,10 +156,6 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/shortcodes/expand.fr/</loc>
-  </url>
-  
-  <url>
     <loc>https://omar2cloud.github.io/shortcodes/</loc>
   </url>
   
@@ -151,15 +164,7 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/shortcodes/mermaid.fr/</loc>
-  </url>
-  
-  <url>
     <loc>https://omar2cloud.github.io/shortcodes/notice/</loc>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/shortcodes/notice.fr/</loc>
   </url>
   
   <url>
@@ -216,10 +221,6 @@
   
   <url>
     <loc>https://omar2cloud.github.io/shortcodes/siteparam/</loc>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/shortcodes/siteparam.fr/</loc>
   </url>
   
 </urlset>

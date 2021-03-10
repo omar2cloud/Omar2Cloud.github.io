@@ -7,14 +7,6 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/aws/portainer/portainer/_portainer/</loc>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/aws/portainer/wordpress/_wordpress/</loc>
-  </url>
-  
-  <url>
     <loc>https://omar2cloud.github.io/rasp/pi/_raspberrypi/</loc>
   </url>
   
@@ -23,7 +15,11 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/rasp/</loc>
+    <loc>https://omar2cloud.github.io/aws/portainer/portainer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/aws/portainer/wordpress/</loc>
   </url>
   
   <url>
@@ -31,7 +27,11 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/aws/portainer/portainer/</loc>
+    <loc>https://omar2cloud.github.io/aws/portainer/portainer/_portainer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/aws/portainer/wordpress/_wordpress/</loc>
   </url>
   
   <url>
@@ -39,11 +39,11 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/aws/portainer/spin-ubuntu-instance/ssh-into-ubuntu-ec2/</loc>
+    <loc>https://omar2cloud.github.io/rasp/</loc>
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/aws/portainer/wordpress/</loc>
+    <loc>https://omar2cloud.github.io/aws/portainer/spin-ubuntu-instance/ssh-into-ubuntu-ec2/</loc>
   </url>
   
   <url>

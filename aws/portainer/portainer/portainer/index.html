@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.78.1" />
-    <meta name="description" content="Displays an expandable/collapsible section of text on your page">
+    <meta name="description" content="Tutorials">
 <meta name="author" content="Omar A Omar">
 
     <link rel="icon" href="/images/favicon.ico" type="image/png">
-    <title>Expand - My Journey</title>
+    <title>Install Portainer on Ubuntu - My Journey</title>
 
     
     <link href="/css/nucleus.css?1615468515" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/shortcodes/expand/">
+  <body class="" data-url="/aws/portainer/portainer/portainer/">
     <nav id="sidebar" class="">
 
 
@@ -94,7 +94,7 @@
   
     
     <li data-nav-id="/aws/" title="AWS Tutorials" class="dd-item
-        
+        parent
         
         
         ">
@@ -123,7 +123,7 @@
   
     
     <li data-nav-id="/aws/portainer/" title="Portainer Tutorials" class="dd-item
-        
+        parent
         
         
         ">
@@ -242,7 +242,7 @@
   
     
     <li data-nav-id="/aws/portainer/portainer/" title="Part 2 - Portainer on Ubuntu" class="dd-item
-        
+        parent
         
         
         ">
@@ -268,7 +268,7 @@
  
   
     
-      <li data-nav-id="/aws/portainer/portainer/portainer/" title="Install Portainer on Ubuntu" class="dd-item ">
+      <li data-nav-id="/aws/portainer/portainer/portainer/" title="Install Portainer on Ubuntu" class="dd-item active">
         <a href="/aws/portainer/portainer/portainer/">
         <b> </b>Install Portainer on Ubuntu
         
@@ -662,7 +662,7 @@
   
     
     <li data-nav-id="/shortcodes/" title="" class="dd-item
-        parent
+        
         
         
         ">
@@ -1097,7 +1097,7 @@
  
   
     
-      <li data-nav-id="/shortcodes/expand/" title="Expand" class="dd-item active">
+      <li data-nav-id="/shortcodes/expand/" title="Expand" class="dd-item ">
         <a href="/shortcodes/expand/">
         Expand
         
@@ -1246,7 +1246,19 @@
             
           
           
-            <a href='/'>Learn with Omar</a> > <a href='/shortcodes/'></a> > Expand
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Learn with Omar</a> > <a href='/aws/'>AWS Tutorials</a> > <a href='/aws/portainer/'>Portainer Tutorials</a> > <a href='/aws/portainer/portainer/'>Part 2 - Portainer on Ubuntu</a> > Install Portainer on Ubuntu
+          
+        
+          
+        
           
         
           
@@ -1261,7 +1273,13 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#what-is-portainer">What is Portainer?</a></li>
+    <li><a href="#updating-the-operating-system">Updating the Operating System</a></li>
+    <li><a href="#cleaning-up-after-an-update">Cleaning up after an update</a></li>
+    <li><a href="#step-1-install-docker">Step 1: Install Docker</a></li>
+    <li><a href="#step-2-install-docker-compose">Step 2: Install Docker Compose</a></li>
+    <li><a href="#step-3-setup-portainer">Step 3: Setup Portainer</a></li>
+    <li><a href="#conclusion">Conclusion:</a></li>
   </ul>
 </nav>
     </div>
@@ -1279,86 +1297,119 @@
           
             <h1>
               
-              Expand
+              Install Portainer on Ubuntu
             </h1>
           
 
         
 
 
-<p>The Expand shortcode displays an expandable/collapsible section of text on your page.
-Here is an example</p>
+<h2 id="what-is-portainer">What is Portainer?</h2>
+<p>Portainer is the definitive open source container management tool for Kubernetes, Docker, Docker Swarm and Azure ACI. It allows anyone to deploy and manage containers without the need to write codes. To learn more about <a href="https://www.portainer.io/">Portainer.</a></p>
+<h2 id="updating-the-operating-system">Updating the Operating System</h2>
+<p>Now, we have a secured connection with our instance, let&rsquo;s update and upgrade the operating system. Updating and upgrading the operating system of the instance is always a good habit to have. We will run the following update/upgrade commands. The -y in the end of the command line will automatically enters &ldquo;yes&rdquo; as a confirmation before installing the updates.</p>
+<pre><code>sudo apt update &amp;&amp; sudo apt upgrade -y
+</code></pre><h2 id="cleaning-up-after-an-update">Cleaning up after an update</h2>
+<p>If this is not the packges first time to run an update, there might have some unnecessary packages left for cleaning. Removing these packages will free space and prevent your system from cluttering. The following command shall do the job.</p>
+<pre><code>sudo apt autoremove
+</code></pre><h2 id="step-1-install-docker">Step 1: Install Docker</h2>
+<p>If always want to automatically get the latest version of Docker on Ubuntu, you must add its official repository to Ubuntu system. To do that, run the commands below to install prerequisite packages:</p>
+<pre><code>sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+</code></pre><p>Next, run the commands below to download and install Docker’s official GPG key. The key is used to validate packages installed from Docker’s repository making sure they’re trusted.</p>
+<pre><code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+</code></pre><p>The response would be like this:</p>
+<pre><code>Response:
 
-<div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
-        <span>
-        
-    	
-    	Expand me...
-    	
-    	</span>
-    </div>
-    <div class="expand-content" style="display: none;">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+pub   rsa4096 2017-02-22 [SCEA]
+      9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+uid           [ unknown] Docker Release (CE deb) &lt;docker@docker.com&gt;
+sub   rsa4096 2017-02-22 [S]
+</code></pre><p>Now that the official GPG key is installed, run the commands below to add its stable repository to Ubuntu. To add the nightly or test repository, add the word nightly or test (or both) after the word stable in the commands below.</p>
+<pre><code>sudo add-apt-repository &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&quot;
+</code></pre><p>After this command, Docker’s official GPG and repository should be installed on Ubuntu.
+If you have older versions of Docker, run the commands below to remove them:</p>
+<pre><code>sudo apt-get remove docker docker-engine docker.io containerd runc
+</code></pre><p>When you have removed all the previous versions of Docker, run the commands below to install the latest and current stable version of Docker:
+To install specific version of Docker, run the apt-cache command. Then select the version to install.</p>
+<pre><code>apt-cache madison docker-ce
 
-    </div>
-</div>
-<h2 id="usage">Usage</h2>
-<p>this shortcode takes exactly one optional parameter to define the text that appears next to the expand/collapse icon. (default is &ldquo;Expand me&hellip;&quot;)</p>
-<pre><code>{{%expand &quot;Is this learn theme rocks ?&quot; %}}Yes !.{{% /expand%}}
-</code></pre>
+Output:
+docker-ce | 5:19.03.12~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+docker-ce | 5:19.03.11~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+docker-ce | 5:19.03.10~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+docker-ce | 5:19.03.9~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+....
 
-<div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
-        <span>
-        
-    	
-    	Is this learn theme rocks ?
-    	
-    	</span>
-    </div>
-    <div class="expand-content" style="display: none;">
-        Yes !
-    </div>
-</div>
-<h1 id="demo">Demo</h1>
-<pre><code>{{%expand%}}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-{{% /expand%}}
-</code></pre>
+</code></pre><p>Now to install a specific version, run the commands below with the version you wish to install:</p>
+<pre><code>sudo apt-get install docker-ce=5:19.03.10~3-0~ubuntu-focal docker-ce-cli=5:19.03.10~3-0~ubuntu-focal containerd.io
+</code></pre><p>If you just want to latest version without specifying above, run the commands below. The command below will always install the highest possible version:</p>
+<pre><code>sudo apt-get install docker-ce docker-ce-cli containerd.io
+</code></pre><p>This will install Docker software on Ubuntu.
+Add your account, for most cases it will be ubuntu, to Docker group and restart:</p>
+<pre><code>sudo usermod -aG docker $USER
+</code></pre><p>Reboot your instance:</p>
+<pre><code>sudo reboot
+</code></pre><p>To verify that Docker CE is installed correctly you can run the hello-world image:</p>
+<pre><code>sudo docker run hello-world
+</code></pre><p>If Docker is installed correctly you will see the following response:</p>
+<pre><code>Response:
 
-<div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
-        <span>
-        
-    	
-    	Expand me...
-    	
-    	</span>
-    </div>
-    <div class="expand-content" style="display: none;">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
 
-    </div>
-</div>
+To generate this message, Docker took the following steps:
+1. The Docker client contacted the Docker daemon.
+2. The Docker daemon pulled the &quot;hello-world&quot; image from the Docker Hub.
+(amd64)
+3. The Docker daemon created a new container from that image which runs the
+executable that produces the output you are currently reading.
+4. The Docker daemon streamed that output to the Docker client, which sent it
+to your terminal.
+
+</code></pre><h2 id="step-2-install-docker-compose">Step 2: Install Docker Compose</h2>
+<p>On Ubuntu Linux, you can download the Docker Compose binary from the <a href="https://github.com/docker/compose/releases">Compose repository release page on GitHub.</a></p>
+<p>To install it, run the commands below to download version <strong>1.28.5</strong> As of this writing, this was the current version.</p>
+<pre><code>sudo curl -L &quot;https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose
+</code></pre><p>To install a different version of Compose, substitute 1.28.5 with the version of Compose you want to use.</p>
+<p>After downloading it, run the commands below to apply executable permissions to the binary file and create a symbolic link to <strong>/usr/binary</strong></p>
+<pre><code>sudo chmod +x /usr/local/bin/docker-compose
+</code></pre><pre><code>sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+</code></pre><p>Now, Docker Compose should work. To test it, we will run the command below:</p>
+<pre><code>docker-compose --version
+</code></pre><p>You should see similar output as below:</p>
+<pre><code>Response:
+docker-compose version 1.28.5, build 0aa59064
+</code></pre><h2 id="step-3-setup-portainer">Step 3: Setup Portainer</h2>
+<p>Now that Docker and Docker Composer are installed, follow the steps below to get Portainer setup.</p>
+<p>You can use Docker command to deploy the Portainer Server; note the agent is not needed on standalone hosts, however, it does provide additional functionality if used.</p>
+<p>To get the server installed, run the commands below.</p>
+<pre><code>cd ~/
+</code></pre><pre><code>docker volume create portainer_data
+</code></pre><pre><code>docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+</code></pre><p>You’ll just need to access the port 9000 of the Docker engine where Portainer is running using your browser.</p>
+<p><strong>Note:</strong> the -v /var/run/docker.sock:/var/run/docker.sock option can be used in Linux environments only.</p>
+<p>After a successful pull, you should get a similar message as below:</p>
+<pre><code>latest: Pulling from portainer/portainer
+d1e017099d17: Pull complete 
+a7dca5b5a9e8: Pull complete 
+Digest: sha256:4ae7f14330b56ffc8728e63d355bc4bc7381417fa45ba0597e5dd32682901080
+Status: Downloaded newer image for portainer/portainer:latest
+2fd5f4a0883a9d358ad424fd963699445be8839f3e6a2cf73d55778bcc268523
+</code></pre><p>At this point, all you need to do is access Portainer portal to manage Docker. Open your web browser and browse to the server’s hostname or IP address followed by port #<strong>9000</strong></p>
+<p><code>http://localhost:9000</code> or <code>http://your_EC2_instance_public_ip_adress:9000</code></p>
+<p>You should get Portainer login page to create an admin password.</p>
+<p>Submit a new password.</p>
+<p><img src="/images/portainer_1.jpg?classes=shadow" alt="Portainer"></p>
+<p>Now, you see some options to choose the environment you want to manage. Since we installed Docker on the same instance, select to connect and manage Docker locally.</p>
+<p><img src="/images/portainer_2.jpg?classes=shadow" alt="Portainer"></p>
+<p>You’ll be directed to Portainer dashboard where you can start managing Docker. If you see a notification for upgrade, click on it and proceed with the upgrade process.</p>
+<p><img src="/images/portainer_3.jpg?classes=shadow" alt="Portainer"></p>
+<h2 id="conclusion">Conclusion:</h2>
+<p>By the end of this tutorial, we have successfully installed Portainer Docker management tool on our Ubuntu 20.04 EC2 instance. In part 3 of this tutorial, we will learn how to install and run a Wordpress web application.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
 
 <footer class="footline">
@@ -1396,8 +1447,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1414,6 +1463,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
                 
                     
+                    
                 
                 
 
@@ -1428,6 +1478,9 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1479,6 +1532,43 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -1506,38 +1596,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
             
         
                     
@@ -1553,56 +1611,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 
 
                     
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
                     
                     
 
@@ -1638,6 +1646,24 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     
             
         
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
                     
                         
             
@@ -1735,176 +1761,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -1950,6 +1806,204 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -2001,7 +2055,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
                 
                     
-                    
                 
                 
 
@@ -2017,9 +2070,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2076,10 +2126,10 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/shortcodes/children/test.fr/" title="page test"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/aws/portainer/portainer/" title="Part 2 - Portainer on Ubuntu"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/shortcodes/mermaid/" title="Mermaid" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/aws/portainer/wordpress/" title="Part 3 - WordPress Docker Image" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

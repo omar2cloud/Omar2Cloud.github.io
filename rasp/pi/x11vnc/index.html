@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.78.1" />
-    <meta name="description" content="Displays an expandable/collapsible section of text on your page">
+    <meta name="description" content="Tutorials">
 <meta name="author" content="Omar A Omar">
 
     <link rel="icon" href="/images/favicon.ico" type="image/png">
-    <title>Expand - My Journey</title>
+    <title>Install x11vnc VNC Server on Ubuntu 20.04 for Remote Access - My Journey</title>
 
     
     <link href="/css/nucleus.css?1615468515" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/shortcodes/expand/">
+  <body class="" data-url="/rasp/pi/x11vnc/">
     <nav id="sidebar" class="">
 
 
@@ -372,7 +372,7 @@
   
     
     <li data-nav-id="/rasp/" title="Raspberry Pi Tutorials" class="dd-item
-        
+        parent
         
         
         ">
@@ -419,7 +419,7 @@
  
   
     
-      <li data-nav-id="/rasp/pi/x11vnc/" title="Install x11vnc VNC Server on Ubuntu 20.04 for Remote Access" class="dd-item ">
+      <li data-nav-id="/rasp/pi/x11vnc/" title="Install x11vnc VNC Server on Ubuntu 20.04 for Remote Access" class="dd-item active">
         <a href="/rasp/pi/x11vnc/">
         <b></b>Install VNC Server
         
@@ -662,7 +662,7 @@
   
     
     <li data-nav-id="/shortcodes/" title="" class="dd-item
-        parent
+        
         
         
         ">
@@ -1097,7 +1097,7 @@
  
   
     
-      <li data-nav-id="/shortcodes/expand/" title="Expand" class="dd-item active">
+      <li data-nav-id="/shortcodes/expand/" title="Expand" class="dd-item ">
         <a href="/shortcodes/expand/">
         Expand
         
@@ -1246,7 +1246,7 @@
             
           
           
-            <a href='/'>Learn with Omar</a> > <a href='/shortcodes/'></a> > Expand
+            <a href='/'>Learn with Omar</a> > <a href='/rasp/'>Raspberry Pi Tutorials</a> > Install x11vnc VNC Server on Ubuntu 20.04 for Remote Access
           
         
           
@@ -1261,7 +1261,12 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#what-is-a-x11vnc-server">What is a X11VNC Server?</a></li>
+    <li><a href="#lets-install-x11vnc-server-on-our-ubuntu-2004-lts">Let&rsquo;s Install X11VNC Server on our Ubuntu 20.04 LTS</a>
+      <ul>
+        <li><a href="#conclusion">Conclusion:</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -1279,86 +1284,58 @@
           
             <h1>
               
-              Expand
+              Install x11vnc VNC Server on Ubuntu 20.04 for Remote Access
             </h1>
           
 
         
 
 
-<p>The Expand shortcode displays an expandable/collapsible section of text on your page.
-Here is an example</p>
+<h2 id="what-is-a-x11vnc-server">What is a X11VNC Server?</h2>
+<p>The <strong>Virtual Network Computing (VNC)</strong> allows to view and interact with devices remotely with any VNC viewer. When working with multiple RPIs, having VNC servers give us access all our RPIs from one device. There are many VNC servers and <strong>X11VNC</strong> is one of them. On another tutorial, we will install <strong>RealVNC</strong>, which is another vnc server. I will go over why do we need to install X11VNC on Ubuntu and RealVNC on RPI OS.</p>
+<p>To learn more about <a href="https://wiki.archlinux.org/index.php/x11vnc">X11VNC.</a></p>
 
-<div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
-        <span>
-        
-    	
-    	Expand me...
-    	
-    	</span>
-    </div>
-    <div class="expand-content" style="display: none;">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-    </div>
+<div class="notices note" ><p>All commands employed are case senstive, and <strong>X11</strong> is not <strong>x11.</strong></p>
 </div>
-<h2 id="usage">Usage</h2>
-<p>this shortcode takes exactly one optional parameter to define the text that appears next to the expand/collapse icon. (default is &ldquo;Expand me&hellip;&quot;)</p>
-<pre><code>{{%expand &quot;Is this learn theme rocks ?&quot; %}}Yes !.{{% /expand%}}
-</code></pre>
 
-<div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
-        <span>
-        
-    	
-    	Is this learn theme rocks ?
-    	
-    	</span>
-    </div>
-    <div class="expand-content" style="display: none;">
-        Yes !
-    </div>
-</div>
-<h1 id="demo">Demo</h1>
-<pre><code>{{%expand%}}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-{{% /expand%}}
-</code></pre>
+<h2 id="lets-install-x11vnc-server-on-our-ubuntu-2004-lts">Let&rsquo;s Install X11VNC Server on our Ubuntu 20.04 LTS</h2>
+<p>As a best practice, we shall update and upgrade our operating system.</p>
+<pre><code>sudo apt update &amp;&amp; sudo apt upgrade -y
+</code></pre><p>Now, we will need to change display manager to lightdm</p>
+<pre><code>sudo apt-get install lightdm
+</code></pre><p>Let&rsquo;s reboot the Raspberry Pi for these changes to take effect.</p>
+<pre><code>sudo reboot
+</code></pre><p>The following command to install <strong>x11vnc</strong> server</p>
+<pre><code>sudo apt-get install x11vnc
+</code></pre><p>Now, we will create our service configuration file.</p>
+<pre><code>sudo nano /lib/systemd/system/x11vnc.service
+</code></pre><p>Let&rsquo;s copy and paste the following configuration into our newly create service file. These configurations will start the x11vnc server and make it run continuously. It will also force the server to restart automatically in case of any failure.</p>
+<pre><code>[Unit]
+Description=x11vnc service
+After=display-manager.service network.target syslog.target
 
-<div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
-        <span>
-        
-    	
-    	Expand me...
-    	
-    	</span>
-    </div>
-    <div class="expand-content" style="display: none;">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+[Service]
+Type=simple
+ExecStart=/usr/bin/x11vnc -forever -display :0 -auth guess -passwd yourPassword
+ExecStop=/usr/bin/killall x11vnc
+Restart=on-failure
 
-    </div>
-</div>
+[Install]
+WantedBy=multi-user.target
+</code></pre><p>The following commands to reload the systmd system and to enable and start the x11vnc service.</p>
+<pre><code>systemctl daemon-reload
+systemctl enable x11vnc.service
+systemctl status x11vnc.service
+</code></pre><p>We can check the status of our x11vnc server as shown.</p>
+<pre><code>x11vnc status
+</code></pre><p>Notice that x11vnc is warning us that we are running this server without a password. Well, let&rsquo;s setup a password.</p>
+<p><img src="/images/RPI/x11vnc.JPG?classes=shadow" alt="RPI"></p>
+<p>The following command to setup a password, and you will be promoted to enter a password and to confirm.</p>
+<pre><code>x11vnc -storepasswd 
+</code></pre><p>Make sure you have received a similar success message,and that you&rsquo;re password has been written, if not try it again.</p>
+<pre><code>password written to: /home/pi3/.vnc/passwd
+</code></pre><h3 id="conclusion">Conclusion:</h3>
+<p>This concludes our x11vnc server installation on a Ubuntu 20.04 LTS installed on a RPI 4.</p>
 
 
 <footer class="footline">
@@ -1549,6 +1526,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
                 
                     
+                    
                 
                 
 
@@ -1561,6 +1539,9 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1578,39 +1559,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1623,21 +1571,26 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
         
                     
+            
+        
+                    
                         
             
             
                 
                     
+                        
+                        
+                    
                 
                 
 
                     
                     
+                        
+                    
                     
 
-                    
-            
-        
                     
                         
             
@@ -1735,176 +1688,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -1950,6 +1733,204 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -2001,7 +1982,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
                 
                     
-                    
                 
                 
 
@@ -2017,9 +1997,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2076,10 +2053,10 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/shortcodes/children/test.fr/" title="page test"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/rasp/pi/myrasp/" title="My Raspberry Pi"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/shortcodes/mermaid/" title="Mermaid" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cont/" title="" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

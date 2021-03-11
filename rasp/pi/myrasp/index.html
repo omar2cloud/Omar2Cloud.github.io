@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.78.1" />
-    <meta name="description" content="Displays an expandable/collapsible section of text on your page">
+    <meta name="description" content="Tutorials">
 <meta name="author" content="Omar A Omar">
 
     <link rel="icon" href="/images/favicon.ico" type="image/png">
-    <title>Expand - My Journey</title>
+    <title>My Raspberry Pi - My Journey</title>
 
     
     <link href="/css/nucleus.css?1615468515" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/shortcodes/expand/">
+  <body class="" data-url="/rasp/pi/myrasp/">
     <nav id="sidebar" class="">
 
 
@@ -372,7 +372,7 @@
   
     
     <li data-nav-id="/rasp/" title="Raspberry Pi Tutorials" class="dd-item
-        
+        parent
         
         
         ">
@@ -398,7 +398,7 @@
  
   
     
-      <li data-nav-id="/rasp/pi/myrasp/" title="My Raspberry Pi" class="dd-item ">
+      <li data-nav-id="/rasp/pi/myrasp/" title="My Raspberry Pi" class="dd-item active">
         <a href="/rasp/pi/myrasp/">
         <b></b>My Raspberry Pi
         
@@ -662,7 +662,7 @@
   
     
     <li data-nav-id="/shortcodes/" title="" class="dd-item
-        parent
+        
         
         
         ">
@@ -1097,7 +1097,7 @@
  
   
     
-      <li data-nav-id="/shortcodes/expand/" title="Expand" class="dd-item active">
+      <li data-nav-id="/shortcodes/expand/" title="Expand" class="dd-item ">
         <a href="/shortcodes/expand/">
         Expand
         
@@ -1246,7 +1246,7 @@
             
           
           
-            <a href='/'>Learn with Omar</a> > <a href='/shortcodes/'></a> > Expand
+            <a href='/'>Learn with Omar</a> > <a href='/rasp/'>Raspberry Pi Tutorials</a> > My Raspberry Pi
           
         
           
@@ -1261,7 +1261,11 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#what-is-raspberry-pi-rpi">What is Raspberry Pi (RPI)?</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -1279,86 +1283,43 @@
           
             <h1>
               
-              Expand
+              My Raspberry Pi
             </h1>
           
 
         
 
 
-<p>The Expand shortcode displays an expandable/collapsible section of text on your page.
-Here is an example</p>
-
-<div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
-        <span>
-        
-    	
-    	Expand me...
-    	
-    	</span>
-    </div>
-    <div class="expand-content" style="display: none;">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-    </div>
-</div>
-<h2 id="usage">Usage</h2>
-<p>this shortcode takes exactly one optional parameter to define the text that appears next to the expand/collapse icon. (default is &ldquo;Expand me&hellip;&quot;)</p>
-<pre><code>{{%expand &quot;Is this learn theme rocks ?&quot; %}}Yes !.{{% /expand%}}
-</code></pre>
-
-<div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
-        <span>
-        
-    	
-    	Is this learn theme rocks ?
-    	
-    	</span>
-    </div>
-    <div class="expand-content" style="display: none;">
-        Yes !
-    </div>
-</div>
-<h1 id="demo">Demo</h1>
-<pre><code>{{%expand%}}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-{{% /expand%}}
-</code></pre>
-
-<div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
-        <span>
-        
-    	
-    	Expand me...
-    	
-    	</span>
-    </div>
-    <div class="expand-content" style="display: none;">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-    </div>
-</div>
+<h2 id="what-is-raspberry-pi-rpi">What is Raspberry Pi (RPI)?</h2>
+<p>The Raspberry Pi is a small single-board computer capable of doing almost everything that an ordinary Linux-based computer can do. Once it connects to an HDMI display, a keyboard, and a mouse, we have have a fully functional computer for a pice of <strong>$35</strong> (or even way less for the Raspberry Pi Zero). The Raspberry Pi is widely known and used for home lab environments, where anyone can experiment safely.
+To learn more about <a href="https://www.raspberrypi.org/">Raspberry Pi.</a></p>
+<p>Note that we will need to purchase a <strong>microSD</strong> card with a capacity of <strong>at least 8GB.</strong> We will also need a power supply to power the Raspberry Pi via <strong>USB-C</strong> for <strong>Raspberry Pi 4.</strong></p>
+<p><img src="/images/RPI/pi-plug-in.gif?width=50pc" alt="Connect"></p>
+<h4 id="raspberry-pi-4">Raspberry Pi 4</h4>
+<p>There are several models of <strong>RPI</strong>, and for most people <strong>Raspberry Pi 4 Model B</strong> is the one to choose. Raspberry Pi 4 Model B is the newest, fastest, and easiest to use.</p>
+<p>Raspberry Pi 4 comes with 2GB, 4GB, or 8GB of RAM. For most educational purposes and hobbyist projects, and for use as a desktop computer, 2GB is enough.</p>
+<h4 id="raspberry-zero">Raspberry Zero</h4>
+<p>Raspberry Pi Zero, Raspberry Pi Zero W, and Raspberry Pi Zero WH are smaller and require less power, so they’re useful for portable projects such as robots. It’s generally easier to start a project with Raspberry Pi 4, and to move to Raspberry Pi Zero when you have a working prototype that a smaller Raspberry Pi would be useful for.</p>
+<h4 id="unpacking-and-assembling-my-first-raspberry-pi-4">Unpacking and Assembling My First Raspberry Pi 4</h4>
+<p>I purchased the latest Raspberry Pi 4 from Amazon which rocks <strong>a 1.5GHz 64-bit quad-core (ARMv8) CPU (4GB of RAM)</strong>—though you can step up to 8GB of RAM for a bit more money. Moreover, <strong>2.4 Ghz and 5.0 GHz IEEE 802.11ac wireless, Bluetooth 5.0, BLE.</strong> It is very powerful for pretty little thing.</p>
+<p><img src="/images/RPI/1.jpg?classes=shadow" alt="RPI"></p>
+<p>I have had the starter kit with my RPI 4 which includes premium case with integrated fan mount, 3.5A USB-C power supply with on/off power switch, set of heat sinks, micro HDMI to HDMI cable and 32 GB microSD card.</p>
+<p><img src="/images/RPI/2.jpg?classes=shadow" alt="RPI"></p>
+<p>This is my RPI 4 after being fully assembled.</p>
+<p>We will need a keyboard, a monitor and a mouse for the initial setup. However, we might not need them down the road. It depends on the project and how we are going to access the RPI 4.</p>
+<p><img src="/images/RPI/3.jpg?classes=shadow" alt="RPI"></p>
+<h4 id="install-an-operating-system-on-the-microsd-card">Install an Operating System on the microSD Card</h4>
+<p>The RPI operating system (previously called Raspbian) is the Foundation&rsquo;s official OS for the Pi based on Debian Linux. The Pi Foundation also offers a <a href="https://www.raspberrypi.org/software/"><strong>Raspberry Pi Imager</strong></a> for a quick and easy way to install Raspberry PI OS and other operating systems to our microSD card. It&rsquo;s available for Windows, MacOS and Ubuntu. Let&rsquo;s download the Raspberry Pi Imager.</p>
+<p>For our upcoming projects, I would suggest to install <a href="https://ubuntu.com/download/raspberry-pi"><strong>64-bit Ubuntu Desktop 20.10</strong></a> on the RPI instead of the 32-bit Raspbian operating system.</p>
+<p>After downloading the Raspberry Pi Imager, we will click on <strong>&ldquo;CHOOSE OS&rdquo;</strong> to select the Ubuntu Desktop 20.10 on our microSD card.</p>
+<p><img src="/images/RPI/RaspberryPi/Imager.PNG?classes=shadow" alt="RPI"></p>
+<p><img src="/images/RPI/RaspberryPi/Imager2.PNG?classes=shadow" alt="RPI"></p>
+<p><img src="/images/RPI/RaspberryPi/Imager3.PNG?classes=shadow" alt="RPI"></p>
+<p>If the downloading process to the microSD is completed successfully, we shall see the below message.</p>
+<p><img src="/images/RPI/RaspberryPi/Imager4.PNG?classes=shadow" alt="RPI"></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
 
 <footer class="footline">
@@ -1549,6 +1510,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
                 
                     
+                    
                 
                 
 
@@ -1561,6 +1523,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
             
                 
+                    
                     
                 
                 
@@ -1578,6 +1541,9 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -1606,38 +1572,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1735,176 +1669,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -1950,6 +1714,204 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -2001,7 +1963,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
                 
                     
-                    
                 
                 
 
@@ -2017,9 +1978,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2076,10 +2034,10 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/shortcodes/children/test.fr/" title="page test"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/rasp/" title="Raspberry Pi Tutorials"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/shortcodes/mermaid/" title="Mermaid" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/rasp/pi/x11vnc/" title="Install x11vnc VNC Server on Ubuntu 20.04 for Remote Access" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

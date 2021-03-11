@@ -36,6 +36,15 @@ Updating the Operating System Now, we have a secured connection with our instanc
     </item>
     
     <item>
+      <title>Install x11vnc VNC Server on Ubuntu 20.04 for Remote Access</title>
+      <link>https://omar2cloud.github.io/rasp/pi/_x11vnc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/pi/_x11vnc/</guid>
+      <description>What is a X11VNC Server? The Virtual Network Computing (VNC) allows to view and interact with devices remotely with any VNC viewer. When working with multiple RPIs, having VNC servers give us access all our RPIs from one device. There are many VNC servers and X11VNC is one of them. On another tutorial, we will install RealVNC, which is another vnc server. I will go over why do we need to install X11VNC on Ubuntu and RealVNC on RPI OS.</description>
+    </item>
+    
+    <item>
       <title>Archetypes</title>
       <link>https://omar2cloud.github.io/cont/archetypes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

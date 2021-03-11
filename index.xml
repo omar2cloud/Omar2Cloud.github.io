@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jun 2020 13:31:12 +0100</lastBuildDate><atom:link href="https://omar2cloud.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>My Raspberry Pi</title>
+      <link>https://omar2cloud.github.io/rasp/pi/_myrasp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/pi/_myrasp/</guid>
+      <description>What is Raspberry Pi (RPI)? The Raspberry Pi is a small single-board computer capable of doing almost everything that an ordinary Linux-based computer can do. Once it connects to an HDMI display, a keyboard, and a mouse, we have have a fully functional computer for a pice of $35 (or even way less for the Raspberry Pi Zero). The Raspberry Pi is widely known and used for home lab environments, where anyone can experiment safely.</description>
+    </item>
+    
+    <item>
       <title>Install Portainer on Ubuntu</title>
       <link>https://omar2cloud.github.io/aws/portainer/portainer/_portainer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

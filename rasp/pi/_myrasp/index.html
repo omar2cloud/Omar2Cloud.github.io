@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.78.1" />
-    <meta name="description" content="Get value of site params variables in your page.">
+    <meta name="description" content="Tutorials">
 <meta name="author" content="Omar A Omar">
 
     <link rel="icon" href="/images/favicon.ico" type="image/png">
-    <title>Site param - My Journey</title>
+    <title>My Raspberry Pi - My Journey</title>
 
     
     <link href="/css/nucleus.css?1615435551" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/shortcodes/siteparam/">
+  <body class="" data-url="/rasp/pi/_myrasp/">
     <nav id="sidebar" class="">
 
 
@@ -372,7 +372,7 @@
   
     
     <li data-nav-id="/rasp/" title="Raspberry Pi Tutorials" class="dd-item
-        
+        parent
         
         
         ">
@@ -398,7 +398,7 @@
  
   
     
-      <li data-nav-id="/rasp/pi/_myrasp/" title="My Raspberry Pi" class="dd-item ">
+      <li data-nav-id="/rasp/pi/_myrasp/" title="My Raspberry Pi" class="dd-item active">
         <a href="/rasp/pi/_myrasp/">
         <b></b>My Raspberry Pi
         
@@ -662,7 +662,7 @@
   
     
     <li data-nav-id="/shortcodes/" title="" class="dd-item
-        parent
+        
         
         
         ">
@@ -1160,7 +1160,7 @@
  
   
     
-      <li data-nav-id="/shortcodes/siteparam/" title="Site param" class="dd-item active">
+      <li data-nav-id="/shortcodes/siteparam/" title="Site param" class="dd-item ">
         <a href="/shortcodes/siteparam/">
         Site param
         
@@ -1246,7 +1246,7 @@
             
           
           
-            <a href='/'>Learn with Omar</a> > <a href='/shortcodes/'></a> > Site param
+            <a href='/'>Learn with Omar</a> > <a href='/rasp/'>Raspberry Pi Tutorials</a> > My Raspberry Pi
           
         
           
@@ -1259,7 +1259,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-raspberry-pi-rpi">What is Raspberry Pi (RPI)?</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1275,21 +1283,43 @@
           
             <h1>
               
-              Site param
+              My Raspberry Pi
             </h1>
           
 
         
 
 
-<p><code>siteparam</code> shortcode is used to help you print values of site params.</p>
-<p>For instance, in this current site, the <code>editURL</code> variable is used in <code>config.toml</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>]
-  <span style="color:#a6e22e">editURL</span> = <span style="color:#e6db74">&#34;https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/&#34;</span>
-</code></pre></div><p>Use the <code>siteparam</code> shortcode to display its value.</p>
-<pre><code>`editURL` Value : {{% siteparam &quot;editURL&quot; %}}
-</code></pre><p>is displayed as</p>
-<p><code>editURL</code> Value :</p>
+<h2 id="what-is-raspberry-pi-rpi">What is Raspberry Pi (RPI)?</h2>
+<p>The Raspberry Pi is a small single-board computer capable of doing almost everything that an ordinary Linux-based computer can do. Once it connects to an HDMI display, a keyboard, and a mouse, we have have a fully functional computer for a pice of <strong>$35</strong> (or even way less for the Raspberry Pi Zero). The Raspberry Pi is widely known and used for home lab environments, where anyone can experiment safely.
+To learn more about <a href="https://www.raspberrypi.org/">Raspberry Pi.</a></p>
+<p>Note that we will need to purchase a <strong>microSD</strong> card with a capacity of <strong>at least 8GB.</strong> We will also need a power supply to power the Raspberry Pi via <strong>USB-C</strong> for <strong>Raspberry Pi 4.</strong></p>
+<p><img src="/images/RPI/pi-plug-in.gif?width=50pc" alt="Connect"></p>
+<h4 id="raspberry-pi-4">Raspberry Pi 4</h4>
+<p>There are several models of <strong>RPI</strong>, and for most people <strong>Raspberry Pi 4 Model B</strong> is the one to choose. Raspberry Pi 4 Model B is the newest, fastest, and easiest to use.</p>
+<p>Raspberry Pi 4 comes with 2GB, 4GB, or 8GB of RAM. For most educational purposes and hobbyist projects, and for use as a desktop computer, 2GB is enough.</p>
+<h4 id="raspberry-zero">Raspberry Zero</h4>
+<p>Raspberry Pi Zero, Raspberry Pi Zero W, and Raspberry Pi Zero WH are smaller and require less power, so they’re useful for portable projects such as robots. It’s generally easier to start a project with Raspberry Pi 4, and to move to Raspberry Pi Zero when you have a working prototype that a smaller Raspberry Pi would be useful for.</p>
+<h4 id="unpacking-and-assembling-my-first-raspberry-pi-4">Unpacking and Assembling My First Raspberry Pi 4</h4>
+<p>I purchased the latest Raspberry Pi 4 from Amazon which rocks <strong>a 1.5GHz 64-bit quad-core (ARMv8) CPU (4GB of RAM)</strong>—though you can step up to 8GB of RAM for a bit more money. Moreover, <strong>2.4 Ghz and 5.0 GHz IEEE 802.11ac wireless, Bluetooth 5.0, BLE.</strong> It is very powerful for pretty little thing.</p>
+<p><img src="/images/RPI/1.jpg?classes=shadow" alt="RPI"></p>
+<p>I have had the starter kit with my RPI 4 which includes premium case with integrated fan mount, 3.5A USB-C power supply with on/off power switch, set of heat sinks, micro HDMI to HDMI cable and 32 GB microSD card.</p>
+<p><img src="/images/RPI/2.jpg?classes=shadow" alt="RPI"></p>
+<p>This is my RPI 4 after being fully assembled.</p>
+<p>We will need a keyboard, a monitor and a mouse for the initial setup. However, we might not need them down the road. It depends on the project and how we are going to access the RPI 4.</p>
+<p><img src="/images/RPI/3.jpg?classes=shadow" alt="RPI"></p>
+<h4 id="install-an-operating-system-on-the-microsd-card">Install an Operating System on the microSD Card</h4>
+<p>The RPI operating system (previously called Raspbian) is the Foundation&rsquo;s official OS for the Pi based on Debian Linux. The Pi Foundation also offers a <a href="https://www.raspberrypi.org/software/"><strong>Raspberry Pi Imager</strong></a> for a quick and easy way to install Raspberry PI OS and other operating systems to our microSD card. It&rsquo;s available for Windows, MacOS and Ubuntu. Let&rsquo;s download the Raspberry Pi Imager.</p>
+<p>For our upcoming projects, I would suggest to install <a href="https://ubuntu.com/download/raspberry-pi"><strong>64-bit Ubuntu Desktop 20.10</strong></a> on the RPI instead of the 32-bit Raspbian operating system.</p>
+<p>After downloading the Raspberry Pi Imager, we will click on <strong>&ldquo;CHOOSE OS&rdquo;</strong> to select the Ubuntu Desktop 20.10 on our microSD card.</p>
+<p><img src="/images/RPI/RaspberryPi/Imager.PNG?classes=shadow" alt="RPI"></p>
+<p><img src="/images/RPI/RaspberryPi/Imager2.PNG?classes=shadow" alt="RPI"></p>
+<p><img src="/images/RPI/RaspberryPi/Imager3.PNG?classes=shadow" alt="RPI"></p>
+<p>If the downloading process to the microSD is completed successfully, we shall see the below message.</p>
+<p><img src="/images/RPI/RaspberryPi/Imager4.PNG?classes=shadow" alt="RPI"></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
 
 <footer class="footline">
@@ -1480,6 +1510,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1492,6 +1523,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1509,6 +1541,9 @@
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -1537,38 +1572,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1666,176 +1669,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -1881,6 +1714,21 @@
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -1890,7 +1738,134 @@
                         
             
             
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
                         
             
@@ -1946,6 +1921,62 @@
                         
             
             
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
                 
                     
                 
@@ -1979,7 +2010,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -2004,10 +2034,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/shortcodes/notice/" title="Notice"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/rasp/" title="Raspberry Pi Tutorials"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/shortcodes/attachments/" title="Attachments" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/rasp/pi/_x11vnc/" title="Install x11vnc VNC Server on Ubuntu 20.04 for Remote Access" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

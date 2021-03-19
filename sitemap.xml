@@ -7,7 +7,7 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/myrasp/</loc>
+    <loc>https://omar2cloud.github.io/rasp/pi/_myrasp/</loc>
   </url>
   
   <url>
@@ -35,7 +35,7 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/x11vnc/</loc>
+    <loc>https://omar2cloud.github.io/rasp/pi/_x11vnc/</loc>
   </url>
   
   <url>
@@ -51,8 +51,32 @@
   </url>
   
   <url>
+    <loc>https://omar2cloud.github.io/_template.en-copy/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/_template/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/rasp/pi/_rpidock/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/aws/cloudwatch/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/rasp/pi/_wprpi/</loc>
+  </url>
+  
+  <url>
     <loc>https://omar2cloud.github.io/cont/pages/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/rasp/pi/_psswd/</loc>
   </url>
   
   <url>

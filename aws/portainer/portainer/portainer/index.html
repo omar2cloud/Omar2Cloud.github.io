@@ -11,21 +11,21 @@
     <title>Install Portainer on Ubuntu - My Journey</title>
 
     
-    <link href="/css/nucleus.css?1615468515" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1615468515" rel="stylesheet">
-    <link href="/css/hybrid.css?1615468515" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1615468515" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1615468515" rel="stylesheet">
-    <link href="/css/auto-complete.css?1615468515" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1615468515" rel="stylesheet">
-    <link href="/css/theme.css?1615468515" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1615468515" rel="stylesheet">
+    <link href="/css/nucleus.css?1616114958" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1616114958" rel="stylesheet">
+    <link href="/css/hybrid.css?1616114958" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1616114958" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1616114958" rel="stylesheet">
+    <link href="/css/auto-complete.css?1616114958" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1616114958" rel="stylesheet">
+    <link href="/css/theme.css?1616114958" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1616114958" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1615468515" rel="stylesheet">
+    <link href="/css/theme-mine.css?1616114958" rel="stylesheet">
     
-    <link href="/css/foo.css?1615468515" rel="stylesheet"><link href="/css/bar.css?1615468515" rel="stylesheet">
+    <link href="/css/foo.css?1616114958" rel="stylesheet"><link href="/css/bar.css?1616114958" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1615468515"></script>
+    <script src="/js/jquery-3.3.1.min.js?1616114958"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1615468515"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1615468515"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1616114958"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1616114958"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/omar2cloud.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1615468515"></script>
+<script type="text/javascript" src="/js/search.js?1616114958"></script>
 
     
   </div>
@@ -355,6 +355,27 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/aws/cloudwatch/" title="Unified Cloudwatch Agent" class="dd-item ">
+        <a href="/aws/cloudwatch/">
+        <b> </b>Install Unified Cloudwatch Agent
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
       
@@ -398,8 +419,8 @@
  
   
     
-      <li data-nav-id="/rasp/pi/myrasp/" title="My Raspberry Pi" class="dd-item ">
-        <a href="/rasp/pi/myrasp/">
+      <li data-nav-id="/rasp/pi/_myrasp/" title="My Raspberry Pi" class="dd-item ">
+        <a href="/rasp/pi/_myrasp/">
         <b></b>My Raspberry Pi
         
         </a>
@@ -419,9 +440,72 @@
  
   
     
-      <li data-nav-id="/rasp/pi/x11vnc/" title="Install x11vnc VNC Server on Ubuntu 20.04 for Remote Access" class="dd-item ">
-        <a href="/rasp/pi/x11vnc/">
+      <li data-nav-id="/rasp/pi/_x11vnc/" title="Install x11vnc VNC Server on Ubuntu 20.04 for Remote Access" class="dd-item ">
+        <a href="/rasp/pi/_x11vnc/">
         <b></b>Install VNC Server
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rasp/pi/_rpidock/" title="Docker on Ubuntu Raspberry Pi 4" class="dd-item ">
+        <a href="/rasp/pi/_rpidock/">
+        <b> </b>Docker on Ubuntu RPI 4
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rasp/pi/_wprpi/" title="Install Wordpress Docker-Compose Stack" class="dd-item ">
+        <a href="/rasp/pi/_wprpi/">
+        <b></b>WordPress on MY RPI 4
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rasp/pi/_psswd/" title="" class="dd-item ">
+        <a href="/rasp/pi/_psswd/">
+        <b></b>Reset Portainer Password
         
         </a>
     </li>
@@ -1278,8 +1362,11 @@
     <li><a href="#cleaning-up-after-an-update">Cleaning up after an update</a></li>
     <li><a href="#step-1-install-docker">Step 1: Install Docker</a></li>
     <li><a href="#step-2-install-docker-compose">Step 2: Install Docker Compose</a></li>
-    <li><a href="#step-3-setup-portainer">Step 3: Setup Portainer</a></li>
-    <li><a href="#conclusion">Conclusion:</a></li>
+    <li><a href="#step-3-setup-portainer">Step 3: Setup Portainer</a>
+      <ul>
+        <li><a href="#conclusion">Conclusion:</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -1405,7 +1492,7 @@ Status: Downloaded newer image for portainer/portainer:latest
 <p><img src="/images/portainer_2.jpg?classes=shadow" alt="Portainer"></p>
 <p>You’ll be directed to Portainer dashboard where you can start managing Docker. If you see a notification for upgrade, click on it and proceed with the upgrade process.</p>
 <p><img src="/images/portainer_3.jpg?classes=shadow" alt="Portainer"></p>
-<h2 id="conclusion">Conclusion:</h2>
+<h3 id="conclusion">Conclusion:</h3>
 <p>By the end of this tutorial, we have successfully installed Portainer Docker management tool on our Ubuntu 20.04 EC2 instance. In part 3 of this tutorial, we will learn how to install and run a Wordpress web application.</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
@@ -1599,6 +1686,22 @@ Status: Downloaded newer image for portainer/portainer:latest
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1614,6 +1717,54 @@ Status: Downloaded newer image for portainer/portainer:latest
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -2139,19 +2290,19 @@ Status: Downloaded newer image for portainer/portainer:latest
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1615468515"></script>
-    <script src="/js/perfect-scrollbar.min.js?1615468515"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1615468515"></script>
-    <script src="/js/jquery.sticky.js?1615468515"></script>
-    <script src="/js/featherlight.min.js?1615468515"></script>
-    <script src="/js/highlight.pack.js?1615468515"></script>
+    <script src="/js/clipboard.min.js?1616114958"></script>
+    <script src="/js/perfect-scrollbar.min.js?1616114958"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1616114958"></script>
+    <script src="/js/jquery.sticky.js?1616114958"></script>
+    <script src="/js/featherlight.min.js?1616114958"></script>
+    <script src="/js/highlight.pack.js?1616114958"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1615468515"></script>
-    <script src="/js/learn.js?1615468515"></script>
-    <script src="/js/hugo-learn.js?1615468515"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1616114958"></script>
+    <script src="/js/learn.js?1616114958"></script>
+    <script src="/js/hugo-learn.js?1616114958"></script>
     
         
-            <script src="/mermaid/mermaid.js?1615468515"></script>
+            <script src="/mermaid/mermaid.js?1616114958"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

@@ -47,10 +47,10 @@ version: &#39;2&#39;services:db:image: mysql/mysql-server:latestvolumes:- d
     
     <item>
       <title>How To Reset My Portainer Password</title>
-      <link>https://omar2cloud.github.io/rasp/pi/_psswd/</link>
+      <link>https://omar2cloud.github.io/rasp/pi/psswd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://omar2cloud.github.io/rasp/pi/_psswd/</guid>
+      <guid>https://omar2cloud.github.io/rasp/pi/psswd/</guid>
       <description>Resetting Admin password in Portainer running as container Portainer does not have a password reset feature. We will have to you use a password container helper.
 1- Firstly, we will stop the Portainer container.
 docker container stop portainer2- We will run the helper using the same bind-mount/volume for the data volume

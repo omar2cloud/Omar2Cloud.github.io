@@ -35,10 +35,6 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/aws/portainer/wordpress/_wordpress/</loc>
-  </url>
-  
-  <url>
     <loc>https://omar2cloud.github.io/rasp/pi/x11vnc/</loc>
   </url>
   
@@ -80,7 +76,7 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/_psswd/</loc>
+    <loc>https://omar2cloud.github.io/rasp/pi/psswd/</loc>
   </url>
   
   <url>
@@ -156,6 +152,10 @@
   
   <url>
     <loc>https://omar2cloud.github.io/aws/new-folder/style-customization/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/aws/portainer/wordpress/_wordpress/</loc>
   </url>
   
   <url>

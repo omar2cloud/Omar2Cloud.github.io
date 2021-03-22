@@ -19,10 +19,6 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/aws/portainer/wordpress/</loc>
-  </url>
-  
-  <url>
     <loc>https://omar2cloud.github.io/aws/portainer/spin-ubuntu-instance/ec2-ubuntu/</loc>
   </url>
   
@@ -152,6 +148,10 @@
   
   <url>
     <loc>https://omar2cloud.github.io/aws/new-folder/style-customization/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/aws/portainer/wordpress/</loc>
   </url>
   
   <url>

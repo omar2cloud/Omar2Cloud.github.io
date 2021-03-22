@@ -8,12 +8,22 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jun 2020 13:31:12 +0100</lastBuildDate><atom:link href="https://omar2cloud.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My Raspberry Pi</title>
-      <link>https://omar2cloud.github.io/rasp/pi/_myrasp/</link>
+      <title>My First Raspberry Pi</title>
+      <link>https://omar2cloud.github.io/rasp/pi/myrasp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://omar2cloud.github.io/rasp/pi/_myrasp/</guid>
+      <guid>https://omar2cloud.github.io/rasp/pi/myrasp/</guid>
       <description>What is Raspberry Pi (RPI)? The Raspberry Pi is a small single-board computer capable of doing almost everything that an ordinary Linux-based computer can do. Once it connects to an HDMI display, a keyboard, and a mouse, we have have a fully functional computer for a pice of $35 (or even way less for the Raspberry Pi Zero). The Raspberry Pi is widely known and used for home lab environments, where anyone can experiment safely.</description>
+    </item>
+    
+    <item>
+      <title>Docker on Ubuntu Raspberry Pi 4</title>
+      <link>https://omar2cloud.github.io/rasp/pi/rpidock/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/pi/rpidock/</guid>
+      <description>Updating the Operating System Now, we have a secured connection with our instance, let&amp;rsquo;s update and upgrade the operating system. Updating and upgrading the operating system of the instance is always a good habit to have. We will run the following update/upgrade commands. The -y in the end of the command line will automatically enters &amp;ldquo;yes&amp;rdquo; as a confirmation before installing the updates.
+sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -yCleaning up after an update If this is not the packages first time to run an update, there might have some unnecessary packages left for cleaning.</description>
     </item>
     
     <item>
@@ -37,10 +47,10 @@ Updating the Operating System Now, we have a secured connection with our instanc
     
     <item>
       <title>Install x11vnc VNC Server on Ubuntu 20.04 for Remote Access</title>
-      <link>https://omar2cloud.github.io/rasp/pi/_x11vnc/</link>
+      <link>https://omar2cloud.github.io/rasp/pi/x11vnc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://omar2cloud.github.io/rasp/pi/_x11vnc/</guid>
+      <guid>https://omar2cloud.github.io/rasp/pi/x11vnc/</guid>
       <description>What is a X11VNC Server? The Virtual Network Computing (VNC) allows to view and interact with devices remotely with any VNC viewer. When working with multiple RPIs, having VNC servers give us access all our RPIs from one device. There are many VNC servers and X11VNC is one of them. On another tutorial, we will install RealVNC, which is another vnc server. I will go over why do we need to install X11VNC on Ubuntu and RealVNC on RPI OS.</description>
     </item>
     
@@ -62,16 +72,6 @@ Learning Outcomes:  Creating an EC2 instance using the 7 step workflow &amp;amp;
       <guid>https://omar2cloud.github.io/_template/</guid>
       <description>Updating the Operating System Now, we have a secured connection with our instance, let&amp;rsquo;s update and upgrade the operating system. Updating and upgrading the operating system of the instance is always a good habit to have. We will run the following update/upgrade commands. The -y in the end of the command line will automatically enters &amp;ldquo;yes&amp;rdquo; as a confirmation before installing the updates.
 sudo apt autoremoveA public folder will be generated, containing all static content and assets for your website.</description>
-    </item>
-    
-    <item>
-      <title>Docker on Ubuntu Raspberry Pi 4</title>
-      <link>https://omar2cloud.github.io/rasp/pi/_rpidock/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/rasp/pi/_rpidock/</guid>
-      <description>Updating the Operating System Now, we have a secured connection with our instance, let&amp;rsquo;s update and upgrade the operating system. Updating and upgrading the operating system of the instance is always a good habit to have. We will run the following update/upgrade commands. The -y in the end of the command line will automatically enters &amp;ldquo;yes&amp;rdquo; as a confirmation before installing the updates.
-sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -yCleaning up after an update If this is not the packages first time to run an update, there might have some unnecessary packages left for cleaning.</description>
     </item>
     
     <item>
@@ -106,7 +106,7 @@ version: &#39;2&#39;services:db:image: mysql/mysql-server:latestvolumes:- d
     </item>
     
     <item>
-      <title></title>
+      <title>How To Reset My Portainer Password</title>
       <link>https://omar2cloud.github.io/rasp/pi/_psswd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

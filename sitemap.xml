@@ -7,7 +7,7 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/_myrasp/</loc>
+    <loc>https://omar2cloud.github.io/rasp/pi/myrasp/</loc>
   </url>
   
   <url>
@@ -27,6 +27,10 @@
   </url>
   
   <url>
+    <loc>https://omar2cloud.github.io/rasp/pi/rpidock/</loc>
+  </url>
+  
+  <url>
     <loc>https://omar2cloud.github.io/aws/portainer/portainer/portainer/</loc>
   </url>
   
@@ -35,7 +39,7 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/_x11vnc/</loc>
+    <loc>https://omar2cloud.github.io/rasp/pi/x11vnc/</loc>
   </url>
   
   <url>
@@ -56,10 +60,6 @@
   
   <url>
     <loc>https://omar2cloud.github.io/_template/</loc>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/_rpidock/</loc>
   </url>
   
   <url>

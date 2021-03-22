@@ -8,7 +8,7 @@
 <meta name="author" content="Omar A Omar">
 
     <link rel="icon" href="/images/favicon.ico" type="image/png">
-    <title>Showcase - My Journey</title>
+    <title>Docker on Ubuntu Raspberry Pi 4 - My Journey</title>
 
     
     <link href="/css/nucleus.css?1616375745" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/showcase/">
+  <body class="" data-url="/rasp/pi/rpidock/">
     <nav id="sidebar" class="">
 
 
@@ -414,7 +414,7 @@
   
     
     <li data-nav-id="/rasp/" title="Raspberry Pi Tutorials" class="dd-item
-        
+        parent
         
         
         ">
@@ -461,7 +461,7 @@
  
   
     
-      <li data-nav-id="/rasp/pi/rpidock/" title="Docker on Ubuntu Raspberry Pi 4" class="dd-item ">
+      <li data-nav-id="/rasp/pi/rpidock/" title="Docker on Ubuntu Raspberry Pi 4" class="dd-item active">
         <a href="/rasp/pi/rpidock/">
         <b> </b>Docker on Ubuntu RPI 4
         
@@ -1335,6 +1335,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -1345,7 +1347,13 @@
             
           
           
-            <a href='/'>Learn with Omar</a> > Showcase
+            
+            
+          
+          
+            <a href='/'>Learn with Omar</a> > <a href='/rasp/'>Raspberry Pi Tutorials</a> > Docker on Ubuntu Raspberry Pi 4
+          
+        
           
         
           
@@ -1353,6 +1361,26 @@
                  
                   </span>
                 </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#updating-the-operating-system">Updating the Operating System</a></li>
+    <li><a href="#cleaning-up-after-an-update">Cleaning up after an update</a>
+      <ul>
+        <li><a href="#step-1-install-docker">Step 1: Install Docker</a></li>
+        <li><a href="#step-2-install-docker-compose">Step 2: Install Docker-Compose</a></li>
+        <li><a href="#some-useful-docker-commands">Some useful Docker commands:</a></li>
+        <li><a href="#step-3-install-portainer">Step 3: Install Portainer</a></li>
+        <li><a href="#conclusion">Conclusion:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
                 
               </div>
             </div>
@@ -1365,19 +1393,145 @@
           
             <h1>
               
-              Showcase
+              Docker on Ubuntu Raspberry Pi 4
             </h1>
           
 
         
 
 
-<h4 id="tathttpsovhgithubiotatoverview-by-ovh"><a href="https://ovh.github.io/tat/overview/">TAT</a> by OVH</h4>
-<p><img src="/images/showcase/tat.png?width=50pc" alt="TAT image"></p>
-<h4 id="tsharkdevhttpstsharkdev-by-ross-jacobs"><a href="https://tshark.dev">Tshark.dev</a> by Ross Jacobs</h4>
-<p><img src="/images/showcase/tshark_dev.png?width=50pc" alt="Tshark.dev image"></p>
-<h4 id="inteliverhttpsdocsintelivercom-by-amir-lavasani"><a href="https://docs.inteliver.com">inteliver</a> by Amir Lavasani</h4>
-<p><img src="/images/showcase/inteliver_docs.png?width=50pc" alt="docs.inteliver.com image"></p>
+<h2 id="updating-the-operating-system">Updating the Operating System</h2>
+<p>Now, we have a secured connection with our instance, let&rsquo;s update and upgrade the operating system. Updating and upgrading the operating system of the instance is always a good habit to have. We will run the following update/upgrade commands. The -y in the end of the command line will automatically enters &ldquo;yes&rdquo; as a confirmation before installing the updates.</p>
+<pre><code>sudo apt update &amp;&amp; sudo apt upgrade -y
+</code></pre><h2 id="cleaning-up-after-an-update">Cleaning up after an update</h2>
+<p>If this is not the packages first time to run an update, there might have some unnecessary packages left for cleaning. Removing these packages will free space and prevent your system from cluttering. The following command shall do the job.</p>
+<pre><code>sudo apt autoremove
+</code></pre><h3 id="step-1-install-docker">Step 1: Install Docker</h3>
+<p>There are different methods to install <strong>Docker Engine</strong>. The following approach is the method from the official <a href="https://docs.docker.com/engine/install/ubuntu/">Docker</a> site.</p>
+<p>We will setup Docker&rsquo;s repository and then install from them for ease of installation and upgrade tasks as it&rsquo;s the recommended approach.</p>
+<p>1 - Setup the Repository:</p>
+<pre><code> sudo apt-get update
+</code></pre><pre><code> sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+</code></pre><p>2- Add Docker&rsquo;s Official GPG Key:</p>
+<p>The commands below is to download and install Docker’s official GPG key, which is used to validate packages installed from Docker’s repository making sure they’re trusted.</p>
+<pre><code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+</code></pre>
+<div class="notices note" ><p>If you were unable to download the GPG key, check if you have the <strong>CURL</strong> command-line utility installed on your Ubuntu 20.04 by typing <strong>$ curl &ndash;version</strong>. If you need to install the CURL, type in <strong>$ sudo apt-get install curl -y</strong></p>
+</div>
+
+<pre><code>curl --version
+sudo apt-get install curl -y
+</code></pre><p>3 - Setup the Stable Repository:</p>
+<p>Docker Engine is supported on <strong>x86_64 (or amd64), armhf, and arm64 architectures.</strong> We should know that RPI 4 is an <strong>arm64</strong> architecture, but the <strong>Raspberry Pi OS</strong> is a <strong>32-bit</strong> operating system. We have decided to utilize Ubuntu 20.04 LTS on our RPI 4 because it&rsquo;s a <strong>64-bit</strong> operating system. Therefore, we will need to install Docker Engine that supports 64-bit operating system on an arm64 architecture such as our current Ubuntu 20.04 LTS on RPI 4.</p>
+<p>I would like to suggest studying the differences between amd64, 64 and armhf.</p>
+<p>Now, let&rsquo;s use the following command to setup the stable repository for <strong>arm64.</strong></p>
+<pre><code> echo \
+  &quot;deb [arch=arm64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</code></pre><p>4 - Install Docker Engine:</p>
+<p>Firstly, we will update the <strong>apt</strong> package index and then install the latest version of Docker Engine and <strong>containerd.</strong></p>
+<pre><code>sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+</code></pre><p>Let&rsquo;s verify that we have installed Docker Engine by running the <strong>hello-world</strong> image.</p>
+<pre><code>sudo docker run hello-world
+</code></pre><p>The response should be similar to the below:</p>
+<pre><code>Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the &quot;hello-world&quot; image from the Docker Hub.
+    (arm64v8)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+</code></pre><p>If you would like to use Docker as a non-root user, you should now consider adding your user to the “docker” group with something like:</p>
+<pre><code>sudo usermod -aG docker $USER
+
+</code></pre><p>Now, we have installed Docker successfully, let&rsquo;s move on to installing Docker-Compose.</p>
+<h3 id="step-2-install-docker-compose">Step 2: Install Docker-Compose</h3>
+<p>Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration. To learn more about all the features of Compose, see the list of <a href="https://docs.docker.com/compose/#features">features</a>.</p>
+<p>If you try to <a href="https://docs.docker.com/compose/install/">install Docker-Compose</a> from Docker&rsquo;s official website, you will face some hiccups as shown below.</p>
+<pre><code>sudo curl -L &quot;https://github.com/docker/compose/releases/download/1.28.5/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose
+</code></pre><p><img src="/images/RPI/DockerComposeError.JPG?classes=shadow" alt="Docker-Error"></p>
+<p>Docker does not have a release for Docker-Compose for <strong>arm64</strong> yet; however, I have a shell script which will allow us to download a compatible Docker-Compose container with arm64 from my <a href="https://github.com/OmarCloud20">GitHub</a>.</p>
+<p>To install it, run the commands below to download version <strong>1.28.5</strong> As of this writing, this was the current version.</p>
+<pre><code>sudo curl -L --fail https://github.com/OmarCloud20/docker-compose/releases/download/1.28.5/run.sh -o /usr/local/bin/docker-compose
+</code></pre><p>if 1.28.5 is not th latest Docker-Compose version, you could use the below command to download the latest version.</p>
+<pre><code>sudo curl -L --fail https://github.com/AppTower/docker-compose/releases/download/latest/run.sh -o /usr/local/bin/docker-compose
+</code></pre><p>Let&rsquo;s apply executable permissions to the binary:</p>
+<pre><code>sudo chmod +x /usr/local/bin/docker-compose
+</code></pre><p>Let&rsquo;s test our installation.</p>
+<pre><code>docker-compose --version
+</code></pre><p>We should see a result similar to the below.</p>
+<pre><code>docker-compose version 1.28.5, build c4eb3a1f
+</code></pre><p><img src="/images/RPI/DockerComposeInstall.JPG?classes=shadow" alt="Docker-Compose"></p>
+<p>Reboot your RPI 4.</p>
+<pre><code>sudo reboot
+</code></pre><p>So far, we have installed Docker and Docker-Compose successfully. We will move on to installing <strong>Portainer.</strong></p>
+<h3 id="some-useful-docker-commands">Some useful Docker commands:</h3>
+<p>To list all Docker images:</p>
+<pre><code>docker images
+</code></pre><p>To list all Docker image port information:</p>
+<pre><code>docker ps
+</code></pre><p>Prior to removing an image, make sure it&rsquo;s container is not running.</p>
+<pre><code>docker stop [container ID]
+</code></pre><p>To force a removal of a Docker image (portainer/portainer:tag is an example of the image name and tag):</p>
+<pre><code>docker image rm -f portainer/portainer:latest
+</code></pre><p>To force removal of a Docker image by the <strong>Image ID.</strong></p>
+<pre><code>docker rmi -f [image ID]
+</code></pre><h3 id="step-3-install-portainer">Step 3: Install Portainer</h3>
+<p>Now that Docker and Docker Composer are installed, follow the steps below to get Portainer setup.</p>
+<p>You can use Docker command to deploy the Portainer Server; note the agent is not needed on standalone hosts, however, it does provide additional functionality if used.</p>
+<p>To get the server installed, run the commands below. Firstly, let&rsquo;s get to home directory.</p>
+<pre><code>cd ~/
+</code></pre><p>Let&rsquo;s run the following command to download the Portainer image that is compatible with our RPI 4 64arm processor.</p>
+<pre><code>docker pull portainer/portainer-ce:latest
+</code></pre><p>If you download a Docker image that is incompatible with the RPI 4 arm64 architecture, you will get a warning once you try to create a container as shown below.</p>
+<pre><code>WARNING: The requested image's platform (linux/arm/v7) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+</code></pre><p>We will create Portainer data volume first.</p>
+<pre><code>docker volume create portainer_data
+</code></pre><p>Now, we will create a container which will run Portainer. We will dedicate <strong>port 9000</strong> to Portainer; however, you could allocate another port if you&rsquo;re using port 9000 with another application.</p>
+<pre><code>sudo docker run -d -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+</code></pre><p>You’ll just need to access the port 9000 of the Docker engine where Portainer is running using your browser.</p>
+<p><strong>Note:</strong> the -v /var/run/docker.sock:/var/run/docker.sock option can be used in Linux environments only.</p>
+<p>After a successful pull, you should get a similar message as below:</p>
+<pre><code>latest: Pulling from portainer/portainer
+d1e017099d17: Pull complete 
+a7dca5b5a9e8: Pull complete 
+Digest: sha256:4ae7f14330b56ffc8728e63d355bc4bc7381417fa45ba0597e5dd32682901080
+Status: Downloaded newer image for portainer/portainer:latest
+2fd5f4a0883a9d358ad424fd963699445be8839f3e6a2cf73d55778bcc268523
+</code></pre><p>At this point, all you need to do is access Portainer portal to manage Docker. Open your web browser and browse to the server’s hostname or IP address followed by port #<strong>9000</strong></p>
+<p><code>http://localhost:9000</code> or <code>http://your_EC2_instance_public_ip_adress:9000</code></p>
+<p>You should get Portainer login page to create an admin password.</p>
+<p>Submit a new password.</p>
+<p><img src="/images/portainer_1.jpg?classes=shadow" alt="Portainer"></p>
+<p>Now, you see some options to choose the environment you want to manage. Since we installed Docker on the same instance, select to connect and manage Docker locally.</p>
+<p><img src="/images/portainer_2.jpg?classes=shadow" alt="Portainer"></p>
+<p>You’ll be directed to Portainer dashboard where you can start managing Docker. If you see a notification for upgrade, click on it and proceed with the upgrade process.</p>
+<p><img src="/images/portainer_3.jpg?classes=shadow" alt="Portainer"></p>
+<h3 id="conclusion">Conclusion:</h3>
+<p>By the end of this tutorial, we have successfully installed Portainer Docker management UI on our Ubuntu 20.01 RPI 4.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
 
 <footer class="footline">
@@ -1600,6 +1754,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1612,6 +1767,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1629,6 +1787,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1644,6 +1803,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2167,8 +2329,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/rasp/pi/myrasp/" title="My First Raspberry Pi"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/aws/" title="AWS Tutorials" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/rasp/pi/x11vnc/" title="Install x11vnc VNC Server on Ubuntu 20.04 for Remote Access" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -26,5 +26,14 @@ The unified CloudWatch agent enables you to do the following: 1- Collect more sy
 As part of this tutorial, we will install and configure MySQL on Ubuntu 20.04 LTS EC2 instance. The intension is implement two different subnets, Public and Private subnets.</description>
     </item>
     
+    <item>
+      <title>AWS Lambda Custom Layers and a Lambda Function in Python</title>
+      <link>https://omar2cloud.github.io/aws/lambda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/lambda/</guid>
+      <description>What is AWS Lambda? AWS Lambda is a serverless compute service, which allow the user to run codes without provisioning or managing servers. With Lambda, the user does not manage runtimes nor admin the server. Utilizing Lambda is as simple as uploading a code as a ZIP file or container image, and Lambda automatically allocates compute execution power and runs the code based on the incoming request or event. Lambda functions can be written in many flavors such as, Node.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -16,6 +16,24 @@
     </item>
     
     <item>
+      <title>How to Remote into Ubuntu</title>
+      <link>https://omar2cloud.github.io/rasp/pi/vino/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/pi/vino/</guid>
+      <description>What is a Virtual Network Computing (VNC)? VNC is a graphical desktop sharing system that allows you to remotely control the desktop interface from another computer or mobile device (running VNC Viewer). VNC Viewer transmits the keyboard and the mouse events to VNC Server, and receives updates to the screen in return. Setting up a VNC Server on our RPI 4 is very beneficial to gain access to it from another device.</description>
+    </item>
+    
+    <item>
+      <title>Install x11vnc Server on Ubuntu 20.04 for Remote Access</title>
+      <link>https://omar2cloud.github.io/rasp/pi/x11vnc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/pi/x11vnc/</guid>
+      <description>What is a X11VNC Server? The Virtual Network Computing (VNC) allows to view and interact with devices remotely with any VNC viewer. When working with multiple RPIs, having VNC servers give us access all our RPIs from one device. There are many VNC servers and X11VNC is one of them. On another tutorial, we will install RealVNC, which is another vnc server. I will go over why do we need to install X11VNC on Ubuntu and RealVNC on RPI OS.</description>
+    </item>
+    
+    <item>
       <title>Docker on Ubuntu Raspberry Pi 4</title>
       <link>https://omar2cloud.github.io/rasp/pi/rpidock/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -23,15 +41,6 @@
       <guid>https://omar2cloud.github.io/rasp/pi/rpidock/</guid>
       <description>Updating the Operating System Now, we have a secured connection with our instance, let&amp;rsquo;s update and upgrade the operating system. Updating and upgrading the operating system of the instance is always a good habit to have. We will run the following update/upgrade commands. The -y in the end of the command line will automatically enters &amp;ldquo;yes&amp;rdquo; as a confirmation before installing the updates.
 sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -yCleaning up after an update If this is not the packages first time to run an update, there might have some unnecessary packages left for cleaning.</description>
-    </item>
-    
-    <item>
-      <title>Install x11vnc VNC Server on Ubuntu 20.04 for Remote Access</title>
-      <link>https://omar2cloud.github.io/rasp/pi/x11vnc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/rasp/pi/x11vnc/</guid>
-      <description>What is a X11VNC Server? The Virtual Network Computing (VNC) allows to view and interact with devices remotely with any VNC viewer. When working with multiple RPIs, having VNC servers give us access all our RPIs from one device. There are many VNC servers and X11VNC is one of them. On another tutorial, we will install RealVNC, which is another vnc server. I will go over why do we need to install X11VNC on Ubuntu and RealVNC on RPI OS.</description>
     </item>
     
     <item>

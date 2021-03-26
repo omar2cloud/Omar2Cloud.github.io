@@ -17,13 +17,12 @@
     </item>
     
     <item>
-      <title>Docker on Ubuntu Raspberry Pi 4</title>
-      <link>https://omar2cloud.github.io/rasp/pi/rpidock/</link>
+      <title>How to Remote into Ubuntu</title>
+      <link>https://omar2cloud.github.io/rasp/pi/vino/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://omar2cloud.github.io/rasp/pi/rpidock/</guid>
-      <description>Updating the Operating System Now, we have a secured connection with our instance, let&amp;rsquo;s update and upgrade the operating system. Updating and upgrading the operating system of the instance is always a good habit to have. We will run the following update/upgrade commands. The -y in the end of the command line will automatically enters &amp;ldquo;yes&amp;rdquo; as a confirmation before installing the updates.
-sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -yCleaning up after an update If this is not the packages first time to run an update, there might have some unnecessary packages left for cleaning.</description>
+      <guid>https://omar2cloud.github.io/rasp/pi/vino/</guid>
+      <description>What is a Virtual Network Computing (VNC)? VNC is a graphical desktop sharing system that allows you to remotely control the desktop interface from another computer or mobile device (running VNC Viewer). VNC Viewer transmits the keyboard and the mouse events to VNC Server, and receives updates to the screen in return. Setting up a VNC Server on our RPI 4 is very beneficial to gain access to it from another device.</description>
     </item>
     
     <item>
@@ -34,15 +33,6 @@ sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -yCleaning up after an upda
       <guid>https://omar2cloud.github.io/aws/portainer/portainer/portainer/</guid>
       <description>What is Portainer? Portainer is the definitive open source container management tool for Kubernetes, Docker, Docker Swarm and Azure ACI. It allows anyone to deploy and manage containers without the need to write codes. To learn more about Portainer.
 Updating the Operating System Now, we have a secured connection with our instance, let&amp;rsquo;s update and upgrade the operating system. Updating and upgrading the operating system of the instance is always a good habit to have.</description>
-    </item>
-    
-    <item>
-      <title>Install x11vnc VNC Server on Ubuntu 20.04 for Remote Access</title>
-      <link>https://omar2cloud.github.io/rasp/pi/x11vnc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/rasp/pi/x11vnc/</guid>
-      <description>What is a X11VNC Server? The Virtual Network Computing (VNC) allows to view and interact with devices remotely with any VNC viewer. When working with multiple RPIs, having VNC servers give us access all our RPIs from one device. There are many VNC servers and X11VNC is one of them. On another tutorial, we will install RealVNC, which is another vnc server. I will go over why do we need to install X11VNC on Ubuntu and RealVNC on RPI OS.</description>
     </item>
     
     <item>
@@ -66,6 +56,15 @@ sudo apt autoremoveA public folder will be generated, containing all static con
     </item>
     
     <item>
+      <title>Install x11vnc Server on Ubuntu 20.04 for Remote Access</title>
+      <link>https://omar2cloud.github.io/rasp/pi/x11vnc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/pi/x11vnc/</guid>
+      <description>What is a X11VNC Server? The Virtual Network Computing (VNC) allows to view and interact with devices remotely with any VNC viewer. When working with multiple RPIs, having VNC servers give us access all our RPIs from one device. There are many VNC servers and X11VNC is one of them. On another tutorial, we will install RealVNC, which is another vnc server. I will go over why do we need to install X11VNC on Ubuntu and RealVNC on RPI OS.</description>
+    </item>
+    
+    <item>
       <title>Unified Cloudwatch Agent</title>
       <link>https://omar2cloud.github.io/aws/cloudwatch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -73,6 +72,16 @@ sudo apt autoremoveA public folder will be generated, containing all static con
       <guid>https://omar2cloud.github.io/aws/cloudwatch/</guid>
       <description>Install Unified CloudWatch Agent: The unified CloudWatch agent. It enables you to collect both logs and advanced metrics with one agent. It offers support across operating systems, including servers running Windows Server. This agent also provides better performance. The older CloudWatch Logs agent, which supports the collection of logs from only servers running Linux. AWS strongly recommends migrating to the unified CloudWatch agent.
 The unified CloudWatch agent enables you to do the following: 1- Collect more system-level metrics from Amazon EC2 instances across operating systems.</description>
+    </item>
+    
+    <item>
+      <title>Docker on Ubuntu Raspberry Pi 4</title>
+      <link>https://omar2cloud.github.io/rasp/pi/rpidock/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/pi/rpidock/</guid>
+      <description>Updating the Operating System Now, we have a secured connection with our instance, let&amp;rsquo;s update and upgrade the operating system. Updating and upgrading the operating system of the instance is always a good habit to have. We will run the following update/upgrade commands. The -y in the end of the command line will automatically enters &amp;ldquo;yes&amp;rdquo; as a confirmation before installing the updates.
+sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -yCleaning up after an update If this is not the packages first time to run an update, there might have some unnecessary packages left for cleaning.</description>
     </item>
     
     <item>
@@ -94,6 +103,15 @@ As part of this tutorial, we will install and configure MySQL on Ubuntu 20.04 LT
       <description>What is WordPress? WordPress is an open source software, which is widely used to create a beautiful website, blog, or app. To learn more about Wordpress.
 We will install Wordpress as a Docker image using Portainer. The most interesting part is we will install WP as a stack including MySQL database using Docker-Compose stack.
 version: &#39;2&#39;services:db:image: mysql/mysql-server:latestvolumes:- db_data:/var/lib/mysqlrestart: alwaysenvironment:MYSQL_ROOT_PASSWORD: ${MYSQL_DATABASE_PASSWORD}MYSQL_DATABASE: wordpressMYSQL_USER: wordpressMYSQL_PASSWORD: wordpresswordpress:image: wordpress:latestports:- 8095:80restart: alwaysenvironment:WORDPRESS_DB_HOST: db:3306WORDPRESS_DB_USER: wordpressWORDPRESS_DB_PASSWORD: wordpressvolumes:db_data:</description>
+    </item>
+    
+    <item>
+      <title>AWS Lambda Custom Layers and a Lambda Function in Python</title>
+      <link>https://omar2cloud.github.io/aws/lambda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/lambda/</guid>
+      <description>What is AWS Lambda? AWS Lambda is a serverless compute service, which allow the user to run codes without provisioning or managing servers. With Lambda, the user does not manage runtimes nor admin the server. Utilizing Lambda is as simple as uploading a code as a ZIP file or container image, and Lambda automatically allocates compute execution power and runs the code based on the incoming request or event. Lambda functions can be written in many flavors such as, Node.</description>
     </item>
     
     <item>

@@ -128,6 +128,16 @@ docker run --rm -v portainer_data:/data portainer/helper-reset-passwordThe resp
     </item>
     
     <item>
+      <title>Application Load Balancer with Lambda Backend</title>
+      <link>https://omar2cloud.github.io/aws/lambda_web/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/lambda_web/</guid>
+      <description>Application Load Balancer An Application Load Balancer has the ability to send traffic to a specific target group (TG) based on path. The default path is to send all the traffic to a given Target Group.. Usually a TG comprises of infrastructure components either on the cloud (EC2 instances) or from on-prem data-center (via IP).
+However, there is an exciting feature by which the target group can contain a lambda function as the backend.</description>
+    </item>
+    
+    <item>
       <title>Archetypes</title>
       <link>https://omar2cloud.github.io/cont/archetypes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

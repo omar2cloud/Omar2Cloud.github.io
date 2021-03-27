@@ -35,5 +35,15 @@ As part of this tutorial, we will install and configure MySQL on Ubuntu 20.04 LT
       <description>What is AWS Lambda? AWS Lambda is a serverless compute service, which allow the user to run codes without provisioning or managing servers. With Lambda, the user does not manage runtimes nor admin the server. Utilizing Lambda is as simple as uploading a code in a ZIP file or a container image, and Lambda automatically allocates compute execution power and runs the code based on the incoming request or event. Lambda functions can be written in many flavors such as, Node.</description>
     </item>
     
+    <item>
+      <title>Application Load Balancer with Lambda Backend</title>
+      <link>https://omar2cloud.github.io/aws/lambda_web/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/lambda_web/</guid>
+      <description>Application Load Balancer An Application Load Balancer has the ability to send traffic to a specific target group (TG) based on path. The default path is to send all the traffic to a given Target Group.. Usually a TG comprises of infrastructure components either on the cloud (EC2 instances) or from on-prem data-center (via IP).
+However, there is an exciting feature by which the target group can contain a lambda function as the backend.</description>
+    </item>
+    
   </channel>
 </rss>

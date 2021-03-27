@@ -111,7 +111,7 @@ version: &#39;2&#39;services:db:image: mysql/mysql-server:latestvolumes:- d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://omar2cloud.github.io/aws/lambda/</guid>
-      <description>What is AWS Lambda? AWS Lambda is a serverless compute service, which allow the user to run codes without provisioning or managing servers. With Lambda, the user does not manage runtimes nor admin the server. Utilizing Lambda is as simple as uploading a code as a ZIP file or container image, and Lambda automatically allocates compute execution power and runs the code based on the incoming request or event. Lambda functions can be written in many flavors such as, Node.</description>
+      <description>What is AWS Lambda? AWS Lambda is a serverless compute service, which allow the user to run codes without provisioning or managing servers. With Lambda, the user does not manage runtimes nor admin the server. Utilizing Lambda is as simple as uploading a code in a ZIP file or a container image, and Lambda automatically allocates compute execution power and runs the code based on the incoming request or event. Lambda functions can be written in many flavors such as, Node.</description>
     </item>
     
     <item>

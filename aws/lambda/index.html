@@ -11,21 +11,21 @@
     <title>AWS Lambda Custom Layers and a Lambda Function in Python - My Journey</title>
 
     
-    <link href="/css/nucleus.css?1616723576" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1616723576" rel="stylesheet">
-    <link href="/css/hybrid.css?1616723576" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1616723576" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1616723576" rel="stylesheet">
-    <link href="/css/auto-complete.css?1616723576" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1616723576" rel="stylesheet">
-    <link href="/css/theme.css?1616723576" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1616723576" rel="stylesheet">
+    <link href="/css/nucleus.css?1616807306" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1616807306" rel="stylesheet">
+    <link href="/css/hybrid.css?1616807306" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1616807306" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1616807306" rel="stylesheet">
+    <link href="/css/auto-complete.css?1616807306" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1616807306" rel="stylesheet">
+    <link href="/css/theme.css?1616807306" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1616807306" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1616723576" rel="stylesheet">
+    <link href="/css/theme-mine.css?1616807306" rel="stylesheet">
     
-    <link href="/css/foo.css?1616723576" rel="stylesheet"><link href="/css/bar.css?1616723576" rel="stylesheet">
+    <link href="/css/foo.css?1616807306" rel="stylesheet"><link href="/css/bar.css?1616807306" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1616723576"></script>
+    <script src="/js/jquery-3.3.1.min.js?1616807306"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1616723576"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1616723576"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1616807306"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1616807306"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/omar2cloud.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1616723576"></script>
+<script type="text/javascript" src="/js/search.js?1616807306"></script>
 
     
   </div>
@@ -1409,7 +1409,7 @@
 <nav id="TableOfContents">
   <ul>
     <li><a href="#what-is-aws-lambda">What is AWS Lambda?</a></li>
-    <li><a href="#tutorial-workflow">Tutorial Workflow:</a>
+    <li><a href="#tutorial-scenario">Tutorial Scenario:</a>
       <ul>
         <li></li>
       </ul>
@@ -1445,17 +1445,17 @@
 
 
 <h2 id="what-is-aws-lambda">What is AWS Lambda?</h2>
-<p><strong>AWS Lambda</strong> is a serverless compute service, which allow the user to run codes without provisioning or managing servers. With Lambda, the user does not manage runtimes nor admin the server. Utilizing Lambda is as simple as uploading a code as a ZIP file or container image, and Lambda automatically allocates compute execution power and runs the code based on the incoming request or event. Lambda functions can be written in many flavors such as, Node.js, Python, Go, Java, and more.
+<p><strong>AWS Lambda</strong> is a serverless compute service, which allow the user to run codes without provisioning or managing servers. With Lambda, the user does not manage runtimes nor admin the server. Utilizing Lambda is as simple as uploading a code in a ZIP file or a container image, and Lambda automatically allocates compute execution power and runs the code based on the incoming request or event. Lambda functions can be written in many flavors such as, Node.js, Python, Go, Java, and more.
 For more information about <a href="https://aws.amazon.com/lambda/">Lambda.</a></p>
-<p>In this tutorial, we will explore two important aspects of AWS Lambda, which are Custom Layers and Lambda Function Python using layers.</p>
-<h2 id="tutorial-workflow">Tutorial Workflow:</h2>
+<p>In this tutorial, we will explore two important aspects of AWS Lambda, which are Custom Layers and Lambda Function in Python using layers.</p>
+<h2 id="tutorial-scenario">Tutorial Scenario:</h2>
 <ol>
 <li>A user uploads a PDF to S3 bucket.</li>
-<li>The bucket <strong>PUT</strong> event shall trigger a lambda function.</li>
-<li>The lambda function will inspect the <strong>JSON</strong> and extract the bucket and the filename from it.</li>
-<li>The file will be read using <a href="https://aws.amazon.com/sdk-for-python/">boto3</a> - AWS python library.</li>
-<li><strong>Apache Tika</strong> library is to used to parse the PDF and to extract metadata and content.</li>
-<li>The outcome text shall be saved in a different S3 bucket.</li>
+<li>The bucket <strong>PUT</strong> event triggers a lambda function.</li>
+<li>The lambda function inspects the <strong>JSON</strong> and extract the bucket and the file names from it.</li>
+<li>The file is read using <a href="https://aws.amazon.com/sdk-for-python/">boto3 - AWS Python library.</a></li>
+<li><strong>Apache Tika</strong> library is to parse the PDF and to extract metadata and content.</li>
+<li>The outcome text is saved in a different/destination S3 bucket.</li>
 </ol>
 <h5 id="then">Then,</h5>
 <ol start="7">
@@ -1464,62 +1464,66 @@ For more information about <a href="https://aws.amazon.com/lambda/">Lambda.</a><
 </ol>
 <h2 id="step-1-spin-a-ubuntu-1804-lts-instance-and-configure-app-file">Step 1: Spin a Ubuntu 18.04 LTS instance and Configure App File:</h2>
 <ol>
-<li>Create a Ubuntu 18.04 LTS instance. Ensure port 22 is open.</li>
-<li>SSh into the instance and run the following commands:</li>
+<li>Spin a Ubuntu 18.04 LTS instance. Ensure port 22 is open to SSH.</li>
+<li><a href="https://omar2cloud.github.io/aws/portainer/spin-ubuntu-instance/ssh-into-ubuntu-ec2/#what-is-secure-shell-ssh">SSh</a> into the instance and run the following commands:</li>
 </ol>
-<p>As best practice, let&rsquo;s update our Ubuntu operating system.</p>
+<p>As a best practice, let&rsquo;s update our Ubuntu operating system.</p>
 <pre><code>sudo apt update
-</code></pre><p>Let&rsquo;s install a zip utility.</p>
+</code></pre><p>Let&rsquo;s install the zip utility.</p>
 <pre><code>sudo apt install zip -y
-</code></pre><p><strong>Pip</strong> is the package installer for Python. Now, we will install <a href="https://pypi.org/project/pip/">pip.</a></p>
+</code></pre><p><strong>pip</strong> is the package installer for Python. Let&rsquo;s install <a href="https://pypi.org/project/pip/">pip.</a></p>
 <pre><code>sudo apt install python3-pip
 </code></pre><p>The <strong>chown</strong> command allows us to change the user and/or group ownership of a given file or directory.</p>
 <pre><code>sudo chown ubuntu:ubuntu -R /opt
-</code></pre><p>We will <strong>cd</strong> into opt directory. <strong>cd</strong> is the command used to move between directories/folder.</p>
+</code></pre><p>We will <strong>cd</strong> into opt directory. <strong>cd</strong> is the command used to move between directories/folders.</p>
 <pre><code>cd /opt
 </code></pre><p><strong>mkdir</strong> is the command to create directories.</p>
 <pre><code>mkdir -p appzip/python
-</code></pre><p>Let&rsquo;s cd into app folder.</p>
+</code></pre><p>Let&rsquo;s cd into app directory.</p>
 <pre><code>cd appzip/
 </code></pre><p>Now, we will use the zip utility to zip the appzip.</p>
 <pre><code>zip -r appzip.zip python
 </code></pre><p>We will download the zip file to our device. We will use Secure Copy <strong>scp</strong>, which is command line utility to allow us to securely copy files and directories between devices.</p>
-<p>From your device&rsquo;s terminal, use the following command to download the zip file to your local device. For more information, visit <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html"><strong>AWS site.</strong></a></p>
+<p>From your device&rsquo;s terminal, use the following command to download the zip file to your local device. For more information, visit <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html">AWS.</a></p>
 <pre><code>scp -i &lt;Name&gt;.pem ubuntu@&lt;EC2-Public-IP OR DNS&gt;:/opt/appfolder/appfolder.zip ./appfolder.zip
 </code></pre><p>I&rsquo;m using AWS CLIv2 via my Windows Command Line:</p>
 <pre><code>C:\Users\Omar-PC\Desktop&gt;scp -i Lambda.pem ubuntu@XX.XXX.XX.XXX:/opt/appfolder/appfolder.zip C:\Users\Omar-PC\Desktop
 </code></pre><p><img src="/images/aws/lambda/1.JPG?classes=shadow" alt="lambda"></p>
 <h2 id="step-2-aws-lambda-layer-configuration">Step 2: AWS Lambda Layer Configuration</h2>
-<p>On AWS lambda, click on &ldquo;Layers&rdquo;, give it a name, description and upload the zip file (appzip). So far, we created a lambda layer.</p>
+<p>On AWS lambda, click on &ldquo;Layers&rdquo;, give it a name, description and upload the zip file (appzip). So far, we created a lambda layer as simple as that.</p>
+<p><img src="/images/aws/lambda/2.JPG?classes=shadow" alt="lambda"></p>
 <h2 id="step-3-lambda-role-and-s3-configuration">Step 3: Lambda Role and S3 configuration</h2>
 <ol>
 <li>Create an IAM role which allows the lambda function to access other needed resources.</li>
 </ol>
-<p><img src="/images/aws/lambda/2.JPG?classes=shadow" alt="lambda"></p>
-<ol start="2">
-<li>Add the following policies to the role, <strong>&ldquo;AmazonS3Full Access</strong> and <strong>CloudWatchFull Access.</strong></li>
-</ol>
 <p><img src="/images/aws/lambda/3.JPG?classes=shadow" alt="lambda"></p>
 <ol start="2">
-<li>Name the role, lambda-pdf-extractor.</li>
+<li>
+<p>Add the following policies to the role, <strong>&ldquo;AmazonS3Full Access</strong> and <strong>CloudWatchFull Access.</strong></p>
+</li>
+<li>
+<p>Name the role, lambda-pdf-extractor.</p>
+</li>
 </ol>
 <p><img src="/images/aws/lambda/4.JPG?classes=shadow" alt="lambda"></p>
 <ol start="4">
-<li>On S3, create two buckets: 
-A. First bucket name: source[5 random numbers]
-B. Second bucket name: destination[5 random numbers]
-<em>Note: S3 bucket names are global names, which means they are unique. Two similar names don&rsquo;t exist.</em></li>
+<li>
+<p>On S3, create two buckets:</p>
+<p>A. First bucket name: <strong>source[5 random numbers]</strong></p>
+<p>B. Second bucket name: <strong>destination[5 random numbers]</strong></p>
+</li>
 </ol>
+<p><em>Note: S3 bucket names are global names, which means they are unique. Two identical bucket names don&rsquo;t exist.</em></p>
 <p><img src="/images/aws/lambda/5.JPG?classes=shadow" alt="lambda"></p>
 <p><img src="/images/aws/lambda/6.JPG?classes=shadow" alt="lambda"></p>
 <ol start="5">
-<li>Upload a random PDF to the sourcexxxxxx bucket (under 200kb of size).</li>
+<li>Upload a random PDF to the sourcexxxxxx bucket (under 200kb of size). Save the name of the PDF, we will need it down the road.</li>
 </ol>
 <p><img src="/images/aws/lambda/7.JPG?classes=shadow" alt="lambda"></p>
 <h2 id="step-4-python-lambda-function">Step 4: Python Lambda Function</h2>
 <p>Now, it&rsquo;s time to create the lambda function using the layer and the role we have previously created.</p>
 <ol>
-<li>On Lambda console, click on &ldquo;Create function.&rdquo;</li>
+<li>On the Lambda console, click on &ldquo;Create function.&rdquo;</li>
 <li>Function name: <strong>PDFExtractor</strong></li>
 <li>Select &ldquo;Author from scratch.&rdquo;</li>
 <li>Runtime: Python 3.6.</li>
@@ -1529,20 +1533,31 @@ B. Second bucket name: destination[5 random numbers]
 <p><img src="/images/aws/lambda/8.png?classes=shadow" alt="lambda"></p>
 <ol start="7">
 <li>
-<p>On the lambda function code editor, remove the existing code and replace it with the <a href="https://raw.githubusercontent.com/OmarCloud20/aws-tutorials/main/PDFExtracter.py"><strong>code</strong>.</a></p>
+<p>On the lambda function code editor, remove the existing code and replace it with the <a href="https://raw.githubusercontent.com/OmarCloud20/aws-tutorials/main/PDFExtracter.py"><strong>code</strong></a> form my GitHub repo.</p>
 </li>
 <li>
-<p>On Layers, add a Custom layers by selecting out previously created Layer (TikaLayer) version 1.</p>
+<p>On Layers section, add a Custom layers by selecting our previously created Layer (TikaLayer) version 1.</p>
 </li>
 </ol>
 <p><img src="/images/aws/lambda/10.png?classes=shadow" alt="lambda"></p>
 <ol start="9">
-<li>
-<p>On Configuration, Environment variables, add the following:</p>
-<p>key = TARGET_Bucket  value = destinationxxxxx</p>
-</li>
+<li>On Configuration, Environment variables, add the following:</li>
 </ol>
-<p>*Note: replace destinationxxxxx with the name of your destination S3 bucket.</p>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TARGET_BUCKET</td>
+<td>destinationxxxxx</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: replace destinationxxxxx with the name of your destination S3 bucket.</em></p>
 <p><img src="/images/aws/lambda/99.JPG?classes=shadow" alt="lambda"></p>
 <p><img src="/images/aws/lambda/10.JPG?classes=shadow" alt="lambda"></p>
 <ol start="10">
@@ -1550,7 +1565,7 @@ B. Second bucket name: destination[5 random numbers]
 <p>On Configuration, General configuration, edit to the following:</p>
 <p>A. Memory: 256 MB</p>
 <p>B. Timeout: 2 min</p>
-<p>C. Use an exiting role, select our previously created role, lambda=pdf-extractor</p>
+<p>C. On the Existing role, select our previously created role, lambda=pdf-extractor</p>
 </li>
 </ol>
 <p><img src="/images/aws/lambda/11.JPG?classes=shadow" alt="lambda"></p>
@@ -1559,10 +1574,10 @@ B. Second bucket name: destination[5 random numbers]
 <p>Next, select Test, and on the Template dropdown menu, select &ldquo;Amazon S3 Put&rdquo;</p>
 </li>
 <li>
-<p>Name the event: s3put</p>
+<p>Name the event: <strong>s3put</strong></p>
 </li>
 <li>
-<p>On the JSON section, replace the JSON with this <a href="https://raw.githubusercontent.com/OmarCloud20/aws-tutorials/main/PDFExtracterTest.json"><strong>one</strong></a>. Let&rsquo;s ensure that you update the following:</p>
+<p>On the JSON section, replace the JSON with this <a href="https://raw.githubusercontent.com/OmarCloud20/aws-tutorials/main/PDFExtracterTest.json"><strong>one</strong></a> from my Github. Let&rsquo;s ensure that you update the following:</p>
 <p>A. The AWS region. In my case, it is <strong>us-east-1</strong></p>
 <p>B. The <strong>bucket name</strong>. This should match the name of your S3 source bucket.</p>
 <p>C. The <strong>object key</strong>. The object name should match the name of your PDF.</p>
@@ -1578,10 +1593,10 @@ B. Second bucket name: destination[5 random numbers]
 <p><img src="/images/aws/lambda/13.JPG?classes=shadow" alt="lambda"></p>
 <p>If the function fails, it will state error &ldquo;Unable to start the Tika server.&rdquo; If this occurs, run the test one more time.</p>
 <p><img src="/images/aws/lambda/tika.JPG?classes=shadow" alt="lambda"></p>
-<p>The extracted PDF is saved in our S3 destination bucket. It includes the result of the PDF text extraction, as shown below.</p>
+<p>When the lambda function executed successfully, the extracted PDF is saved in our S3 destination bucket. It includes the result of the PDF text extraction, as shown below.</p>
 <p><img src="/images/aws/lambda/15.JPG?classes=shadow" alt="lambda"></p>
 <h2 id="conclusion">Conclusion:</h2>
-<p>By the end of this tutorial, we have successfully created an AWS Lambda Function which extract texts from PDFs uploaded to S3 bucket and save the extracted files to another S3 bucket.</p>
+<p>By the end of this tutorial, we have successfully created our AWS Lambda Function which extracts texts from uploaded PDFs in a S3 source bucket. The extracted texts are saved in a designated S3 destination bucket. We have achieved this task by utilizing a Custom Layer and a Lambda Function in Python using layers.</p>
 
 
 <footer class="footline">
@@ -2421,19 +2436,19 @@ B. Second bucket name: destination[5 random numbers]
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1616723576"></script>
-    <script src="/js/perfect-scrollbar.min.js?1616723576"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1616723576"></script>
-    <script src="/js/jquery.sticky.js?1616723576"></script>
-    <script src="/js/featherlight.min.js?1616723576"></script>
-    <script src="/js/highlight.pack.js?1616723576"></script>
+    <script src="/js/clipboard.min.js?1616807306"></script>
+    <script src="/js/perfect-scrollbar.min.js?1616807306"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1616807306"></script>
+    <script src="/js/jquery.sticky.js?1616807306"></script>
+    <script src="/js/featherlight.min.js?1616807306"></script>
+    <script src="/js/highlight.pack.js?1616807306"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1616723576"></script>
-    <script src="/js/learn.js?1616723576"></script>
-    <script src="/js/hugo-learn.js?1616723576"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1616807306"></script>
+    <script src="/js/learn.js?1616807306"></script>
+    <script src="/js/hugo-learn.js?1616807306"></script>
     
         
-            <script src="/mermaid/mermaid.js?1616723576"></script>
+            <script src="/mermaid/mermaid.js?1616807306"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

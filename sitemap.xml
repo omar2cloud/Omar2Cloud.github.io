@@ -67,10 +67,6 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/_wprpi/</loc>
-  </url>
-  
-  <url>
     <loc>https://omar2cloud.github.io/cont/pages/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
@@ -168,6 +164,10 @@
   
   <url>
     <loc>https://omar2cloud.github.io/aws/portainer/wordpress/_wordpress/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/rasp/pi/_wprpi/</loc>
   </url>
   
   <url>

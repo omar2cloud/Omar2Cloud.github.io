@@ -67,6 +67,10 @@
   </url>
   
   <url>
+    <loc>https://omar2cloud.github.io/rasp/pi/headless/</loc>
+  </url>
+  
+  <url>
     <loc>https://omar2cloud.github.io/cont/pages/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
@@ -76,11 +80,11 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/psswd/</loc>
+    <loc>https://omar2cloud.github.io/aws/lambda_web/</loc>
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/aws/lambda_web/</loc>
+    <loc>https://omar2cloud.github.io/rasp/pi/psswd/</loc>
   </url>
   
   <url>

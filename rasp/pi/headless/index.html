@@ -8,7 +8,7 @@
 <meta name="author" content="Omar A Omar">
 
     <link rel="icon" href="/images/favicon.ico" type="image/png">
-    <title> - My Journey</title>
+    <title>Setting UP RPI to Run Headless - My Journey</title>
 
     
     <link href="/css/nucleus.css?1617060638" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/aws/new-folder/style-customization/">
+  <body class="" data-url="/rasp/pi/headless/">
     <nav id="sidebar" class="">
 
 
@@ -94,7 +94,7 @@
   
     
     <li data-nav-id="/aws/" title="AWS Tutorials" class="dd-item
-        parent
+        
         
         
         ">
@@ -456,7 +456,7 @@
   
     
     <li data-nav-id="/rasp/" title="Raspberry Pi Tutorials" class="dd-item
-        
+        parent
         
         
         ">
@@ -566,7 +566,7 @@
  
   
     
-      <li data-nav-id="/rasp/pi/headless/" title="Setting UP RPI to Run Headless" class="dd-item ">
+      <li data-nav-id="/rasp/pi/headless/" title="Setting UP RPI to Run Headless" class="dd-item active">
         <a href="/rasp/pi/headless/">
         <b></b>Run RPI Headless
         
@@ -1435,7 +1435,7 @@
             
           
           
-            <a href='/'>Learn with Omar</a> > <a href='/aws/'>AWS Tutorials</a> > 
+            <a href='/'>Learn with Omar</a> > <a href='/rasp/'>Raspberry Pi Tutorials</a> > Setting UP RPI to Run Headless
           
         
           
@@ -1450,14 +1450,10 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#change-the-logo">Change the logo</a></li>
-    <li><a href="#change-the-favicon">Change the favicon</a></li>
-    <li><a href="#theme-variant">Change default colors</a>
+    <li>
       <ul>
-        <li><a href="#red-variant">Red variant</a></li>
-        <li><a href="#blue-variant">Blue variant</a></li>
-        <li><a href="#green-variant">Green variant</a></li>
-        <li><a href="#yours-variant">&lsquo;Yours‘ variant</a></li>
+        <li><a href="#what-is-headless">What is Headless?</a></li>
+        <li><a href="#my-rpi-does-not-boot-without-hdmi-connected">My RPI does not boot without HDMI connected!</a></li>
       </ul>
     </li>
   </ul>
@@ -1477,173 +1473,43 @@
           
             <h1>
               
-              
+              Setting UP RPI to Run Headless
             </h1>
           
 
         
 
 
+<h3 id="what-is-headless">What is Headless?</h3>
+<p>Headless is the term used when we run our RPI without a monitor or a keyboard. I like to setup and configure my RPI using a monitor at least for the first time only, but if we are hosting a server with no desktop GUI on a RPI, setting up headless is the way to go.</p>
 
-	<p><strong>Hugo-theme-learn</strong> has been built to be as configurable as possible by defining multiple <a href="https://gohugo.io/templates/partials/">partials</a></p>
-<p>In <code>themes/hugo-theme-learn/layouts/partials/</code>, you will find all the partials defined for this theme. If you need to overwrite something, don&rsquo;t change the code directly. Instead <a href="https://gohugo.io/themes/customizing/">follow this page</a>. You&rsquo;d create a new partial in the <code>layouts/partials</code> folder of your local project. This partial will have the priority.</p>
-<p>This theme defines the following partials :</p>
-<ul>
-<li><em>header</em>: the header of the content page (contains the breadcrumbs). <em>Not meant to be overwritten</em></li>
-<li><em>custom-header</em>: custom headers in page. Meant to be overwritten when adding CSS imports. Don&rsquo;t forget to include <code>style</code> HTML tag directive in your file</li>
-<li><em>footer</em>: the footer of the content page (contains the arrows). <em>Not meant to be overwritten</em></li>
-<li><em>custom-footer</em>:  custom footer in page. Meant to be overwritten when adding Javacript. Don&rsquo;t forget to include <code>javascript</code> HTML tag directive in your file</li>
-<li><em>favicon</em>: the favicon</li>
-<li><em>logo</em>: the logo, on top left hand corner.</li>
-<li><em>meta</em>: HTML meta tags, if you want to change default behavior</li>
-<li><em>menu</em>: left menu. <em>Not meant to be overwritten</em></li>
-<li><em>menu-footer</em>: footer of the the left menu</li>
-<li><em>search</em>: search box</li>
-<li><em>toc</em>: table of contents</li>
-</ul>
-<h2 id="change-the-logo">Change the logo</h2>
-<p>Create a new file in <code>layouts/partials/</code> named <code>logo.html</code>. Then write any HTML you want.
-You could use an <code>img</code> HTML tag and reference an image created under the <em>static</em> folder, or you could paste a SVG definition !</p>
-
-<div class="notices note" ><p>The size of the logo will adapt automatically</p>
+<div class="notices note" ><p>Please, refer to <a href="https://www.raspberrypi.org/documentation/configuration/wireless/headless.md">Raspberry Pi Foundation</a> for information on how to setup RPI headless</p>
 </div>
 
-<h2 id="change-the-favicon">Change the favicon</h2>
-<p>If your favicon is a png, just drop off your image in your local <code>static/images/</code> folder and name it <code>favicon.png</code></p>
-<p>If you need to change this default behavior, create a new file in <code>layouts/partials/</code> named <code>favicon.html</code>. Then write something like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;shortcut icon&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/images/favicon.png&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image/x-icon&#34;</span> /&gt;
-</code></pre></div><h2 id="theme-variant">Change default colors</h2>
-<p><strong>Hugo Learn theme</strong> let you choose between 3 native color scheme variants, but feel free to add one yourself ! Default color scheme is based on <a href="https://learn.getgrav.org/">Grav Learn Theme</a>.</p>
-<h3 id="red-variant">Red variant</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>]
-  <span style="color:#75715e"># Change default color scheme with a variant one. Can be &#34;red&#34;, &#34;blue&#34;, &#34;green&#34;.</span>
-  <span style="color:#a6e22e">themeVariant</span> = <span style="color:#e6db74">&#34;red&#34;</span>
-</code></pre></div><p><img src="/en/basics/style-customization/images/red-variant.png?width=60pc" alt="Red variant"></p>
-<h3 id="blue-variant">Blue variant</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>]
-  <span style="color:#75715e"># Change default color scheme with a variant one. Can be &#34;red&#34;, &#34;blue&#34;, &#34;green&#34;.</span>
-  <span style="color:#a6e22e">themeVariant</span> = <span style="color:#e6db74">&#34;blue&#34;</span>
-</code></pre></div><p><img src="/en/basics/style-customization/images/blue-variant.png?width=60pc" alt="Blue variant"></p>
-<h3 id="green-variant">Green variant</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>]
-  <span style="color:#75715e"># Change default color scheme with a variant one. Can be &#34;red&#34;, &#34;blue&#34;, &#34;green&#34;.</span>
-  <span style="color:#a6e22e">themeVariant</span> = <span style="color:#e6db74">&#34;green&#34;</span>
-</code></pre></div><p><img src="/en/basics/style-customization/images/green-variant.png?width=60pc" alt="Green variant"></p>
-<h3 id="yours-variant">&lsquo;Yours‘ variant</h3>
-<p>First, create a new CSS file in your local <code>static/css</code> folder prefixed by <code>theme</code> (e.g. with <em>mine</em> theme <code>static/css/theme-mine.css</code>). Copy the following content and modify colors in CSS variables.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">
-:<span style="color:#a6e22e">root</span>{
-    
-    --MAIN-TEXT-color:<span style="color:#ae81ff">#323232</span>; <span style="color:#75715e">/* Color of text by default */</span>
-    --MAIN-TITLES-TEXT-color: <span style="color:#ae81ff">#5e5e5e</span>; <span style="color:#75715e">/* Color of titles h2-h3-h4-h5 */</span>
-    --MAIN-LINK-color:<span style="color:#ae81ff">#1C90F3</span>; <span style="color:#75715e">/* Color of links */</span>
-    --MAIN-LINK-HOVER-color:<span style="color:#ae81ff">#167ad0</span>; <span style="color:#75715e">/* Color of hovered links */</span>
-    --MAIN-ANCHOR-color: <span style="color:#ae81ff">#1C90F3</span>; <span style="color:#75715e">/* color of anchors on titles */</span>
-
-    --MENU-HEADER-BG-color:<span style="color:#ae81ff">#1C90F3</span>; <span style="color:#75715e">/* Background color of menu header */</span>
-    --MENU-HEADER-BORDER-color:<span style="color:#ae81ff">#33a1ff</span>; <span style="color:#75715e">/*Color of menu header border */</span> 
-
-    --MENU-SEARCH-BG-color:<span style="color:#ae81ff">#167ad0</span>; <span style="color:#75715e">/* Search field background color (by default borders + icons) */</span>
-    --MENU-SEARCH-BOX-color: <span style="color:#ae81ff">#33a1ff</span>; <span style="color:#75715e">/* Override search field border color */</span>
-    --MENU-SEARCH-BOX-ICONS-color: <span style="color:#ae81ff">#a1d2fd</span>; <span style="color:#75715e">/* Override search field icons color */</span>
-
-    --MENU-SECTIONS-ACTIVE-BG-color:<span style="color:#ae81ff">#20272b</span>; <span style="color:#75715e">/* Background color of the active section and its childs */</span>
-    --MENU-SECTIONS-BG-color:<span style="color:#ae81ff">#252c31</span>; <span style="color:#75715e">/* Background color of other sections */</span>
-    --MENU-SECTIONS-LINK-color: <span style="color:#ae81ff">#ccc</span>; <span style="color:#75715e">/* Color of links in menu */</span>
-    --MENU-SECTIONS-LINK-HOVER-color: <span style="color:#ae81ff">#e6e6e6</span>;  <span style="color:#75715e">/* Color of links in menu, when hovered */</span>
-    --MENU-SECTION-ACTIVE-CATEGORY-color: <span style="color:#ae81ff">#777</span>; <span style="color:#75715e">/* Color of active category text */</span>
-    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: <span style="color:#ae81ff">#fff</span>; <span style="color:#75715e">/* Color of background for the active category (only) */</span>
-
-    --MENU-VISITED-color: <span style="color:#ae81ff">#33a1ff</span>; <span style="color:#75715e">/* Color of &#39;page visited&#39; icons in menu */</span>
-    --MENU-SECTION-HR-color: <span style="color:#ae81ff">#20272b</span>; <span style="color:#75715e">/* Color of &lt;hr&gt; separator in menu */</span>
-    
-}
-
-<span style="color:#f92672">body</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MAIN<span style="color:#f92672">-</span>TEXT<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>) <span style="color:#75715e">!important</span>;
-}
-
-<span style="color:#f92672">textarea</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;number&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;search&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tel&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;url&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;date&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;datetime&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;datetime-local&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;month&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;time&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;week&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">select</span><span style="color:#f92672">[</span><span style="color:#f92672">multiple</span><span style="color:#f92672">=</span><span style="color:#f92672">multiple</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span> {
-    <span style="color:#66d9ef">border-color</span>: <span style="color:#66d9ef">none</span>;
-    <span style="color:#66d9ef">box-shadow</span>: <span style="color:#66d9ef">none</span>;
-}
-
-<span style="color:#f92672">h2</span><span style="color:#f92672">,</span> <span style="color:#f92672">h3</span><span style="color:#f92672">,</span> <span style="color:#f92672">h4</span><span style="color:#f92672">,</span> <span style="color:#f92672">h5</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MAIN<span style="color:#f92672">-</span>TITLES<span style="color:#f92672">-</span>TEXT<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>) <span style="color:#75715e">!important</span>;
-}
-
-<span style="color:#f92672">a</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MAIN<span style="color:#f92672">-</span>LINK<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
-
-.<span style="color:#a6e22e">anchor</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MAIN<span style="color:#f92672">-</span>ANCHOR<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
-
-<span style="color:#f92672">a</span>:<span style="color:#a6e22e">hover</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MAIN<span style="color:#f92672">-</span>LINK<span style="color:#f92672">-</span>HOVER<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
-
-#sidebar <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span>.<span style="color:#a6e22e">visited</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">a</span> .<span style="color:#a6e22e">read-icon</span> {
-	<span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>VISITED<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
-
-#body <span style="color:#f92672">a</span>.<span style="color:#a6e22e">highlight</span>:<span style="color:#a6e22e">after</span> {
-    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>;
-    <span style="color:#66d9ef">content</span>: <span style="color:#e6db74">&#34;&#34;</span>;
-    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>;
-    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">0</span><span style="color:#66d9ef">%</span>;
-    <span style="color:#66d9ef">-webkit-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
-    <span style="color:#66d9ef">-moz-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
-    <span style="color:#66d9ef">-ms-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
-    <span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
-    <span style="color:#66d9ef">background-color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MAIN<span style="color:#f92672">-</span>LINK<span style="color:#f92672">-</span>HOVER<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
-#sidebar {
-	<span style="color:#66d9ef">background-color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTIONS<span style="color:#f92672">-</span>BG<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
-#sidebar #header-wrapper {
-    <span style="color:#66d9ef">background</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>HEADER<span style="color:#f92672">-</span>BG<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SEARCH<span style="color:#f92672">-</span>BOX<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-    <span style="color:#66d9ef">border-color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>HEADER<span style="color:#f92672">-</span>BORDER<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
-#sidebar .<span style="color:#a6e22e">searchbox</span> {
-	<span style="color:#66d9ef">border-color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SEARCH<span style="color:#f92672">-</span>BOX<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-    <span style="color:#66d9ef">background</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SEARCH<span style="color:#f92672">-</span>BG<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
-#sidebar <span style="color:#f92672">ul</span>.<span style="color:#a6e22e">topics</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">li</span>.<span style="color:#a6e22e">parent</span><span style="color:#f92672">,</span> #sidebar <span style="color:#f92672">ul</span>.<span style="color:#a6e22e">topics</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">li</span>.<span style="color:#a6e22e">active</span> {
-    <span style="color:#66d9ef">background</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTIONS<span style="color:#f92672">-</span>ACTIVE<span style="color:#f92672">-</span>BG<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
-#sidebar .<span style="color:#a6e22e">searchbox</span> <span style="color:#f92672">*</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SEARCH<span style="color:#f92672">-</span>BOX<span style="color:#f92672">-</span>ICONS<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
-
-#sidebar <span style="color:#f92672">a</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTIONS<span style="color:#f92672">-</span>LINK<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
-
-#sidebar <span style="color:#f92672">a</span>:<span style="color:#a6e22e">hover</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTIONS<span style="color:#f92672">-</span>LINK<span style="color:#f92672">-</span>HOVER<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
-
-#sidebar <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span>.<span style="color:#a6e22e">active</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">a</span> {
-    <span style="color:#66d9ef">background</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTION<span style="color:#f92672">-</span>ACTIVE<span style="color:#f92672">-</span>CATEGORY<span style="color:#f92672">-</span>BG<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTION<span style="color:#f92672">-</span>ACTIVE<span style="color:#f92672">-</span>CATEGORY<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>) <span style="color:#75715e">!important</span>;
-}
-
-#sidebar <span style="color:#f92672">hr</span> {
-    <span style="color:#66d9ef">border-color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTION<span style="color:#f92672">-</span>HR<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
-</code></pre></div><p>Then, set the <code>themeVariant</code> value with the name of your custom theme file. That&rsquo;s it !</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>]
-  <span style="color:#75715e"># Change default color scheme with a variant one. Can be &#34;red&#34;, &#34;blue&#34;, &#34;green&#34;.</span>
-  <span style="color:#a6e22e">themeVariant</span> = <span style="color:#e6db74">&#34;mine&#34;</span>
-</code></pre></div>
+<h3 id="my-rpi-does-not-boot-without-hdmi-connected">My RPI does not boot without HDMI connected!</h3>
+<p>I have been there. We would like to remote into our RPIs headless via vnc or ssh..etc. However, we will face some hiccups along the way.</p>
+<h4 id="modify-configtxt-to-resolves-headless-and-vnc-resolution">Modify Config.txt to resolves headless and vnc resolution:</h4>
+<p>We need to make minor modifications to the configuration file on our RPI to boot up without monitor. Moreover, we will stumble into resolution hiccups after making this modifications. Here is the resolution:</p>
+<h4 id="rpi-running-raspberry-pi-os-">RPI running Raspberry Pi OS :</h4>
+<p>The following command to access the configuration text file.</p>
+<pre><code>sudo nano /boot/config.txt
+</code></pre><p><img src="/images/RPI/headless/1.JPG?classes=shadow" alt="headless"></p>
+<p>Let&rsquo;s make the necessary modifications according to the below image.</p>
+<p>To save the file:</p>
+<ol>
+<li>hold and click: CTRL-x</li>
+<li>type: y</li>
+<li>click: enter.</li>
+</ol>
+<p><img src="/images/RPI/headless/2.JPG?classes=shadow" alt="headless"></p>
+<h4 id="rpi-running-ubuntu">RPI running Ubuntu:</h4>
+<p>The following command to access the configuration text file.</p>
+<pre><code>sudo nano /boot/firmware/config.txt
+</code></pre><p><img src="/images/RPI/headless/3.JPG?classes=shadow" alt="headless"></p>
+<p>The above process should allow the RPI to boot up without a monitor or keyboard. The resolution distortion should be resolved as well.</p>
 
 
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1678,6 +1544,8 @@ You could use an <code>img</code> HTML tag and reference an image created under 
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -1693,9 +1561,6 @@ You could use an <code>img</code> HTML tag and reference an image created under 
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1896,6 +1761,7 @@ You could use an <code>img</code> HTML tag and reference an image created under 
             
                 
                     
+                    
                 
                 
 
@@ -1908,6 +1774,9 @@ You could use an <code>img</code> HTML tag and reference an image created under 
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1973,6 +1842,7 @@ You could use an <code>img</code> HTML tag and reference an image created under 
             
                 
                     
+                    
                 
                 
 
@@ -1988,6 +1858,9 @@ You could use an <code>img</code> HTML tag and reference an image created under 
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2495,10 +2368,10 @@ You could use an <code>img</code> HTML tag and reference an image created under 
 	 
 	 
 		
-			<a class="nav nav-prev" href="/" title="Learn with Omar"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/rasp/pi/rpidock/" title="Docker on Ubuntu Raspberry Pi 4"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/aws/portainer/" title="Portainer Tutorials" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/rasp/pi/psswd/" title="How To Reset My Portainer Password" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2538,3 +2411,4 @@ You could use an <code>img</code> HTML tag and reference an image created under 
 </script>
   </body>
 </html>
+

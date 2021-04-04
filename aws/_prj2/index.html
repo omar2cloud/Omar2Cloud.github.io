@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/rasp/pi/_wprpi/">
+  <body class="" data-url="/aws/_prj2/">
     <nav id="sidebar" class="">
 
 
@@ -94,7 +94,7 @@
   
     
     <li data-nav-id="/aws/" title="AWS Tutorials" class="dd-item
-        
+        parent
         
         
         ">
@@ -448,7 +448,7 @@
  
   
     
-      <li data-nav-id="/aws/_prj2/" title="" class="dd-item ">
+      <li data-nav-id="/aws/_prj2/" title="" class="dd-item active">
         <a href="/aws/_prj2/">
         
         
@@ -477,7 +477,7 @@
   
     
     <li data-nav-id="/rasp/" title="Raspberry Pi Tutorials" class="dd-item
-        parent
+        
         
         
         ">
@@ -629,7 +629,7 @@
  
   
     
-      <li data-nav-id="/rasp/pi/_wprpi/" title="" class="dd-item active">
+      <li data-nav-id="/rasp/pi/_wprpi/" title="" class="dd-item ">
         <a href="/rasp/pi/_wprpi/">
         
         
@@ -1456,7 +1456,7 @@
             
           
           
-            <a href='/'>Learn with Omar</a> > <a href='/rasp/'>Raspberry Pi Tutorials</a> > 
+            <a href='/'>Learn with Omar</a> > <a href='/aws/'>AWS Tutorials</a> > 
           
         
           
@@ -1471,11 +1471,21 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#invoice-processing-application">Invoice Processing Application</a></li>
+    <li><a href="#architecture-implementation---tutorial-scenario">Architecture Implementation - Tutorial Scenario:</a></li>
+    <li><a href="#step-1-s3-buckets">Step 1: S3 Buckets</a></li>
+    <li><a href="#step-2-sns-subscription">Step 2: SNS Subscription</a>
       <ul>
-        <li><a href="#what-is-wordpress">What is WordPress?</a></li>
+        <li></li>
       </ul>
     </li>
+    <li><a href="#step-3-configuring-sns-notification-for-s3">Step 3: Configuring SNS Notification for S3</a></li>
+    <li><a href="#step-4-spin-an-ec2-instance-to-run-the-custom-code">Step 4: Spin an EC2 Instance to Run the Custom Code</a></li>
+    <li><a href="#step-5-iam-role-for-the-ec2-instance">Step 5: IAM role for the EC2 instance</a></li>
+    <li><a href="#step-6-uploading-the-python-code">Step 6: Uploading the Python Code</a></li>
+    <li><a href="#step-7-source-code-installation">Step 7: Source Code Installation</a></li>
+    <li><a href="#step-8-sns-subscription">Step 8: SNS Subscription</a></li>
+    <li><a href="#step-9-generation-of-csv-file">Step 9: Generation of CSV File</a></li>
   </ul>
 </nav>
     </div>
@@ -1500,47 +1510,219 @@
         
 
 
-<h3 id="what-is-wordpress">What is WordPress?</h3>
-<p>WordPress is an open source software, which is widely used to create a beautiful website, blog, or app. To learn more about <a href="https://wordpress.org/">Wordpress.</a></p>
-<p>We will install Wordpress as a Docker image using Portainer. The most interesting part is we will install WP as a stack including <strong>MySQL</strong> database using <strong>Docker-Compose</strong> stack.</p>
-<p><img src="/images/RPI/portainer_RPI4/1.JPG?classes=shadow" alt="RPI"></p>
-<p><img src="/images/RPI/portainer_RPI4/2.JPG?classes=shadow" alt="RPI"></p>
-<pre><code>version: '2'
+<h2 id="invoice-processing-application">Invoice Processing Application</h2>
+<p>The application in scope shall have the ability to parse the content of the uploaded text format invoices to <strong>S3</strong> bucket and convert them into CSV records. Once a record is processed, it will be saved in <strong>DynamoDB</strong> for retention and the converted CSV record is saved in S3 destination bucket. 
+<strong>AWS Athena</strong> is to query the CSV records to aggregate expenses grouped by date.</p>
 
-services:
-   db:
-     image: mysql/mysql-server:latest
-     volumes:
-       - db_data:/var/lib/mysql
-     restart: always
-     environment:
-       MYSQL_ROOT_PASSWORD: ${MYSQL_DATABASE_PASSWORD}
-       MYSQL_DATABASE: wordpress
-       MYSQL_USER: wordpress
-       MYSQL_PASSWORD: wordpress
+<div class="notices note" ><p>Please note that some parts of the images in this tutorial will be pixilated or hidden to hide all personal information such as account numbers, ip addresses and any other personal or sensitive information.</p>
+</div>
 
-   wordpress:
-     image: wordpress:latest
-     ports:
-       - 8095:80
-     restart: always
-     environment:
-       WORDPRESS_DB_HOST: db:3306
-       WORDPRESS_DB_USER: wordpress
-       WORDPRESS_DB_PASSWORD: wordpress
+<p><img src="/images/aws/prj2/archi.png?classes=shadow" alt="prj2"></p>
+<h2 id="architecture-implementation---tutorial-scenario">Architecture Implementation - Tutorial Scenario:</h2>
+<ol>
+<li>The customer uploads the invoice data to S3 bucket in a text format as per their guidelines and policies. This bucket will have a policy to auto delete any content that is more than 1 day old (24 hours).</li>
+<li>An event will trigger in the bucket that will place a message in SNS topic</li>
+<li>A custom program running in EC2 will subscribe to the SNS topic and get the message placed by S3 event</li>
+<li>The program will use S3 API to read from the bucket, parse the content of the file and create a CSV record along with saving the original record in DynamoDB</li>
+<li>The program will use S3 API to write CSV record to destination S3 bucket as new S3 object.</li>
+<li>Athena is used to query the CSV file (query to show aggregated expenses grouped by date).</li>
+</ol>
+<h2 id="step-1-s3-buckets">Step 1: S3 Buckets</h2>
+<ol>
+<li>Navigate to S3 using the Services button at the top of the screen.</li>
+<li>Select &ldquo;Create Bucket&rdquo;</li>
+<li>Enter a source bucket name and use the default options for the rest of the fields.</li>
+<li>Repeat 1 to 3 steps to create a target bucket</li>
+</ol>
+<p><img src="/images/aws/prj2/1.JPG?classes=shadow" alt="prj2"></p>
+<h2 id="step-2-sns-subscription">Step 2: SNS Subscription</h2>
+<p>Lets' create a lambda function and attach the role we have previously created.</p>
+<ol>
+<li>Navigate to SNS -&gt; Topics -&gt; Standard</li>
+<li>Click on &ldquo;Create Topic&rdquo;</li>
+<li>Enter the following fields Name: <strong>S3toEC2Topic</strong></li>
+<li>Click on Create Topic</li>
+</ol>
+<p><img src="/images/aws/prj2/2.JPG?classes=shadow" alt="prj2"></p>
+<ol start="5">
+<li>Let&rsquo;s modification of SNS Access Policy as follows:</li>
+</ol>
+<pre><code>{
+&quot;Version&quot;: &quot;2012-10-17&quot;,
+&quot;Id&quot;: &quot;example-ID&quot;,
+&quot;Statement&quot;: [
+{
+&quot;Sid&quot;: &quot;example-statement-ID&quot;,
+&quot;Effect&quot;: &quot;Allow&quot;,
+&quot;Principal&quot;: {
+&quot;AWS&quot;:&quot;*&quot;
+},
+&quot;Action&quot;: [
+&quot;SNS:Publish&quot;
+],
+&quot;Resource&quot;: &quot;SNS-topic-ARN&quot;,
+&quot;Condition&quot;: {
+&quot;ArnLike&quot;: { &quot;aws:SourceArn&quot;: &quot;arn:aws:s3:*:*:bucket-name&quot; },
+&quot;StringEquals&quot;: { &quot;aws:SourceAccount&quot;: &quot;bucket-owner-account-id&quot; }
+}
+}
+]
+}
 
-volumes:
-    db_data:
-
-</code></pre><p><img src="/images/RPI/portainer_RPI4/3.JPG?classes=shadow" alt="RPI"> 
-<img src="/images/RPI/portainer_RPI4/4.JPG?classes=shadow" alt="RPI"> 
-<img src="/images/RPI/portainer_RPI4/5.JPG?classes=shadow" alt="RPI"> 
-<img src="/images/RPI/portainer_RPI4/6.JPG?classes=shadow" alt="RPI"> 
-<img src="/images/RPI/portainer_RPI4/7.JPG?classes=shadow" alt="RPI"> 
-<img src="/images/RPI/portainer_RPI4/8.JPG?classes=shadow" alt="RPI"> 
-<img src="/images/RPI/portainer_RPI4/9.JPG?classes=shadow" alt="RPI"> 
-<img src="/images/RPI/portainer_RPI4/10.JPG?classes=shadow" alt="RPI"></p>
-<!-- raw HTML omitted -->
+</code></pre><h4 id="note">Note:</h4>
+<p>A. Replace <strong>SNS-topic-ARN</strong> as shown below.</p>
+<p>B. Replace <strong>bucket-name</strong> with your source bucker name as shown below.</p>
+<p>C. Replace <strong>bucket-owner-account-id</strong> with yours as shown below.</p>
+<p><img src="/images/aws/prj2/4.JPG?classes=shadow" alt="prj2"></p>
+<p><img src="/images/aws/prj2/5.JPG?classes=shadow" alt="prj2"></p>
+<h2 id="step-3-configuring-sns-notification-for-s3">Step 3: Configuring SNS Notification for S3</h2>
+<ol>
+<li>
+<p>Navigate to S3 and select the source bucket, which we have previously created.</p>
+</li>
+<li>
+<p>Select Properties and scroll down to Event Notifications and select it.</p>
+</li>
+<li>
+<p>Follow the following details:</p>
+<p>A. Name: <strong>S3PutEvent</strong>
+B. Select <strong>PUT</strong> from the list
+C. Destination: <strong>SNS Topic</strong>
+D. SNS: <strong>S3toEC2Topic</strong></p>
+</li>
+<li>
+<p>Save changes.</p>
+</li>
+</ol>
+<p><img src="/images/aws/prj2/6.png?classes=shadow" alt="prj2"></p>
+<h2 id="step-4-spin-an-ec2-instance-to-run-the-custom-code">Step 4: Spin an EC2 Instance to Run the Custom Code</h2>
+<ol>
+<li>
+<p>Navigate to EC2 -&gt; Instances</p>
+</li>
+<li>
+<p>Create an EC2 instance with the following parameters:</p>
+<p>A. AMI: <strong>Ubuntu 18.04 LTS</strong>
+B. VPC: <strong>Default</strong>
+C. Security Group: <strong>Open ports 22 and 8080</strong></p>
+</li>
+</ol>
+<p><em>Note: to enhance the security, you could select opening port 22 to your home public IP address. This will limit the SSH access to request coming from your home.</em>
+<em>Please, note that some Internet Service Providers don&rsquo;t allow SSH access through your gateway/router.</em></p>
+<p><img src="/images/aws/prj2/7.JPG?classes=shadow" alt="prj2"></p>
+<h2 id="step-5-iam-role-for-the-ec2-instance">Step 5: IAM role for the EC2 instance</h2>
+<ol>
+<li>
+<p>Navigate to IAM -&gt; Roles -&gt; Create role</p>
+</li>
+<li>
+<p>Attach two the following two policies:</p>
+<p>A. AmazonS3FullAccess</p>
+<p>B. AmazonDynamoDBFullAccess</p>
+</li>
+<li>
+<p>Name the role, EC2S3Access</p>
+</li>
+</ol>
+<p><img src="/images/aws/prj2/9.JPG?classes=shadow" alt="prj2"></p>
+<ol start="4">
+<li>Let&rsquo;s go back to the EC2 and attach this role to it as shown below.</li>
+</ol>
+<p><img src="/images/aws/prj2/10.JPG?classes=shadow" alt="prj2"></p>
+<p><img src="/images/aws/prj2/11.JPG?classes=shadow" alt="prj2"></p>
+<h2 id="step-6-uploading-the-python-code">Step 6: Uploading the Python Code</h2>
+<ol>
+<li>
+<p>Download the application zip file from my <a href="https://github.com/OmarCloud20/aws-tutorials/raw/5e9d8096a17d7b8a849c4e8fdae5d8c37b7bd547/prj2/project2.zip">GitHUb repo</a> and save it to your local device.</p>
+</li>
+<li>
+<p>Open the code using any code editor of your choice. I&rsquo;m using <a href="https://code.visualstudio.com/">V.S Code</a> as a code/text editor.</p>
+</li>
+<li>
+<p>Unzip the file and navigate to docproc-new -&gt; api -&gt; views.py.</p>
+</li>
+<li>
+<p>Open views.py with your choice of code editor and ensure that:</p>
+<p>A. the name of the S3 target bucket matches the name of our target bucket&rsquo;s name.</p>
+<p>B. The region matches your region. Mine is us-east-1.</p>
+</li>
+</ol>
+<p>Then, let&rsquo;s save the python file.</p>
+<p><img src="/images/aws/prj2/12.JPG?classes=shadow" alt="prj2"></p>
+<ol start="5">
+<li>Now, we need to copy folder <strong>docproc-new</strong> from our local device to the home folder of our Ubuntu EC2 instance using <strong>scp</strong> command as shown below.</li>
+</ol>
+<p>Example:</p>
+<p><em>Note: first you may need to navigate (cd) to where you have saved the pem file</em></p>
+<pre><code>scp -i &lt;Ubuntu pem file&gt; ./docproc-new ubuntu@&lt;Ubuntu public ip&gt;:/home/ubuntu
+</code></pre><p>If your transfer is successful, you shall see a message similar to the below.</p>
+<p><img src="/images/aws/prj2/13.JPG?classes=shadow" alt="prj2"></p>
+<h2 id="step-7-source-code-installation">Step 7: Source Code Installation</h2>
+<ol>
+<li>
+<p>Let&rsquo;s SSH into our Ubuntu EC2 instance. Please, refer to my previous tutorial on how to <a href="http://localhost:1313/aws/portainer/spin-ubuntu-instance/ssh-into-ubuntu-ec2/#what-is-secure-shell-ssh">SSH.</a></p>
+</li>
+<li>
+<p>Now, we run the following commands on our Ubuntu instance:</p>
+</li>
+</ol>
+<pre><code>sudo apt update
+sudo apt install python-pip -y
+python -m pip install --upgrade pip setuptools
+sudo apt install virtualenv -y
+virtualenv ~/.virtualenvs/djangodev
+source ~/.virtualenvs/djangodev/bin/activate
+pip install django
+pip install boto3
+</code></pre><ol start="3">
+<li>Let&rsquo;s create a directory and copy the source code.</li>
+</ol>
+<pre><code>sudo cp -r docproc-new /opt
+sudo chown ubuntu:ubuntu -R /opt
+cd /opt/docproc-new
+</code></pre><ol start="4">
+<li>Now, let&rsquo;s run the python code:</li>
+</ol>
+<pre><code>python manage.py runserver 0:8080
+</code></pre><p><img src="/images/aws/prj2/14.JPG?classes=shadow" alt="prj2"></p>
+<p><em>Note: make sure you confirm that the server is running</em></p>
+<h2 id="step-8-sns-subscription">Step 8: SNS Subscription</h2>
+<ol>
+<li>
+<p>Let&rsquo;s navigate to SNS in the AWS Console and select the topic <strong>S3ToEC2Topic</strong></p>
+</li>
+<li>
+<p>Click on Create Subscription</p>
+</li>
+<li>
+<p>Enter the following details: 
+Protocol : HTTP</p>
+<pre><code>Endpoint : **http://&lt;host&gt;:8080/sns** where &lt;host&gt; in the public IP of the EC2 instance
+</code></pre>
+</li>
+</ol>
+<p>Click on Create Subscription</p>
+<p><img src="/images/aws/prj2/16.JPG?classes=shadow" alt="prj2"></p>
+<ol start="4">
+<li>In the EC2 terminal window, look for the field &ldquo;SubscribeURL&rdquo; and copy the entire link given.</li>
+</ol>
+<p><em>Note: If a message is seen &ldquo;ValueError: No JSON object could be decoded&rdquo;, it can be safely ignored.</em></p>
+<p><img src="/images/aws/prj2/17.JPG?classes=shadow" alt="prj2"></p>
+<ol start="5">
+<li>Paste that URL into a browser window, http://<!-- raw HTML omitted -->:8080/sns, to verify the SNS subscription (Ignore any messages received in the web browser).</li>
+</ol>
+<p><img src="/images/aws/prj2/18.JPG?classes=shadow" alt="prj2"></p>
+<h2 id="step-9-generation-of-csv-file">Step 9: Generation of CSV File</h2>
+<p>In the project folder, we have docproc-invoice.txt which we will upload to our S3 source bucket.</p>
+<ol>
+<li>Navigate to S3 in the AWS Console.</li>
+<li>Upload the sample invoice file to the source S3 bucket using the default options.</li>
+</ol>
+<p><img src="/images/aws/prj2/19.JPG?classes=shadow" alt="prj2"></p>
+<ol start="3">
+<li>Verify that a CSV file is generated in the target S3 bucket. This may take a few minutes.</li>
+</ol>
+<p><img src="/images/aws/prj2/20.JPG?classes=shadow" alt="prj2"></p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 
@@ -1580,8 +1762,6 @@ volumes:
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1597,6 +1777,9 @@ volumes:
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1794,41 +1977,6 @@ volumes:
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -1840,6 +1988,25 @@ volumes:
                     
             
         
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
                         
             
@@ -1926,6 +2093,21 @@ volumes:
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -1945,9 +2127,6 @@ volumes:
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2420,10 +2599,10 @@ volumes:
 	 
 	 
 		
-			<a class="nav nav-prev" href="/rasp/pi/psswd/" title="How To Reset My Portainer Password"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/aws/lambda_web/" title="Application Load Balancer with Lambda Backend"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/cont/" title="" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/rasp/" title="Raspberry Pi Tutorials" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

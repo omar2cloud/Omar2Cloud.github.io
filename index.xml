@@ -137,6 +137,16 @@ docker run --rm -v portainer_data:/data portainer/helper-reset-passwordThe resp
     </item>
     
     <item>
+      <title>Invoice Processing Application</title>
+      <link>https://omar2cloud.github.io/aws/prj2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/prj2/</guid>
+      <description>Invoice Processing Application The application in scope shall have the ability to parse the content of the uploaded text format invoices to S3 bucket and convert them into CSV records. Once a record is processed, it will be saved in DynamoDB for retention and the converted CSV record is saved in S3 destination bucket. AWS Athena is to query the CSV records to aggregate expenses grouped by date.
+Please note that some parts of the images in this tutorial will be pixilated or hidden to hide all personal information such as account numbers, ip addresses and any other personal or sensitive information.</description>
+    </item>
+    
+    <item>
       <title>Archetypes</title>
       <link>https://omar2cloud.github.io/cont/archetypes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

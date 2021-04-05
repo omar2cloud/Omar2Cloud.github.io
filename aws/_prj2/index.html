@@ -8,24 +8,24 @@
 <meta name="author" content="Omar A Omar">
 
     <link rel="icon" href="/images/favicon.ico" type="image/png">
-    <title> - My Journey</title>
+    <title>Invoice Processing Application - My Journey</title>
 
     
-    <link href="/css/nucleus.css?1617580238" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1617580238" rel="stylesheet">
-    <link href="/css/hybrid.css?1617580238" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1617580238" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1617580238" rel="stylesheet">
-    <link href="/css/auto-complete.css?1617580238" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1617580238" rel="stylesheet">
-    <link href="/css/theme.css?1617580238" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1617580238" rel="stylesheet">
+    <link href="/css/nucleus.css?1617635191" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1617635191" rel="stylesheet">
+    <link href="/css/hybrid.css?1617635191" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1617635191" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1617635191" rel="stylesheet">
+    <link href="/css/auto-complete.css?1617635191" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1617635191" rel="stylesheet">
+    <link href="/css/theme.css?1617635191" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1617635191" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1617580238" rel="stylesheet">
+    <link href="/css/theme-mine.css?1617635191" rel="stylesheet">
     
-    <link href="/css/foo.css?1617580238" rel="stylesheet"><link href="/css/bar.css?1617580238" rel="stylesheet">
+    <link href="/css/foo.css?1617635191" rel="stylesheet"><link href="/css/bar.css?1617635191" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1617580238"></script>
+    <script src="/js/jquery-3.3.1.min.js?1617635191"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1617580238"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1617580238"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1617635191"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1617635191"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/omar2cloud.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1617580238"></script>
+<script type="text/javascript" src="/js/search.js?1617635191"></script>
 
     
   </div>
@@ -448,9 +448,9 @@
  
   
     
-      <li data-nav-id="/aws/_prj2/" title="" class="dd-item active">
+      <li data-nav-id="/aws/_prj2/" title="Invoice Processing Application" class="dd-item active">
         <a href="/aws/_prj2/">
-        
+        <b> </b>AWS SNS
         
         </a>
     </li>
@@ -1456,7 +1456,7 @@
             
           
           
-            <a href='/'>Learn with Omar</a> > <a href='/aws/'>AWS Tutorials</a> > 
+            <a href='/'>Learn with Omar</a> > <a href='/aws/'>AWS Tutorials</a> > Invoice Processing Application
           
         
           
@@ -1503,7 +1503,7 @@
           
             <h1>
               
-              
+              Invoice Processing Application
             </h1>
           
 
@@ -1548,25 +1548,27 @@
 <li>Let&rsquo;s modification of SNS Access Policy as follows:</li>
 </ol>
 <pre><code>{
-&quot;Version&quot;: &quot;2012-10-17&quot;,
-&quot;Id&quot;: &quot;example-ID&quot;,
-&quot;Statement&quot;: [
-{
-&quot;Sid&quot;: &quot;example-statement-ID&quot;,
-&quot;Effect&quot;: &quot;Allow&quot;,
-&quot;Principal&quot;: {
-&quot;AWS&quot;:&quot;*&quot;
-},
-&quot;Action&quot;: [
-&quot;SNS:Publish&quot;
-],
-&quot;Resource&quot;: &quot;SNS-topic-ARN&quot;,
-&quot;Condition&quot;: {
-&quot;ArnLike&quot;: { &quot;aws:SourceArn&quot;: &quot;arn:aws:s3:*:*:bucket-name&quot; },
-&quot;StringEquals&quot;: { &quot;aws:SourceAccount&quot;: &quot;bucket-owner-account-id&quot; }
-}
-}
-]
+  &quot;Version&quot;: &quot;2008-10-17&quot;,
+  &quot;Id&quot;: &quot;__default_policy_ID&quot;,
+  &quot;Statement&quot;: [
+    {
+      &quot;Sid&quot;: &quot;__default_statement_ID&quot;,
+      &quot;Effect&quot;: &quot;Allow&quot;,
+      &quot;Principal&quot;: {
+        &quot;AWS&quot;: &quot;*&quot;
+      },
+      &quot;Action&quot;: &quot;SNS:Publish&quot;,
+      &quot;Resource&quot;: &quot;arn:aws:sns:us-east-1:[Your AWS Account Number]]:S3toEC2Topic&quot;,
+      &quot;Condition&quot;: {
+        &quot;StringEquals&quot;: {
+          &quot;aws:SourceAccount&quot;: &quot;[your AWS Account Number&quot;
+        },
+        &quot;ArnLike&quot;: {
+          &quot;aws:SourceArn&quot;: &quot;arn:aws:s3:*:*:[S3 Source Bucket Name]&quot;
+        }
+      }
+    }
+  ]
 }
 
 </code></pre><h4 id="note">Note:</h4>
@@ -1704,9 +1706,12 @@ Protocol : HTTP</p>
 <p>Click on Create Subscription</p>
 <p><img src="/images/aws/prj2/16.JPG?classes=shadow" alt="prj2"></p>
 <ol start="4">
-<li>In the EC2 terminal window, look for the field &ldquo;SubscribeURL&rdquo; and copy the entire link given.</li>
+<li>In the EC2 terminal window, look for the field &ldquo;SubscribeURL&rdquo; and copy the entire link given <em>without the prentices.</em> This should be the <strong>token</strong> used to confirm the subscription.</li>
 </ol>
 <p><em>Note: If a message is seen &ldquo;ValueError: No JSON object could be decoded&rdquo;, it can be safely ignored.</em></p>
+<p><img src="/images/aws/prj2/16-2.JPG?classes=shadow" alt="prj2"> 
+<img src="/images/aws/prj2/16-3.JPG?classes=shadow" alt="prj2"> 
+<img src="/images/aws/prj2/16-4.JPG?classes=shadow" alt="prj2"></p>
 <p><img src="/images/aws/prj2/17.JPG?classes=shadow" alt="prj2"></p>
 <ol start="5">
 <li>Paste that URL into a browser window, http://<!-- raw HTML omitted -->:8080/sns, to verify the SNS subscription (Ignore any messages received in the web browser).</li>
@@ -1719,8 +1724,10 @@ Protocol : HTTP</p>
 <li>Upload the sample invoice file to the source S3 bucket using the default options.</li>
 </ol>
 <p><img src="/images/aws/prj2/19.JPG?classes=shadow" alt="prj2"></p>
+<p>*Note: you should be able to track the processing of the file on command line/terminal as shown below.</p>
+<p><img src="/images/aws/prj2/19-2.JPG?classes=shadow" alt="prj2"></p>
 <ol start="3">
-<li>Verify that a CSV file is generated in the target S3 bucket. This may take a few minutes.</li>
+<li>Verify that a CSV file is generated in the target S3 bucket.</li>
 </ol>
 <p><img src="/images/aws/prj2/20.JPG?classes=shadow" alt="prj2"></p>
 <!-- raw HTML omitted -->
@@ -2612,19 +2619,19 @@ Protocol : HTTP</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1617580238"></script>
-    <script src="/js/perfect-scrollbar.min.js?1617580238"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1617580238"></script>
-    <script src="/js/jquery.sticky.js?1617580238"></script>
-    <script src="/js/featherlight.min.js?1617580238"></script>
-    <script src="/js/highlight.pack.js?1617580238"></script>
+    <script src="/js/clipboard.min.js?1617635191"></script>
+    <script src="/js/perfect-scrollbar.min.js?1617635191"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1617635191"></script>
+    <script src="/js/jquery.sticky.js?1617635191"></script>
+    <script src="/js/featherlight.min.js?1617635191"></script>
+    <script src="/js/highlight.pack.js?1617635191"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1617580238"></script>
-    <script src="/js/learn.js?1617580238"></script>
-    <script src="/js/hugo-learn.js?1617580238"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1617635191"></script>
+    <script src="/js/learn.js?1617635191"></script>
+    <script src="/js/hugo-learn.js?1617635191"></script>
     
         
-            <script src="/mermaid/mermaid.js?1617580238"></script>
+            <script src="/mermaid/mermaid.js?1617635191"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

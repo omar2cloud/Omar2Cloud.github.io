@@ -147,7 +147,7 @@
 	"content": "Resetting Admin password in Portainer running as container Portainer does not have a password reset feature. We will have to you use a password container helper.\n1- Firstly, we will stop the Portainer container.\ndocker container stop portainer\r2- We will run the helper using the same bind-mount/volume for the data volume\ndocker run --rm -v portainer_data:/data portainer/helper-reset-password\rThe response should be similar to the below.\n2020/06/04 00:13:58 Password succesfully updated for user: admin\r2020/06/04 00:13:58 Use the following password to login: \u0026amp;_4#\\3^5V8vLTd)E\u0026quot;NWiJBs26G*9HPl1\r3- Finally, we will restart the Portainer container.\ndocker container start portainer\rNow, we have our username and password to log in into Portainer portal. "
 },
 {
-	"uri": "https://omar2cloud.github.io/aws/_prj2/",
+	"uri": "https://omar2cloud.github.io/aws/prj2/",
 	"title": "Invoice Processing Application",
 	"tags": [],
 	"description": "",

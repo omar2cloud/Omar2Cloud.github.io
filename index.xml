@@ -26,7 +26,7 @@
     </item>
     
     <item>
-      <title>Install Portainer on Ubuntu</title>
+      <title>Install Docker and Portainer on Ubuntu Instance</title>
       <link>https://omar2cloud.github.io/aws/portainer/portainer/portainer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -75,16 +75,6 @@ The unified CloudWatch agent enables you to do the following: 1- Collect more sy
     </item>
     
     <item>
-      <title>Docker on Ubuntu Raspberry Pi 4</title>
-      <link>https://omar2cloud.github.io/rasp/pi/rpidock/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/rasp/pi/rpidock/</guid>
-      <description>Updating the Operating System Now, we have a secured connection with our instance, let&amp;rsquo;s update and upgrade the operating system. Updating and upgrading the operating system of the instance is always a good habit to have. We will run the following update/upgrade commands. The -y in the end of the command line will automatically enters &amp;ldquo;yes&amp;rdquo; as a confirmation before installing the updates.
-sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -yCleaning up after an update If this is not the packages first time to run an update, there might have some unnecessary packages left for cleaning.</description>
-    </item>
-    
-    <item>
       <title>install Mattermost and MySQL on EC2</title>
       <link>https://omar2cloud.github.io/aws/mattermost/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -114,6 +104,16 @@ Please, refer to Raspberry Pi Foundation for information on how to setup RPI hea
     </item>
     
     <item>
+      <title>Docker on Ubuntu Raspberry Pi 4</title>
+      <link>https://omar2cloud.github.io/rasp/pi/rpidock/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/pi/rpidock/</guid>
+      <description>Updating the Operating System Now, we have a secured connection with our instance, let&amp;rsquo;s update and upgrade the operating system. Updating and upgrading the operating system of the instance is always a good habit to have. We will run the following update/upgrade commands. The -y in the end of the command line will automatically enters &amp;ldquo;yes&amp;rdquo; as a confirmation before installing the updates.
+sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -yCleaning up after an update If this is not the packages first time to run an update, there might have some unnecessary packages left for cleaning.</description>
+    </item>
+    
+    <item>
       <title>Application Load Balancer with Lambda Backend</title>
       <link>https://omar2cloud.github.io/aws/lambda_web/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -134,6 +134,28 @@ However, there is an exciting feature by which the target group can contain a la
 docker container stop portainer2- We will run the helper using the same bind-mount/volume for the data volume
 docker run --rm -v portainer_data:/data portainer/helper-reset-passwordThe response should be similar to the below.
 2020/06/04 00:13:58 Password succesfully updated for user: admin2020/06/04 00:13:58 Use the following password to login: &amp;amp;_4#\3^5V8vLTd)E&amp;quot;NWiJBs26G*9HPl13- Finally, we will restart the Portainer container.</description>
+    </item>
+    
+    <item>
+      <title>Basic Docker Commands</title>
+      <link>https://omar2cloud.github.io/rasp/pi/docker-on-ec2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/pi/docker-on-ec2/</guid>
+      <description>Basic Commands of Docker The heart of the Docker echo system consists of two parameters: the images and the containers.
+To list out the docker processors:
+ps -ef | grep [d]ockerTo list out all images on the local machine:
+docker imagesTo check for any running containers/processors:
+docker ps -aDocker run reference - Foreground vs. Detached Foreground In foreground mode, docker run can start the process in the container and attach the console to the process’s standard input, output, and standard error.</description>
+    </item>
+    
+    <item>
+      <title>Invoice Processing Application</title>
+      <link>https://omar2cloud.github.io/aws/prj2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/prj2/</guid>
+      <description>Invoice Processing Application The Invoice Processing Application is to parse the content of the uploaded text format invoices to S3 bucket using a Python custom code running on a Ubuntu EC2 to convert them into CSV records. Once a record is processed, it will be saved in DynamoDB for retention and the converted CSV record is saved in S3 destination bucket. AWS Athena is to query the CSV records to aggregate expenses grouped by date.</description>
     </item>
     
     <item>
@@ -209,21 +231,20 @@ List all the tags In the config.toml file you can add a shortcut to display all 
     
     <item>
       <title></title>
-      <link>https://omar2cloud.github.io/aws/_prj2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/aws/_prj2/</guid>
-      <description>Invoice Processing Application The application in scope shall have the ability to parse the content of the uploaded text format invoices to S3 bucket and convert them into CSV records. Once a record is processed, it will be saved in DynamoDB for retention and the converted CSV record is saved in S3 destination bucket. AWS Athena is to query the CSV records to aggregate expenses grouped by date.
-Please note that some parts of the images in this tutorial will be pixilated or hidden to hide all personal information such as account numbers, ip addresses and any other personal or sensitive information.</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://omar2cloud.github.io/aws/portainer/wordpress/_wordpress/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://omar2cloud.github.io/aws/portainer/wordpress/_wordpress/</guid>
       <description>What is WordPress? WordPress is an open source software, which is widely used to create a beautiful website, blog, or app. To learn more about Wordpress.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://omar2cloud.github.io/aws/prj3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/prj3/</guid>
+      <description>A Sample Web Application Containerized as a Docker image Deployed on AWS ECS Fargate In this tutorial, we will package and containerize a sample web application as a Docker image running on Apache Tomcat having JRE-8 as a runtime. Then, we will push this new Docker image to our public repository at Dockerhub. The web application, which is packaged into a Docker image will be deployed on AWS ECS Fargate cluster.</description>
     </item>
     
     <item>

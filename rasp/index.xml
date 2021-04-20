@@ -34,16 +34,6 @@
     </item>
     
     <item>
-      <title>Docker on Ubuntu Raspberry Pi 4</title>
-      <link>https://omar2cloud.github.io/rasp/pi/rpidock/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/rasp/pi/rpidock/</guid>
-      <description>Updating the Operating System Now, we have a secured connection with our instance, let&amp;rsquo;s update and upgrade the operating system. Updating and upgrading the operating system of the instance is always a good habit to have. We will run the following update/upgrade commands. The -y in the end of the command line will automatically enters &amp;ldquo;yes&amp;rdquo; as a confirmation before installing the updates.
-sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -yCleaning up after an update If this is not the packages first time to run an update, there might have some unnecessary packages left for cleaning.</description>
-    </item>
-    
-    <item>
       <title>Setting UP RPI to Run Headless</title>
       <link>https://omar2cloud.github.io/rasp/pi/headless/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -51,6 +41,16 @@ sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -yCleaning up after an upda
       <guid>https://omar2cloud.github.io/rasp/pi/headless/</guid>
       <description>What is Headless? Headless is the term used when we run our RPI without a monitor or a keyboard. I like to setup and configure my RPI using a monitor at least for the first time only, but if we are hosting a server with no desktop GUI on a RPI, setting up headless is the way to go.
 Please, refer to Raspberry Pi Foundation for information on how to setup RPI headless</description>
+    </item>
+    
+    <item>
+      <title>Docker on Ubuntu Raspberry Pi 4</title>
+      <link>https://omar2cloud.github.io/rasp/pi/rpidock/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/pi/rpidock/</guid>
+      <description>Updating the Operating System Now, we have a secured connection with our instance, let&amp;rsquo;s update and upgrade the operating system. Updating and upgrading the operating system of the instance is always a good habit to have. We will run the following update/upgrade commands. The -y in the end of the command line will automatically enters &amp;ldquo;yes&amp;rdquo; as a confirmation before installing the updates.
+sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -yCleaning up after an update If this is not the packages first time to run an update, there might have some unnecessary packages left for cleaning.</description>
     </item>
     
     <item>
@@ -64,6 +64,19 @@ Please, refer to Raspberry Pi Foundation for information on how to setup RPI hea
 docker container stop portainer2- We will run the helper using the same bind-mount/volume for the data volume
 docker run --rm -v portainer_data:/data portainer/helper-reset-passwordThe response should be similar to the below.
 2020/06/04 00:13:58 Password succesfully updated for user: admin2020/06/04 00:13:58 Use the following password to login: &amp;amp;_4#\3^5V8vLTd)E&amp;quot;NWiJBs26G*9HPl13- Finally, we will restart the Portainer container.</description>
+    </item>
+    
+    <item>
+      <title>Basic Docker Commands</title>
+      <link>https://omar2cloud.github.io/rasp/pi/docker-on-ec2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/pi/docker-on-ec2/</guid>
+      <description>Basic Commands of Docker The heart of the Docker echo system consists of two parameters: the images and the containers.
+To list out the docker processors:
+ps -ef | grep [d]ockerTo list out all images on the local machine:
+docker imagesTo check for any running containers/processors:
+docker ps -aDocker run reference - Foreground vs. Detached Foreground In foreground mode, docker run can start the process in the container and attach the console to the process’s standard input, output, and standard error.</description>
     </item>
     
     <item>

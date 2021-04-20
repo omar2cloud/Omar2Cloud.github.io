@@ -11,21 +11,21 @@
     <title>Invoice Processing Application - My Journey</title>
 
     
-    <link href="/css/nucleus.css?1617635460" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1617635460" rel="stylesheet">
-    <link href="/css/hybrid.css?1617635460" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1617635460" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1617635460" rel="stylesheet">
-    <link href="/css/auto-complete.css?1617635460" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1617635460" rel="stylesheet">
-    <link href="/css/theme.css?1617635460" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1617635460" rel="stylesheet">
+    <link href="/css/nucleus.css?1618946613" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1618946613" rel="stylesheet">
+    <link href="/css/hybrid.css?1618946613" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1618946613" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1618946613" rel="stylesheet">
+    <link href="/css/auto-complete.css?1618946613" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1618946613" rel="stylesheet">
+    <link href="/css/theme.css?1618946613" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1618946613" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1617635460" rel="stylesheet">
+    <link href="/css/theme-mine.css?1618946613" rel="stylesheet">
     
-    <link href="/css/foo.css?1617635460" rel="stylesheet"><link href="/css/bar.css?1617635460" rel="stylesheet">
+    <link href="/css/foo.css?1618946613" rel="stylesheet"><link href="/css/bar.css?1618946613" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1617635460"></script>
+    <script src="/js/jquery-3.3.1.min.js?1618946613"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1617635460"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1617635460"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1618946613"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1618946613"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/omar2cloud.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1617635460"></script>
+<script type="text/javascript" src="/js/search.js?1618946613"></script>
 
     
   </div>
@@ -268,9 +268,9 @@
  
   
     
-      <li data-nav-id="/aws/portainer/portainer/portainer/" title="Install Portainer on Ubuntu" class="dd-item ">
+      <li data-nav-id="/aws/portainer/portainer/portainer/" title="Install Docker and Portainer on Ubuntu Instance" class="dd-item ">
         <a href="/aws/portainer/portainer/portainer/">
-        <b> </b>Install Portainer on Ubuntu
+        <b> </b>Install Docker &amp; Portainer
         
         </a>
     </li>
@@ -450,7 +450,28 @@
     
       <li data-nav-id="/aws/prj2/" title="Invoice Processing Application" class="dd-item active">
         <a href="/aws/prj2/">
-        <b> </b>AWS SNS
+        <b> </b>AWS SNS DynamoDB and Athena
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/aws/prj3/" title="" class="dd-item ">
+        <a href="/aws/prj3/">
+        
         
         </a>
     </li>
@@ -566,27 +587,6 @@
  
   
     
-      <li data-nav-id="/rasp/pi/rpidock/" title="Docker on Ubuntu Raspberry Pi 4" class="dd-item ">
-        <a href="/rasp/pi/rpidock/">
-        <b> </b>Docker on Ubuntu RPI 4
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
       <li data-nav-id="/rasp/pi/headless/" title="Setting UP RPI to Run Headless" class="dd-item ">
         <a href="/rasp/pi/headless/">
         <b></b>Run RPI Headless
@@ -608,9 +608,51 @@
  
   
     
+      <li data-nav-id="/rasp/pi/rpidock/" title="Docker on Ubuntu Raspberry Pi 4" class="dd-item ">
+        <a href="/rasp/pi/rpidock/">
+        <b> </b>Docker on Ubuntu RPI 4
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
       <li data-nav-id="/rasp/pi/psswd/" title="How To Reset My Portainer Password" class="dd-item ">
         <a href="/rasp/pi/psswd/">
         <b></b>Portainer Password
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rasp/pi/docker-on-ec2/" title="Basic Docker Commands" class="dd-item ">
+        <a href="/rasp/pi/docker-on-ec2/">
+        <b> </b>Basic Docker Commands
         
         </a>
     </li>
@@ -1486,6 +1528,9 @@
     <li><a href="#step-7-source-code-installation">Step 7: Source Code Installation</a></li>
     <li><a href="#step-8-sns-subscription">Step 8: SNS Subscription</a></li>
     <li><a href="#step-9-generation-of-csv-file">Step 9: Generation of CSV File</a></li>
+    <li><a href="#step-10-create-a-table-in-dynamodb">Step 10: Create a Table in DynamoDB</a></li>
+    <li><a href="#step-11-aws-athena-querying-csv-file">Step 11: AWS Athena Querying CSV File</a></li>
+    <li><a href="#conclusion">Conclusion:</a></li>
   </ul>
 </nav>
     </div>
@@ -1511,7 +1556,7 @@
 
 
 <h2 id="invoice-processing-application">Invoice Processing Application</h2>
-<p>The application in scope shall have the ability to parse the content of the uploaded text format invoices to <strong>S3</strong> bucket and convert them into CSV records. Once a record is processed, it will be saved in <strong>DynamoDB</strong> for retention and the converted CSV record is saved in S3 destination bucket. 
+<p>The Invoice Processing Application is to parse the content of the uploaded text format invoices to <strong>S3</strong> bucket using a <strong>Python</strong> custom code running on a <strong>Ubuntu EC2</strong> to convert them into CSV records. Once a record is processed, it will be saved in <strong>DynamoDB</strong> for retention and the converted CSV record is saved in S3 destination bucket. 
 <strong>AWS Athena</strong> is to query the CSV records to aggregate expenses grouped by date.</p>
 
 <div class="notices note" ><p>Please note that some parts of the images in this tutorial will be pixilated or hidden to hide all personal information such as account numbers, ip addresses and any other personal or sensitive information.</p>
@@ -1558,13 +1603,13 @@
         &quot;AWS&quot;: &quot;*&quot;
       },
       &quot;Action&quot;: &quot;SNS:Publish&quot;,
-      &quot;Resource&quot;: &quot;arn:aws:sns:us-east-1:[Your AWS Account Number]]:S3toEC2Topic&quot;,
+      &quot;Resource&quot;: &quot;arn:aws:sns:us-east-1:Your AWS Account Number:S3toEC2Topic&quot;,
       &quot;Condition&quot;: {
         &quot;StringEquals&quot;: {
-          &quot;aws:SourceAccount&quot;: &quot;[your AWS Account Number&quot;
+          &quot;aws:SourceAccount&quot;: &quot;Your AWS Account Number&quot;
         },
         &quot;ArnLike&quot;: {
-          &quot;aws:SourceArn&quot;: &quot;arn:aws:s3:*:*:[S3 Source Bucket Name]&quot;
+          &quot;aws:SourceArn&quot;: &quot;arn:aws:s3:*:*:&quot;S3 Source Bucket Name&quot;
         }
       }
     }
@@ -1609,8 +1654,7 @@ B. VPC: <strong>Default</strong>
 C. Security Group: <strong>Open ports 22 and 8080</strong></p>
 </li>
 </ol>
-<p><em>Note: to enhance the security, you could select opening port 22 to your home public IP address. This will limit the SSH access to request coming from your home.</em>
-<em>Please, note that some Internet Service Providers don&rsquo;t allow SSH access through your gateway/router.</em></p>
+<p><em>Note: to enhance the security, you could select opening port 22 <strong>ONLY</strong> to your home public IP address. This will limit the SSH access to request coming from your home IP address.</em></p>
 <p><img src="/images/aws/prj2/7.JPG?classes=shadow" alt="prj2"></p>
 <h2 id="step-5-iam-role-for-the-ec2-instance">Step 5: IAM role for the EC2 instance</h2>
 <ol>
@@ -1618,12 +1662,12 @@ C. Security Group: <strong>Open ports 22 and 8080</strong></p>
 <p>Navigate to IAM -&gt; Roles -&gt; Create role</p>
 </li>
 <li>
-<p>Attach two the following two policies:</p>
+<p>Attach the following two policies:</p>
 <p>A. AmazonS3FullAccess</p>
 <p>B. AmazonDynamoDBFullAccess</p>
 </li>
 <li>
-<p>Name the role, EC2S3Access</p>
+<p>Name the role, <strong>EC2S3Access</strong></p>
 </li>
 </ol>
 <p><img src="/images/aws/prj2/9.JPG?classes=shadow" alt="prj2"></p>
@@ -1635,18 +1679,18 @@ C. Security Group: <strong>Open ports 22 and 8080</strong></p>
 <h2 id="step-6-uploading-the-python-code">Step 6: Uploading the Python Code</h2>
 <ol>
 <li>
-<p>Download the application zip file from my <a href="https://github.com/OmarCloud20/aws-tutorials/raw/5e9d8096a17d7b8a849c4e8fdae5d8c37b7bd547/prj2/project2.zip">GitHUb repo</a> and save it to your local device.</p>
+<p>Download the application zip file from my <a href="https://github.com/OmarCloud20/aws-tutorials/raw/5e9d8096a17d7b8a849c4e8fdae5d8c37b7bd547/prj2/project2.zip">GitHub repo</a> and save it to your local device.</p>
 </li>
 <li>
-<p>Open the code using any code editor of your choice. I&rsquo;m using <a href="https://code.visualstudio.com/">V.S Code</a> as a code/text editor.</p>
+<p>Open the code using any code editor of your choice. I&rsquo;m using <a href="https://code.visualstudio.com/">Visual Studio Code</a> as a code/text editor.</p>
 </li>
 <li>
 <p>Unzip the file and navigate to docproc-new -&gt; api -&gt; views.py.</p>
 </li>
 <li>
 <p>Open views.py with your choice of code editor and ensure that:</p>
-<p>A. the name of the S3 target bucket matches the name of our target bucket&rsquo;s name.</p>
-<p>B. The region matches your region. Mine is us-east-1.</p>
+<p>A. The name of the S3 target bucket must match the name of our target bucket&rsquo;s name (line 19).</p>
+<p>B. The region should match your region. Mine is us-east-1.</p>
 </li>
 </ol>
 <p>Then, let&rsquo;s save the python file.</p>
@@ -1654,18 +1698,17 @@ C. Security Group: <strong>Open ports 22 and 8080</strong></p>
 <ol start="5">
 <li>Now, we need to copy folder <strong>docproc-new</strong> from our local device to the home folder of our Ubuntu EC2 instance using <strong>scp</strong> command as shown below.</li>
 </ol>
-<p>Example:</p>
-<p><em>Note: first you may need to navigate (cd) to where you have saved the pem file</em></p>
+<p><em>Note: first you may need to navigate (cd) to where you have saved the pem file.</em></p>
 <pre><code>scp -i &lt;Ubuntu pem file&gt; ./docproc-new ubuntu@&lt;Ubuntu public ip&gt;:/home/ubuntu
 </code></pre><p>If your transfer is successful, you shall see a message similar to the below.</p>
 <p><img src="/images/aws/prj2/13.JPG?classes=shadow" alt="prj2"></p>
 <h2 id="step-7-source-code-installation">Step 7: Source Code Installation</h2>
 <ol>
 <li>
-<p>Let&rsquo;s SSH into our Ubuntu EC2 instance. Please, refer to my previous tutorial on how to <a href="http://localhost:1313/aws/portainer/spin-ubuntu-instance/ssh-into-ubuntu-ec2/#what-is-secure-shell-ssh">SSH.</a></p>
+<p>Let&rsquo;s SSH into our Ubuntu EC2 instance. If you need help SSH&rsquo;ing into the instance, please refer to my previous tutorial about <a href="http://localhost:1313/aws/portainer/spin-ubuntu-instance/ssh-into-ubuntu-ec2/#what-is-secure-shell-ssh">SSH.</a></p>
 </li>
 <li>
-<p>Now, we run the following commands on our Ubuntu instance:</p>
+<p>Now, we will run the following commands on our Ubuntu instance to update the operating system, install Python, Django, Boto3 and a virtual environment:</p>
 </li>
 </ol>
 <pre><code>sudo apt update
@@ -1687,36 +1730,38 @@ cd /opt/docproc-new
 </ol>
 <pre><code>python manage.py runserver 0:8080
 </code></pre><p><img src="/images/aws/prj2/14.JPG?classes=shadow" alt="prj2"></p>
-<p><em>Note: make sure you confirm that the server is running</em></p>
+<p><em>Note: make sure the development server is running on the CLI/Terminal</em></p>
 <h2 id="step-8-sns-subscription">Step 8: SNS Subscription</h2>
 <ol>
 <li>
-<p>Let&rsquo;s navigate to SNS in the AWS Console and select the topic <strong>S3ToEC2Topic</strong></p>
+<p>Let&rsquo;s navigate to SNS in the AWS Console and select the topic <strong>S3toEC2Topic</strong></p>
 </li>
 <li>
 <p>Click on Create Subscription</p>
 </li>
 <li>
-<p>Enter the following details: 
-Protocol : HTTP</p>
-<pre><code>Endpoint : **http://&lt;host&gt;:8080/sns** where &lt;host&gt; in the public IP of the EC2 instance
-</code></pre>
+<p>Enter the following details:</p>
+<p>Protocol : <strong>HTTP</strong></p>
+<p>Endpoint : <strong>http://IP-address:8080/sns</strong>, where the IP Address is the public IP of the EC2 instance.</p>
 </li>
 </ol>
-<p>Click on Create Subscription</p>
 <p><img src="/images/aws/prj2/16.JPG?classes=shadow" alt="prj2"></p>
 <ol start="4">
 <li>In the EC2 terminal window, look for the field &ldquo;SubscribeURL&rdquo; and copy the entire link given <em>without the prentices.</em> This should be the <strong>token</strong> used to confirm the subscription.</li>
 </ol>
-<p><em>Note: If a message is seen &ldquo;ValueError: No JSON object could be decoded&rdquo;, it can be safely ignored.</em></p>
+<p><img src="/images/aws/prj2/17.JPG?classes=shadow" alt="prj2"> 
+<em>Note: If a message is seen &ldquo;ValueError: No JSON object could be decoded&rdquo;, it can be safely ignored.</em></p>
 <p><img src="/images/aws/prj2/16-2.JPG?classes=shadow" alt="prj2"> 
 <img src="/images/aws/prj2/16-3.JPG?classes=shadow" alt="prj2"> 
 <img src="/images/aws/prj2/16-4.JPG?classes=shadow" alt="prj2"></p>
-<p><img src="/images/aws/prj2/17.JPG?classes=shadow" alt="prj2"></p>
 <ol start="5">
-<li>Paste that URL into a browser window, http://<!-- raw HTML omitted -->:8080/sns, to verify the SNS subscription (Ignore any messages received in the web browser).</li>
+<li>Paste that URL into a browser window, <em>http://&lt;instance public IP address</em>&gt;:8080/sns*, to verify the SNS subscription (Ignore any messages received in the web browser).</li>
 </ol>
 <p><img src="/images/aws/prj2/18.JPG?classes=shadow" alt="prj2"></p>
+
+<div class="notices note" ><p>When EC2 instance is stopped, its public IPv4 is released, and a new IPv4 is assigned to the instance once it starts back up. To read more about <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html"> AWS Stop and start your instance</a>.</p>
+</div>
+
 <h2 id="step-9-generation-of-csv-file">Step 9: Generation of CSV File</h2>
 <p>In the project folder, we have docproc-invoice.txt which we will upload to our S3 source bucket.</p>
 <ol>
@@ -1730,8 +1775,53 @@ Protocol : HTTP</p>
 <li>Verify that a CSV file is generated in the target S3 bucket.</li>
 </ol>
 <p><img src="/images/aws/prj2/20.JPG?classes=shadow" alt="prj2"></p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<h2 id="step-10-create-a-table-in-dynamodb">Step 10: Create a Table in DynamoDB</h2>
+<ol>
+<li>Navigate to DynamoDB using the Services Menu.</li>
+<li>Click on tables on the left side.</li>
+<li>Select the table &ldquo;invoice&rdquo;</li>
+<li>Click on the &ldquo;Items&rdquo; tab and verify that a record has been created in the table with the contents of the invoice file.</li>
+</ol>
+<p><img src="/images/aws/prj2/22.JPG?classes=shadow" alt="prj2"></p>
+<h2 id="step-11-aws-athena-querying-csv-file">Step 11: AWS Athena Querying CSV File</h2>
+<ol>
+<li>Navigate to AWS Athena in the AWS Console.</li>
+<li>Paste the following command in the query editor and Run query to create a database:
+<em>create database proj2db;</em></li>
+</ol>
+<p><img src="/images/aws/prj2/24.JPG?classes=shadow" alt="prj2"></p>
+<ol start="3">
+<li>Run the following query to create the table based on the generated CSV file:</li>
+</ol>
+<p><em>Note: add your S3 target bucket name instead of &lt;<em>target S3 bucket</em>&gt;</em>.</p>
+<pre><code>CREATE EXTERNAL TABLE IF NOT EXISTS proj2db.invoice (
+`customer-id` string,
+`inv-id` string,
+`date` string,
+`from` string,
+`to` string,
+`amount` float,
+`sgst` float,
+`total` float,
+`inwords` string
+)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe'
+WITH SERDEPROPERTIES (
+'serialization.format' = ',',
+'field.delim' = ','
+) LOCATION 's3://&lt;target S3 bucket&gt;/'
+TBLPROPERTIES ('has_encrypted_data'='false');
+</code></pre><p><img src="/images/aws/prj2/25.JPG?classes=shadow" alt="prj2"></p>
+<ol start="4">
+<li>Paste the following query and run it to show aggregated expenses by date:</li>
+</ol>
+<pre><code>SELECT sum(&quot;amount&quot;), &quot;date&quot; FROM &quot;proj2db&quot;.&quot;invoice&quot; GROUP BY &quot;date&quot;;
+</code></pre><p><img src="/images/aws/prj2/26.JPG?classes=shadow" alt="prj2"></p>
+<p>Shown below is the output of the Athena query to show aggregated expenses by date. Since we have only uploaded one invoice, we don&rsquo;t have lots of the invoices to query.</p>
+<p><img src="/images/aws/prj2/27.JPG?classes=shadow" alt="prj2"> 
+<img src="/images/aws/prj2/28.JPG?classes=shadow" alt="prj2"></p>
+<h2 id="conclusion">Conclusion:</h2>
+<p>By the end of this tutorial, we have successfully created an Invoice Processing Application web. The application has utilized S3, SNS, EC2, DynamoDB and Athena.</p>
 
 
 <footer class="footline">
@@ -1996,6 +2086,25 @@ Protocol : HTTP</p>
             
         
                     
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -2004,8 +2113,18 @@ Protocol : HTTP</p>
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -2014,6 +2133,9 @@ Protocol : HTTP</p>
                     
                     
 
+                    
+            
+        
                     
                         
             
@@ -2609,7 +2731,7 @@ Protocol : HTTP</p>
 			<a class="nav nav-prev" href="/aws/lambda_web/" title="Application Load Balancer with Lambda Backend"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/rasp/" title="Raspberry Pi Tutorials" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/aws/prj3/" title="" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2619,19 +2741,19 @@ Protocol : HTTP</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1617635460"></script>
-    <script src="/js/perfect-scrollbar.min.js?1617635460"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1617635460"></script>
-    <script src="/js/jquery.sticky.js?1617635460"></script>
-    <script src="/js/featherlight.min.js?1617635460"></script>
-    <script src="/js/highlight.pack.js?1617635460"></script>
+    <script src="/js/clipboard.min.js?1618946613"></script>
+    <script src="/js/perfect-scrollbar.min.js?1618946613"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1618946613"></script>
+    <script src="/js/jquery.sticky.js?1618946613"></script>
+    <script src="/js/featherlight.min.js?1618946613"></script>
+    <script src="/js/highlight.pack.js?1618946613"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1617635460"></script>
-    <script src="/js/learn.js?1617635460"></script>
-    <script src="/js/hugo-learn.js?1617635460"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1618946613"></script>
+    <script src="/js/learn.js?1618946613"></script>
+    <script src="/js/hugo-learn.js?1618946613"></script>
     
         
-            <script src="/mermaid/mermaid.js?1617635460"></script>
+            <script src="/mermaid/mermaid.js?1618946613"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

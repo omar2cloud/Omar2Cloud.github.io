@@ -55,6 +55,36 @@ However, there is an exciting feature by which the target group can contain a la
     </item>
     
     <item>
+      <title>Create a Simple AWS CodePipeline from S3</title>
+      <link>https://omar2cloud.github.io/aws/codepipeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/codepipeline/</guid>
+      <description>AWS CodePipeline AWS CodePipeline is a continuous delivery service offered by AWS to model, visualize, and automate the release of applications. This service allows for rapid modeling and configuring of different steps of an application release process. It automates the necessary process of change of application deployment. For information about AWS CodePipeline.
+Learning Outcomes and Tutorial Scenario: In this tutorial, we will create a two-stage pipeline that uses a versioned S3 bucket and CodeDeploy to release a sample application.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://omar2cloud.github.io/aws/_codepipeline-copy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/_codepipeline-copy/</guid>
+      <description>AWS CodePipeline AWS CodePipeline is a continuous delivery service offered by AWS to model, visualize, and automate the release of applications. This service allows for rapid modeling and configuring of different steps of an application release process. It automates the necessary process of change of application deployment. For information about AWS CodePipeline.
+Learning Outcomes and Tutorial Scenario: In this tutorial, we will create a two-stage pipeline that uses a versioned S3 bucket and CodeDeploy to release a sample application.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://omar2cloud.github.io/aws/_rekognition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/_rekognition/</guid>
+      <description>AWS Rekognition Amazon Rekognition requires no machine learning expertise to use. It&amp;rsquo;s a simple way to analysis images and videos for any application using proven record of high scalability and deep learning technology. Rekognition technology is utilized to identify and detect objects, shapes, people, text, and activities in media contents. For more about Amazon Rekognition.
+In this tutorial, we will explore the important aspect of AWS Rekognition and practically detect people and text on sample picture and video utilizing boto3 - AWS Python library.</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://omar2cloud.github.io/aws/prj3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

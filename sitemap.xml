@@ -96,7 +96,19 @@
   </url>
   
   <url>
+    <loc>https://omar2cloud.github.io/aws/prj3/</loc>
+  </url>
+  
+  <url>
     <loc>https://omar2cloud.github.io/cont/archetypes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/aws/_rekognition/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/aws/_codecommit/</loc>
   </url>
   
   <url>
@@ -159,14 +171,6 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/aws/_codepipeline-copy/</loc>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/aws/_rekognition/</loc>
-  </url>
-  
-  <url>
     <loc>https://omar2cloud.github.io/aws/new-folder/configuration/</loc>
   </url>
   
@@ -188,10 +192,6 @@
   
   <url>
     <loc>https://omar2cloud.github.io/aws/portainer/wordpress/_wordpress/</loc>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/aws/prj3/</loc>
   </url>
   
   <url>

@@ -92,5 +92,15 @@ In this tutorial, we will explore the important aspect of AWS Rekognition and pr
 Learning Outcomes and Tutorial Scenario: In this tutorial, we will create a two-stage pipeline that uses a versioned S3 bucket and CodeDeploy to release a sample application.</description>
     </item>
     
+    <item>
+      <title>Create a Terraform Template to Spin EC2 Instance from a RaspberryPi 4</title>
+      <link>https://omar2cloud.github.io/aws/_terraform/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/_terraform/</guid>
+      <description>What is Terraform? Terraform is an Infrastructure as a Code - IaaC- service. It is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and popular service providers as well as custom in-house solutions. For more information about Terraform.
+During this tutorial, we will create a sample Terraform template to spin an AWS EC2 instance from the Command Line Interface (CLI) on a Raspberry Pi 4.</description>
+    </item>
+    
   </channel>
 </rss>

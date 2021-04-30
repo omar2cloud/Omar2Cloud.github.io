@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://omar2cloud.github.io/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Unified Cloudwatch Agent</title>
+      <title>Install Unified CloudWatch Agent</title>
       <link>https://omar2cloud.github.io/aws/cloudwatch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -64,25 +64,6 @@ However, there is an exciting feature by which the target group can contain a la
     </item>
     
     <item>
-      <title>Image Analysis with AWS Rekognition</title>
-      <link>https://omar2cloud.github.io/aws/_rekognition/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/aws/_rekognition/</guid>
-      <description>AWS Rekognition Amazon Rekognition is part of AWS cognitive services, which requires no machine learning expertise to use. It&amp;rsquo;s a simple way to analysis images and videos for any application using proven record of high scalability and deep learning technology. Rekognition technology is utilized to identify and detect objects, shapes, people, text, and activities in media contents. For more about Amazon Rekognition.
-In this tutorial, we will explore the important aspect of AWS Rekognition and practically detect people and text on sample picture and video utilizing boto3 - AWS Python library.</description>
-    </item>
-    
-    <item>
-      <title>Create a Simple AWS CodePipeline from CodeCommit and Elastic Beanstalk</title>
-      <link>https://omar2cloud.github.io/aws/_codecommit/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/aws/_codecommit/</guid>
-      <description>AWS CodeCommit, Elastic Beanstalk and CodePipeline AWS CodeCommit is a fully-managed source control service that hosts secure Git-based repositories. It makes it easy for teams to collaborate on code in a secure and highly scalable ecosystem. CodeCommit eliminates the need to operate your own source control system or worry about scaling its infrastructure. You can use CodeCommit to securely store anything from source code to binaries, and it works seamlessly with your existing Git tools.</description>
-    </item>
-    
-    <item>
       <title>Create a Simple AWS CodePipeline from S3</title>
       <link>https://omar2cloud.github.io/aws/codepipeline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -94,12 +75,31 @@ Learning Outcomes and Tutorial Scenario: In this tutorial, we will create a two-
     
     <item>
       <title>Create a Terraform Template to Spin EC2 Instance from a RaspberryPi 4</title>
-      <link>https://omar2cloud.github.io/aws/_terraform/</link>
+      <link>https://omar2cloud.github.io/aws/terraform/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://omar2cloud.github.io/aws/_terraform/</guid>
+      <guid>https://omar2cloud.github.io/aws/terraform/</guid>
       <description>What is Terraform? Terraform is an Infrastructure as a Code - IaaC- service. It is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and popular service providers as well as custom in-house solutions. For more information about Terraform.
 During this tutorial, we will create a sample Terraform template to spin an AWS EC2 instance from the Command Line Interface (CLI) on a Raspberry Pi 4.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://omar2cloud.github.io/aws/_codecommit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/_codecommit/</guid>
+      <description>AWS CodeCommit, Elastic Beanstalk and CodePipeline AWS CodeCommit is a fully-managed source control service that hosts secure Git-based repositories. It makes it easy for teams to collaborate on code in a secure and highly scalable ecosystem. CodeCommit eliminates the need to operate your own source control system or worry about scaling its infrastructure. You can use CodeCommit to securely store anything from source code to binaries, and it works seamlessly with your existing Git tools.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://omar2cloud.github.io/aws/_rekognition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/_rekognition/</guid>
+      <description>AWS Rekognition Amazon Rekognition is part of AWS cognitive services, which requires no machine learning expertise to use. It&amp;rsquo;s a simple way to analysis images and videos for any application using proven record of high scalability and deep learning technology. Rekognition technology is utilized to identify and detect objects, shapes, people, text, and activities in media contents. For more about Amazon Rekognition.
+In this tutorial, we will explore the important aspect of AWS Rekognition and practically detect people and text on sample picture and video utilizing boto3 - AWS Python library.</description>
     </item>
     
   </channel>

@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.78.1" />
-    <meta name="description" content="Disclaimers to help you structure your page">
+    <meta name="description" content="Tutorials">
 <meta name="author" content="Omar A Omar">
 
     <link rel="icon" href="/images/favicon.ico" type="image/png">
-    <title>Notice - My Journey</title>
+    <title>Create a Terraform Template to Spin EC2 Instance from a RaspberryPi 4 - My Journey</title>
 
     
     <link href="/css/nucleus.css?1619753746" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/shortcodes/notice/">
+  <body class="" data-url="/aws/terraform/">
     <nav id="sidebar" class="">
 
 
@@ -94,7 +94,7 @@
   
     
     <li data-nav-id="/aws/" title="AWS Tutorials" class="dd-item
-        
+        parent
         
         
         ">
@@ -511,7 +511,7 @@
  
   
     
-      <li data-nav-id="/aws/terraform/" title="Create a Terraform Template to Spin EC2 Instance from a RaspberryPi 4" class="dd-item ">
+      <li data-nav-id="/aws/terraform/" title="Create a Terraform Template to Spin EC2 Instance from a RaspberryPi 4" class="dd-item active">
         <a href="/aws/terraform/">
         <b> </b>Terraform Sample Template
         
@@ -998,7 +998,7 @@
   
     
     <li data-nav-id="/shortcodes/" title="" class="dd-item
-        parent
+        
         
         
         ">
@@ -1475,7 +1475,7 @@
  
   
     
-      <li data-nav-id="/shortcodes/notice/" title="Notice" class="dd-item active">
+      <li data-nav-id="/shortcodes/notice/" title="Notice" class="dd-item ">
         <a href="/shortcodes/notice/">
         Notice
         
@@ -1582,7 +1582,7 @@
             
           
           
-            <a href='/'>Learn with Omar</a> > <a href='/shortcodes/'></a> > Notice
+            <a href='/'>Learn with Omar</a> > <a href='/aws/'>AWS Tutorials</a> > Create a Terraform Template to Spin EC2 Instance from a RaspberryPi 4
           
         
           
@@ -1597,14 +1597,21 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#what-is-terraform">What is Terraform?</a></li>
+    <li><a href="#learning-outcomes">Learning Outcomes:</a></li>
+    <li><a href="#what-you-do-you-need-to-complete-the-tutorial">What you do you need to complete the tutorial:</a></li>
+    <li><a href="#step-1-download-terraform-on-raspberry-pi-4">Step 1: Download Terraform on Raspberry Pi 4</a></li>
+    <li><a href="#step-2-create-aws-identity-and-access-management-iam-user">Step 2: Create AWS Identity and Access Management (IAM) user</a>
       <ul>
-        <li><a href="#note">Note</a></li>
-        <li><a href="#info">Info</a></li>
-        <li><a href="#tip">Tip</a></li>
-        <li><a href="#warning">Warning</a></li>
+        <li></li>
       </ul>
     </li>
+    <li><a href="#step-3-create-a-terraform-sample-template-to-spin-an-aws-ec2">Step 3: Create a Terraform Sample Template to Spin an AWS EC2</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion:</a></li>
   </ul>
 </nav>
     </div>
@@ -1622,50 +1629,187 @@
           
             <h1>
               
-              Notice
+              Create a Terraform Template to Spin EC2 Instance from a RaspberryPi 4
             </h1>
           
 
         
 
 
-<p>The notice shortcode shows 4 types of disclaimers to help you structure your page.</p>
-<h3 id="note">Note</h3>
-<pre><code>{{% notice note %}}
-A notice disclaimer
-{{% /notice %}}
-</code></pre><p>renders as</p>
+<h2 id="what-is-terraform">What is Terraform?</h2>
+<p>Terraform is an Infrastructure as a  Code - <strong>IaaC</strong>- service. It is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and popular service providers as well as custom in-house solutions. For more information about <a href="https://www.terraform.io/intro/index.html">Terraform</a>.</p>
+<p>During this tutorial, we will create a sample Terraform template to spin an AWS EC2 instance from the Command Line Interface (CLI) on a Raspberry Pi 4.</p>
+<h2 id="learning-outcomes">Learning Outcomes:</h2>
+<ol>
+<li>Download Terraform on a Raspberry Pi 4 arm64 architecture.</li>
+<li>Create AWS Identity and Access Management (IAM) user to run the Terraform sample template from the RPI-4.</li>
+<li>Create a Terraform sample template to spin an AWS EC2.</li>
+<li>Learn Terraform commands.</li>
+</ol>
+<h2 id="what-you-do-you-need-to-complete-the-tutorial">What you do you need to complete the tutorial:</h2>
+<ol>
+<li>AWS Account Credentials.</li>
+<li>A Raspberry Pi 4.</li>
+<li>Shell script environment (any text editor of your choice).</li>
+</ol>
+<h2 id="step-1-download-terraform-on-raspberry-pi-4">Step 1: Download Terraform on Raspberry Pi 4</h2>
+<ol>
+<li>First of all, if you&rsquo;d like to check your device&rsquo;s architecture, run the following command:</li>
+</ol>
+<pre><code>uname -a
+</code></pre><p><img src="/images/aws/Terraform/1_2.JPG?classes=shadow" alt="Terraform"></p>
+<ol start="2">
+<li>Navigate to <a href="https://www.terraform.io/downloads.html">Terraform download page</a> and download the proper package for your operating system and architecture. In my case, I chose to download the Linux package arm64 to my RPI-4.</li>
+</ol>
+<p><img src="/images/aws/Terraform/1.png?classes=shadow" alt="Terraform"></p>
+<p>Now, let navigate to the folder where the package is downloaded and unzip it using the unzip utility. If you don&rsquo;t have the unzip utility, use the following command to install it.</p>
+<pre><code>sudo apt install zip -y
+</code></pre><p>Now, let&rsquo;s unzip the package as shown below:</p>
+<p><img src="/images/aws/Terraform/2.png?classes=shadow" alt="Terraform"></p>
+<ol start="3">
+<li>We will run the following commands to move the Terraform zip file to our <em>PATH</em>. Firstly, we need to find the <em>PATH</em>.</li>
+</ol>
+<pre><code>echo $PATH
+</code></pre><p>Then, we will move the Terraform zip file to our main PATH, which is <em>/usr/local/bin/</em>. This will allow us to run Terraform commands from any location without any restrictions.</p>
+<pre><code>sudo mv terraform /usr/local/bin/
+</code></pre><p>Then, we will <strong>cd</strong> into the the <strong>bin</strong> folder as shown below:</p>
+<p><img src="/images/aws/Terraform/4.png?classes=shadow" alt="Terraform"></p>
+<p>Now, let&rsquo;s run the command <strong>terraform</strong>. If the results as shown below, we have installed Terraform successfully.</p>
+<pre><code>terraform
+</code></pre><p>The results should be as shown below:</p>
+<p><img src="/images/aws/Terraform/5.JPG?classes=shadow" alt="Terraform"></p>
+<h2 id="step-2-create-aws-identity-and-access-management-iam-user">Step 2: Create AWS Identity and Access Management (IAM) user</h2>
+<h4 id="part-1">Part 1:</h4>
+<ol>
+<li>Navigate to AWS console.</li>
+<li>Go to IAM and click on Users on the left hand side menu.</li>
+<li>Click on Add user and then add a user name and select access type as <strong>Programmatic access</strong> as shown below. Then, click on Next.</li>
+</ol>
+<p><img src="/images/aws/Terraform/10.JPG?classes=shadow" alt="Terraform"></p>
+<ol start="4">
+<li>On Set permissions, click on Attach existing policies directly. search for XX policy and check it. Then, click Next.</li>
+</ol>
+<p><img src="/images/aws/Terraform/11.JPG?classes=shadow" alt="Terraform"></p>
+<ol start="5">
+<li>On Add tags, it&rsquo;s a best practice to use tags; therefore, adda key and value as shown below. Then, click Next.</li>
+</ol>
+<p><img src="/images/aws/Terraform/12.JPG?classes=shadow" alt="Terraform"></p>
+<ol start="6">
+<li>Finally, review the add user details and permissions summary and then click on Create user.</li>
+</ol>
+<p><img src="/images/aws/Terraform/13.JPG?classes=shadow" alt="Terraform"></p>
+<ol start="7">
+<li>Now, we have obtained the <strong>Access Key ID</strong> and <strong>Secret Access Key</strong>, let&rsquo;s download the csv file and save it in a secure location for future reference.</li>
+</ol>
+<p><img src="/images/aws/Terraform/14.JPG?classes=shadow" alt="Terraform"></p>
+<h4 id="part-2">Part 2:</h4>
+<p>Install the latest <a href="https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html">AWS Command Line Interface - CLI version 2</a> for Linux ARM architecture since my Raspberry Pi 4 is an arm64 architecture. However, you shall Choose the appropriate package for your operating system and device architecture.</p>
+<pre><code>curl &quot;https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip&quot; -o &quot;awscliv2.zip&quot;
+</code></pre><pre><code>unzip awscliv2.zip
+</code></pre><pre><code>sudo ./aws/install
+</code></pre><p><img src="/images/aws/Terraform/7.JPG?classes=shadow" alt="Terraform"> 
+<img src="/images/aws/Terraform/8.JPG?classes=shadow" alt="Terraform"></p>
+<p>We will configure the aws on our device (RPI-4 in my case), which is the fastest way to set up our AWS CLI installation. When you enter this <em>aws configure</em> command, the AWS CLI prompts you for four pieces of information:</p>
+<ol>
+<li>Access key ID</li>
+<li>Secret access key</li>
+<li>AWS Region</li>
+<li>Output format</li>
+</ol>
 
-<div class="notices note" ><p>A notice disclaimer</p>
+<div class="notices note" ><p>The access keys consist of an access key ID and a secret access key, which are used to sign programmatic requests that you make to AWS. If you don&rsquo;t have access keys, you can create them from the AWS Management Console. As a best practice, do not use the AWS account root user access keys for any task where it&rsquo;s not required.</p>
 </div>
 
-<h3 id="info">Info</h3>
-<pre><code>{{% notice info %}}
-An information disclaimer
-{{% /notice %}}
-</code></pre><p>renders as</p>
+<p>Let&rsquo;s start with aws configuration by using the following command in our CLI.</p>
+<p>Example:</p>
+<pre><code>aws configure --profile [your profile name]
+</code></pre><p>Actual:</p>
+<pre><code>aws configure --profile Terraform
+</code></pre><p><img src="/images/aws/Terraform/9.png?classes=shadow" alt="Terraform"></p>
+<p>To Check if the CLI and profile have been configured properly, run the following command which will lists all of your AWS EC2 instance resources using credentials and settings, which we have defined in the [your profile name] profile</p>
+<pre><code>aws ec2 describe-instances --profile [your profile name]
+</code></pre><h2 id="step-3-create-a-terraform-sample-template-to-spin-an-aws-ec2">Step 3: Create a Terraform Sample Template to Spin an AWS EC2</h2>
+<h4 id="terraform-commands">Terraform Commands</h4>
+<table>
+<thead>
+<tr>
+<th>Commands</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>terraform init</td>
+<td>Download any plugins required to run templates</td>
+</tr>
+<tr>
+<td>terraform plan</td>
+<td>Will give you a list of resources that will be created/deleted</td>
+</tr>
+<tr>
+<td>terraform apply</td>
+<td>WIll create/delete resources</td>
+</tr>
+<tr>
+<td>terraform destroy</td>
+<td>Will delete all the resources created by Terraform</td>
+</tr>
+<tr>
+<td>terraform fmt</td>
+<td>Will format the file with proper indentation</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: you could always reference <a href="https://registry.terraform.io/browse/providers">Terraform Providers</a> for more commands per provider.</em></p>
+<h4 id="creating-a-terraform-sample-template">Creating a Terraform Sample Template</h4>
+<ol>
+<li>Utilize any Shell script environment or text/code editor of your choice to start the Terraform language code for Terraform sample template as shown below and save the file with a <strong>.tf</strong> extension:</li>
+</ol>
+<pre><code>provider &quot;aws&quot; {
+    profile = &quot;Terraform&quot;
+    region = &quot;us-east-1&quot;
+    
+}
 
-<div class="notices info" ><p>An information disclaimer</p>
-</div>
-
-<h3 id="tip">Tip</h3>
-<pre><code>{{% notice tip %}}
-A tip disclaimer
-{{% /notice %}}
-</code></pre><p>renders as</p>
-
-<div class="notices tip" ><p>A tip disclaimer</p>
-</div>
-
-<h3 id="warning">Warning</h3>
-<pre><code>{{% notice warning %}}
-A warning disclaimer
-{{% /notice %}}
-</code></pre><p>renders as</p>
-
-<div class="notices warning" ><p>A warning disclaimer</p>
-</div>
-
+resource &quot;aws_instance&quot; &quot;demo_instance&quot; {
+   
+    ami = &quot;ami-042e8287309f5df03&quot;
+    instance_type = &quot;t2.micro&quot;
+    
+    tags = {
+        Name = &quot;Terraform_Demo&quot;
+        
+          }
+    
+}
+</code></pre><p><img src="/images/aws/Terraform/16.png?classes=shadow" alt="Terraform"></p>
+<p><em>Note: every AMI has a unique ID and the Ubuntu 20.04 LTS we have chosen has the following AMI ID: <strong>ami-042e8287309f5df03</strong>. If you would like to spin a different AMI, replace the AMI ID.</em>
+<em>Also, don&rsquo;t forget to replace the profile name with the name of AWS profile which we have created earlier (in my case is Terraform).</em></p>
+<p><img src="/images/aws/Terraform/15.JPG?classes=shadow" alt="Terraform"></p>
+<ol start="2">
+<li>Now, we are ready to run Terraform command. Let&rsquo;s start with running <strong>terraform init</strong>, where we have the Template file saved.</li>
+</ol>
+<pre><code>terraform init
+</code></pre><ol start="3">
+<li>The <strong>terraform plan</strong> command will inspect the template for resources.</li>
+</ol>
+<pre><code>terraform plan
+</code></pre><ol start="4">
+<li>Finally, we are ready to apply changes. Let&rsquo;s run <strong>terraform apply</strong>. You will be prompted to enter <strong>yes</strong> to apply the changes requested by the template. Then, the resources requested will be created as shown below.</li>
+</ol>
+<pre><code>terraform apply
+</code></pre><p><img src="/images/aws/Terraform/22.png?classes=shadow" alt="Terraform"></p>
+<ol start="5">
+<li>We will head to AWS console to verify the status of our newly spun EC2. Let&rsquo;s pay close attention to the name of the instance and the AMI ID which should match the names we chose in our Terraform sample template.</li>
+</ol>
+<p><img src="/images/aws/Terraform/19.JPG?classes=shadow" alt="Terraform"></p>
+<ol start="6">
+<li>Once we have completed the tutorial, we can utilize <strong>terraform destroy</strong> command to terminate the resources we have created and spun by our sample template. This command will only destroy the resources built by Terraform.</li>
+</ol>
+<pre><code>terraform destroy
+</code></pre><p><img src="/images/aws/Terraform/20.JPG?classes=shadow" alt="Terraform"></p>
+<h2 id="conclusion">Conclusion:</h2>
+<p>Congratulations!! We have created a Terraform sample template and ran it to spin an AWS EC2 instance successfully from the Command Line Interface (CLI) on a Raspberry Pi 4.</p>
 
 
 <footer class="footline">
@@ -1703,8 +1847,6 @@ A warning disclaimer
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1720,6 +1862,9 @@ A warning disclaimer
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1965,21 +2110,6 @@ A warning disclaimer
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1997,133 +2127,8 @@ A warning disclaimer
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2164,8 +2169,6 @@ A warning disclaimer
                 
 
                     
-                    
-                        
                     
                     
 
@@ -2306,7 +2309,6 @@ A warning disclaimer
             
                 
                     
-                    
                 
                 
 
@@ -2322,8 +2324,151 @@ A warning disclaimer
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2596,7 +2741,6 @@ A warning disclaimer
             
                 
                     
-                    
                 
                 
 
@@ -2612,9 +2756,6 @@ A warning disclaimer
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2639,10 +2780,10 @@ A warning disclaimer
 	 
 	 
 		
-			<a class="nav nav-prev" href="/shortcodes/mermaid/" title="Mermaid"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/aws/codepipeline/" title="Create a Simple AWS CodePipeline from S3"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/shortcodes/siteparam/" title="Site param" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/aws/_codecommit/" title="" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

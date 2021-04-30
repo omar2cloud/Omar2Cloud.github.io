@@ -56,22 +56,22 @@ sudo apt autoremoveA public folder will be generated, containing all static con
     </item>
     
     <item>
-      <title>Install x11vnc Server on Ubuntu 20.04 for Remote Access</title>
-      <link>https://omar2cloud.github.io/rasp/pi/x11vnc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/rasp/pi/x11vnc/</guid>
-      <description>What is a X11VNC Server? The Virtual Network Computing (VNC) allows to view and interact with devices remotely with any VNC viewer. When working with multiple RPIs, having VNC servers give us access all our RPIs from one device. There are many VNC servers and X11VNC is one of them. On another tutorial, we will install RealVNC, which is another vnc server. I will go over why do we need to install X11VNC on Ubuntu and RealVNC on RPI OS.</description>
-    </item>
-    
-    <item>
-      <title>Unified Cloudwatch Agent</title>
+      <title>Install Unified CloudWatch Agent</title>
       <link>https://omar2cloud.github.io/aws/cloudwatch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://omar2cloud.github.io/aws/cloudwatch/</guid>
       <description>Install Unified CloudWatch Agent: The unified CloudWatch agent. It enables you to collect both logs and advanced metrics with one agent. It offers support across operating systems, including servers running Windows Server. This agent also provides better performance. The older CloudWatch Logs agent, which supports the collection of logs from only servers running Linux. AWS strongly recommends migrating to the unified CloudWatch agent.
 The unified CloudWatch agent enables you to do the following: 1- Collect more system-level metrics from Amazon EC2 instances across operating systems.</description>
+    </item>
+    
+    <item>
+      <title>Install x11vnc Server on Ubuntu 20.04 for Remote Access</title>
+      <link>https://omar2cloud.github.io/rasp/pi/x11vnc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/pi/x11vnc/</guid>
+      <description>What is a X11VNC Server? The Virtual Network Computing (VNC) allows to view and interact with devices remotely with any VNC viewer. When working with multiple RPIs, having VNC servers give us access all our RPIs from one device. There are many VNC servers and X11VNC is one of them. On another tutorial, we will install RealVNC, which is another vnc server. I will go over why do we need to install X11VNC on Ubuntu and RealVNC on RPI OS.</description>
     </item>
     
     <item>
@@ -180,25 +180,6 @@ hugo new --kind chapter &amp;lt;name&amp;gt;/_index.mdIt will create a page wit
     </item>
     
     <item>
-      <title>Image Analysis with AWS Rekognition</title>
-      <link>https://omar2cloud.github.io/aws/_rekognition/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/aws/_rekognition/</guid>
-      <description>AWS Rekognition Amazon Rekognition is part of AWS cognitive services, which requires no machine learning expertise to use. It&amp;rsquo;s a simple way to analysis images and videos for any application using proven record of high scalability and deep learning technology. Rekognition technology is utilized to identify and detect objects, shapes, people, text, and activities in media contents. For more about Amazon Rekognition.
-In this tutorial, we will explore the important aspect of AWS Rekognition and practically detect people and text on sample picture and video utilizing boto3 - AWS Python library.</description>
-    </item>
-    
-    <item>
-      <title>Create a Simple AWS CodePipeline from CodeCommit and Elastic Beanstalk</title>
-      <link>https://omar2cloud.github.io/aws/_codecommit/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/aws/_codecommit/</guid>
-      <description>AWS CodeCommit, Elastic Beanstalk and CodePipeline AWS CodeCommit is a fully-managed source control service that hosts secure Git-based repositories. It makes it easy for teams to collaborate on code in a secure and highly scalable ecosystem. CodeCommit eliminates the need to operate your own source control system or worry about scaling its infrastructure. You can use CodeCommit to securely store anything from source code to binaries, and it works seamlessly with your existing Git tools.</description>
-    </item>
-    
-    <item>
       <title>Create a Simple AWS CodePipeline from S3</title>
       <link>https://omar2cloud.github.io/aws/codepipeline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -210,10 +191,10 @@ Learning Outcomes and Tutorial Scenario: In this tutorial, we will create a two-
     
     <item>
       <title>Create a Terraform Template to Spin EC2 Instance from a RaspberryPi 4</title>
-      <link>https://omar2cloud.github.io/aws/_terraform/</link>
+      <link>https://omar2cloud.github.io/aws/terraform/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://omar2cloud.github.io/aws/_terraform/</guid>
+      <guid>https://omar2cloud.github.io/aws/terraform/</guid>
       <description>What is Terraform? Terraform is an Infrastructure as a Code - IaaC- service. It is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and popular service providers as well as custom in-house solutions. For more information about Terraform.
 During this tutorial, we will create a sample Terraform template to spin an AWS EC2 instance from the Command Line Interface (CLI) on a Raspberry Pi 4.</description>
     </item>
@@ -275,6 +256,25 @@ Configuration Just add tags to any page:
 --- date: 2018-11-29T08:41:44+01:00 title: Theme tutorial weight: 15 tags: [&amp;#34;tutorial&amp;#34;, &amp;#34;theme&amp;#34;] --- Behavior The tags are displayed at the top of the page, in their insertion order.
 Each tag is a link to a Taxonomy page displaying all the articles with the given tag.
 List all the tags In the config.toml file you can add a shortcut to display all the tags</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://omar2cloud.github.io/aws/_codecommit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/_codecommit/</guid>
+      <description>AWS CodeCommit, Elastic Beanstalk and CodePipeline AWS CodeCommit is a fully-managed source control service that hosts secure Git-based repositories. It makes it easy for teams to collaborate on code in a secure and highly scalable ecosystem. CodeCommit eliminates the need to operate your own source control system or worry about scaling its infrastructure. You can use CodeCommit to securely store anything from source code to binaries, and it works seamlessly with your existing Git tools.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://omar2cloud.github.io/aws/_rekognition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/_rekognition/</guid>
+      <description>AWS Rekognition Amazon Rekognition is part of AWS cognitive services, which requires no machine learning expertise to use. It&amp;rsquo;s a simple way to analysis images and videos for any application using proven record of high scalability and deep learning technology. Rekognition technology is utilized to identify and detect objects, shapes, people, text, and activities in media contents. For more about Amazon Rekognition.
+In this tutorial, we will explore the important aspect of AWS Rekognition and practically detect people and text on sample picture and video utilizing boto3 - AWS Python library.</description>
     </item>
     
     <item>

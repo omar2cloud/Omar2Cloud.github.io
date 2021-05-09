@@ -8,12 +8,30 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jun 2020 13:31:12 +0100</lastBuildDate><atom:link href="https://omar2cloud.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Create a Free Domain Name</title>
+      <link>https://omar2cloud.github.io/cloudflare/domain/domain/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/cloudflare/domain/domain/</guid>
+      <description>Tutorial Scenario:  Register a free domain at Freenom Signup for a free account at Cloudflare Add a site to Cloudflare  Step 1: Register a free domain at Freenom:  Navigate to Freenom and create a free account. Select Register a New Domain as show below.  Check the availability of a domain name of your choice. In my case, it&amp;rsquo;s mytunnel. Then, select the free domain TDL  Choose the Period for your selected domain.</description>
+    </item>
+    
+    <item>
       <title>My First Raspberry Pi</title>
       <link>https://omar2cloud.github.io/rasp/pi/myrasp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://omar2cloud.github.io/rasp/pi/myrasp/</guid>
       <description>What is Raspberry Pi (RPI)? The Raspberry Pi is a small single-board computer capable of doing almost everything that an ordinary Linux-based computer can do. Once it connects to an HDMI display, a keyboard, and a mouse, we have have a fully functional computer for a pice of $35 (or even way less for the Raspberry Pi Zero). The Raspberry Pi is widely known and used for home lab environments, where anyone can experiment safely.</description>
+    </item>
+    
+    <item>
+      <title>Create a Free Cloudflare Tunnel</title>
+      <link>https://omar2cloud.github.io/cloudflare/cloudflared/cloudflare/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/cloudflare/cloudflared/cloudflare/</guid>
+      <description>Tutorial Scenario:  Signup for a free Cloudflare for Teams. Install and authenticate cloudflared on a Raspberry Pi 4. Create a Cloudflare Tunnel. Configure the Tunnel details. Create DNS records to route traffic to the Tunnel. Run and manage the Tunnel. Add a Zero Trust policy. Run Tunnel as a service.  Step 1: Signup for a free Cloudflare for Teams: Navigate to Cloudflare for Teams and signup for a free account.</description>
     </item>
     
     <item>
@@ -156,6 +174,17 @@ docker ps -aDocker run reference - Foreground vs. Detached Foreground In foregr
       
       <guid>https://omar2cloud.github.io/aws/prj2/</guid>
       <description>Invoice Processing Application The Invoice Processing Application is to parse the content of the uploaded text format invoices to S3 bucket using a Python custom code running on a Ubuntu EC2 to convert them into CSV records. Once a record is processed, it will be saved in DynamoDB for retention and the converted CSV record is saved in S3 destination bucket. AWS Athena is to query the CSV records to aggregate expenses grouped by date.</description>
+    </item>
+    
+    <item>
+      <title>Create a MySQL database using RDS</title>
+      <link>https://omar2cloud.github.io/rasp/pi/_cloudflared/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/pi/_cloudflared/</guid>
+      <description>https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/run-tunnel/run-as-service
+https://docs.pi-hole.net/guides/dns/cloudflared/#configuring-pi-hole
+Cloudflare | Argo Tunnel | Tunnel Several years ago, Cloudflare has introduced a private, secure connection between the origin server and Cloudflare, which is named Argo Tunnel. The main purpose with Tunnel was to create a private link from the user&amp;rsquo;s origin server directly to Cloudflare without a public IP address, validating traffic origin, port-forwarding or even punching through firewall settings. This private connection is securely established by utilizing a Cloudflared daemon installed on the origin server.</description>
     </item>
     
     <item>

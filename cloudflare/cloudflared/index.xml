@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloudflare Tutorials on My Journey</title>
+    <link>https://omar2cloud.github.io/cloudflare/cloudflared/</link>
+    <description>Recent content in Cloudflare Tutorials on My Journey</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://omar2cloud.github.io/cloudflare/cloudflared/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create a Free Cloudflare Tunnel</title>
+      <link>https://omar2cloud.github.io/cloudflare/cloudflared/cloudflare/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/cloudflare/cloudflared/cloudflare/</guid>
+      <description>Tutorial Scenario:  Signup for a free Cloudflare for Teams. Install and authenticate cloudflared on a Raspberry Pi 4. Create a Cloudflare Tunnel. Configure the Tunnel details. Create DNS records to route traffic to the Tunnel. Run and manage the Tunnel. Add a Zero Trust policy. Run Tunnel as a service.  Step 1: Signup for a free Cloudflare for Teams: Navigate to Cloudflare for Teams and signup for a free account.</description>
+    </item>
+    
+  </channel>
+</rss>

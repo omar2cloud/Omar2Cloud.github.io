@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Domain Registration on My Journey</title>
+    <link>https://omar2cloud.github.io/cloudflare/domain/</link>
+    <description>Recent content in Domain Registration on My Journey</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://omar2cloud.github.io/cloudflare/domain/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create a Free Domain Name</title>
+      <link>https://omar2cloud.github.io/cloudflare/domain/domain/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/cloudflare/domain/domain/</guid>
+      <description>Tutorial Scenario:  Register a free domain at Freenom Signup for a free account at Cloudflare Add a site to Cloudflare  Step 1: Register a free domain at Freenom:  Navigate to Freenom and create a free account. Select Register a New Domain as show below.  Check the availability of a domain name of your choice. In my case, it&amp;rsquo;s mytunnel. Then, select the free domain TDL  Choose the Period for your selected domain.</description>
+    </item>
+    
+  </channel>
+</rss>

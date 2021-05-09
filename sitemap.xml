@@ -7,6 +7,14 @@
   </url>
   
   <url>
+    <loc>https://omar2cloud.github.io/cloudflare/domain/domain/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/cloudflare/domain/</loc>
+  </url>
+  
+  <url>
     <loc>https://omar2cloud.github.io/rasp/pi/myrasp/</loc>
   </url>
   
@@ -20,6 +28,18 @@
   
   <url>
     <loc>https://omar2cloud.github.io/aws/portainer/spin-ubuntu-instance/ec2-ubuntu/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/cloudflare/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/cloudflare/cloudflared/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/cloudflare/cloudflared/cloudflare/</loc>
   </url>
   
   <url>
@@ -93,6 +113,10 @@
   
   <url>
     <loc>https://omar2cloud.github.io/aws/prj2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/rasp/pi/_cloudflared/</loc>
   </url>
   
   <url>

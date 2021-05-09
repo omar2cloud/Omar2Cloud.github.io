@@ -209,6 +209,16 @@ hugo new --kind chapter &amp;lt;name&amp;gt;/_index.mdIt will create a page wit
     </item>
     
     <item>
+      <title>Image Analysis with AWS Rekognition</title>
+      <link>https://omar2cloud.github.io/aws/rekognition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/rekognition/</guid>
+      <description>AWS Rekognition Amazon Rekognition is part of AWS cognitive services, which requires no machine learning expertise to use. It&amp;rsquo;s a simple way to analysis images and videos for any application using proven record of high scalability and deep learning technology. Rekognition technology is utilized to identify and detect objects, shapes, people, texts, and activities in media contents. For more about Amazon Rekognition.
+In this tutorial, we will explore the important aspect of AWS Rekognition and practically detect people and text on sample picture and video utilizing boto3 - AWS Python library.</description>
+    </item>
+    
+    <item>
       <title>Create a Simple AWS CodePipeline from S3</title>
       <link>https://omar2cloud.github.io/aws/codepipeline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -294,16 +304,6 @@ List all the tags In the config.toml file you can add a shortcut to display all 
       
       <guid>https://omar2cloud.github.io/aws/_codecommit/</guid>
       <description>AWS CodeCommit, Elastic Beanstalk and CodePipeline AWS CodeCommit is a fully-managed source control service that hosts secure Git-based repositories. It makes it easy for teams to collaborate on code in a secure and highly scalable ecosystem. CodeCommit eliminates the need to operate your own source control system or worry about scaling its infrastructure. You can use CodeCommit to securely store anything from source code to binaries, and it works seamlessly with your existing Git tools.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://omar2cloud.github.io/aws/_rekognition/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/aws/_rekognition/</guid>
-      <description>AWS Rekognition Amazon Rekognition is part of AWS cognitive services, which requires no machine learning expertise to use. It&amp;rsquo;s a simple way to analysis images and videos for any application using proven record of high scalability and deep learning technology. Rekognition technology is utilized to identify and detect objects, shapes, people, text, and activities in media contents. For more about Amazon Rekognition.
-In this tutorial, we will explore the important aspect of AWS Rekognition and practically detect people and text on sample picture and video utilizing boto3 - AWS Python library.</description>
     </item>
     
     <item>

@@ -94,12 +94,31 @@ During this tutorial, we will create a sample Terraform template to spin an AWS 
     </item>
     
     <item>
+      <title>Create a Static Sample Website on S3 Utilizing AWS CloudFormation</title>
+      <link>https://omar2cloud.github.io/aws/s3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/s3/</guid>
+      <description>AWS S3 Hosted Website: The objective of tutorial is to host a sample static website on AWS S3, obtain a free domain name from Freenom and assign it to the S3 website and utilize AWS Route 53 as DNS hosting provider. Moreover, an AWS CloudFront distribution is employed to serve the website over AWS&amp;rsquo;s fast content network service with low latency and Lambda@Edge is to add security headers to all web server responses.</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://omar2cloud.github.io/aws/_codecommit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://omar2cloud.github.io/aws/_codecommit/</guid>
       <description>AWS CodeCommit, Elastic Beanstalk and CodePipeline AWS CodeCommit is a fully-managed source control service that hosts secure Git-based repositories. It makes it easy for teams to collaborate on code in a secure and highly scalable ecosystem. CodeCommit eliminates the need to operate your own source control system or worry about scaling its infrastructure. You can use CodeCommit to securely store anything from source code to binaries, and it works seamlessly with your existing Git tools.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://omar2cloud.github.io/aws/_s3.en-copy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/_s3.en-copy/</guid>
+      <description>AWS S3 Hosted Website: The objective of tutorial is to host a sample static website on AWS S3, obtain a free domain name from Freenom and assign it to the S3 website. Moreover, an AWS CloudFront distribution is employed to serve the website over AWS&amp;rsquo;s fast content network service with low latency and Lambda@Edge is to add security headers to all web server responses.
+Finally, we will deploy the architecture using AWS CloudFormation to automate the deployment of our website.</description>
     </item>
     
   </channel>

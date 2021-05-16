@@ -89,7 +89,7 @@ The unified CloudWatch agent enables you to do the following: 1- Collect more sy
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://omar2cloud.github.io/rasp/pi/x11vnc/</guid>
-      <description>What is a X11VNC Server? The Virtual Network Computing (VNC) allows to view and interact with devices remotely with any VNC viewer. When working with multiple RPIs, having VNC servers give us access all our RPIs from one device. There are many VNC servers and X11VNC is one of them. On another tutorial, we will install RealVNC, which is another vnc server. I will go over why do we need to install X11VNC on Ubuntu and RealVNC on RPI OS.</description>
+      <description>What is a X11VNC Server? The Virtual Network Computing (VNC) allows to view and interact with devices remotely with any VNC viewer. When working with multiple RPIs, having VNC servers give us access all our RPIs from one device. There are many VNC servers and X11VNC is one of them. On another tutorial, we will install RealVNC, which is another vnc server, and I will go over the differences between X11VNC and RealVNC.</description>
     </item>
     
     <item>
@@ -103,13 +103,12 @@ As part of this tutorial, we will install and configure MySQL on Ubuntu 20.04 LT
     </item>
     
     <item>
-      <title>Setting UP RPI to Run Headless</title>
-      <link>https://omar2cloud.github.io/rasp/pi/headless/</link>
+      <title>Install RealVNC Server on Ubuntu 20.04 for Remote Access</title>
+      <link>https://omar2cloud.github.io/rasp/pi/realvnc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://omar2cloud.github.io/rasp/pi/headless/</guid>
-      <description>What is Headless? Headless is the term used when we run our RPI without a monitor or a keyboard. I like to setup and configure my RPI using a monitor at least for the first time only, but if we are hosting a server with no desktop GUI on a RPI, setting up headless is the way to go.
-Please, refer to Raspberry Pi Foundation for information on how to setup RPI headless</description>
+      <guid>https://omar2cloud.github.io/rasp/pi/realvnc/</guid>
+      <description>What is a RealVNC Server? RealVNC allows us to interact with our Raspberry Pis graphically via Virtual Network Computing (VNC). The RealVNC server comes preinstalled with the Raspberry Pi OS. It&amp;rsquo;s extremely secure, convenient and reliable. Until the moment of writing this tutorial, 5/15/2021, RealVNC allows us to have up to 5 subscribed devices to remote into via cloud connectivity for FREE. By using this feature, we can remote into our devices from anywhere in the world without a VPN, a port-forwarding or a firewall configuration.</description>
     </item>
     
     <item>
@@ -129,6 +128,16 @@ Please, refer to Raspberry Pi Foundation for information on how to setup RPI hea
       <guid>https://omar2cloud.github.io/rasp/pi/rpidock/</guid>
       <description>Updating the Operating System Now, we have a secured connection with our instance, let&amp;rsquo;s update and upgrade the operating system. Updating and upgrading the operating system of the instance is always a good habit to have. We will run the following update/upgrade commands. The -y in the end of the command line will automatically enters &amp;ldquo;yes&amp;rdquo; as a confirmation before installing the updates.
 sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -yCleaning up after an update If this is not the packages first time to run an update, there might have some unnecessary packages left for cleaning.</description>
+    </item>
+    
+    <item>
+      <title>Setting UP RPI to Run Headless</title>
+      <link>https://omar2cloud.github.io/rasp/pi/headless/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/pi/headless/</guid>
+      <description>What is Headless? Headless is the term used when we run our RPI without a monitor or a keyboard. I like to setup and configure my RPI using a monitor at least for the first time only, but if we are hosting a server with no desktop GUI on a RPI, setting up headless is the way to go.
+Please, refer to Raspberry Pi Foundation for information on how to setup RPI headless</description>
     </item>
     
     <item>

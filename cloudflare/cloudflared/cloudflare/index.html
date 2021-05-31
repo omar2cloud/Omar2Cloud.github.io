@@ -11,21 +11,21 @@
     <title>Create a Free Cloudflare Tunnel - My Journey</title>
 
     
-    <link href="/css/nucleus.css?1621135001" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1621135001" rel="stylesheet">
-    <link href="/css/hybrid.css?1621135001" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1621135001" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1621135001" rel="stylesheet">
-    <link href="/css/auto-complete.css?1621135001" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1621135001" rel="stylesheet">
-    <link href="/css/theme.css?1621135001" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1621135001" rel="stylesheet">
+    <link href="/css/nucleus.css?1622432535" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1622432535" rel="stylesheet">
+    <link href="/css/hybrid.css?1622432535" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1622432535" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1622432535" rel="stylesheet">
+    <link href="/css/auto-complete.css?1622432535" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1622432535" rel="stylesheet">
+    <link href="/css/theme.css?1622432535" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1622432535" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1621135001" rel="stylesheet">
+    <link href="/css/theme-mine.css?1622432535" rel="stylesheet">
     
-    <link href="/css/foo.css?1621135001" rel="stylesheet"><link href="/css/bar.css?1621135001" rel="stylesheet">
+    <link href="/css/foo.css?1622432535" rel="stylesheet"><link href="/css/bar.css?1622432535" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1621135001"></script>
+    <script src="/js/jquery-3.3.1.min.js?1622432535"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1621135001"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1621135001"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1622432535"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1622432535"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/omar2cloud.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1621135001"></script>
+<script type="text/javascript" src="/js/search.js?1622432535"></script>
 
     
   </div>
@@ -865,7 +865,7 @@
     
       <li data-nav-id="/rasp/pi/realvnc/" title="Install RealVNC Server on Ubuntu 20.04 for Remote Access" class="dd-item ">
         <a href="/rasp/pi/realvnc/">
-        <b></b>Install RealVNC
+        <b></b>Install RealVNC Server
         
         </a>
     </li>
@@ -1885,16 +1885,16 @@
 <li>Navigate to <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation">Install Cloudflared</a> site to download the proper package for your architecture. In my case, I will install the Cloudflared daemon on my RPI-4, which is an <strong>arm64</strong> architecture.</li>
 </ol>
 <h5 id="arm64-architecture-64-bit-raspberry-pi-4">arm64 architecture (64-bit Raspberry Pi 4):</h5>
-<pre><code>wget -O cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64
+<pre><code>sudo wget -O cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64
 sudo mv cloudflared /usr/local/bin
 sudo chmod +x /usr/local/bin/cloudflared
 cloudflared -v
 </code></pre><h5 id="amd64-architecture-debianubuntu">AMD64 architecture (Debian/Ubuntu):</h5>
-<pre><code>wget https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.deb
+<pre><code>sudo wget https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.deb
 sudo apt-get install ./cloudflared-stable-linux-amd64.deb
 cloudflared -v
 </code></pre><h5 id="armhf-architecture-32-bit-raspberry-pi">armhf architecture (32-bit Raspberry Pi):</h5>
-<pre><code>wget https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-arm.tgz
+<pre><code>sudo wget https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-arm.tgz
 tar -xvzf cloudflared-stable-linux-arm.tgz
 sudo cp ./cloudflared /usr/local/bin
 sudo chmod +x /usr/local/bin/cloudflared
@@ -3246,19 +3246,19 @@ ingress:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1621135001"></script>
-    <script src="/js/perfect-scrollbar.min.js?1621135001"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1621135001"></script>
-    <script src="/js/jquery.sticky.js?1621135001"></script>
-    <script src="/js/featherlight.min.js?1621135001"></script>
-    <script src="/js/highlight.pack.js?1621135001"></script>
+    <script src="/js/clipboard.min.js?1622432535"></script>
+    <script src="/js/perfect-scrollbar.min.js?1622432535"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1622432535"></script>
+    <script src="/js/jquery.sticky.js?1622432535"></script>
+    <script src="/js/featherlight.min.js?1622432535"></script>
+    <script src="/js/highlight.pack.js?1622432535"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1621135001"></script>
-    <script src="/js/learn.js?1621135001"></script>
-    <script src="/js/hugo-learn.js?1621135001"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1622432535"></script>
+    <script src="/js/learn.js?1622432535"></script>
+    <script src="/js/hugo-learn.js?1622432535"></script>
     
         
-            <script src="/mermaid/mermaid.js?1621135001"></script>
+            <script src="/mermaid/mermaid.js?1622432535"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

@@ -11,21 +11,21 @@
     <title>Setting UP RPI to Run Headless - My Journey</title>
 
     
-    <link href="/css/nucleus.css?1622432535" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1622432535" rel="stylesheet">
-    <link href="/css/hybrid.css?1622432535" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1622432535" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1622432535" rel="stylesheet">
-    <link href="/css/auto-complete.css?1622432535" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1622432535" rel="stylesheet">
-    <link href="/css/theme.css?1622432535" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1622432535" rel="stylesheet">
+    <link href="/css/nucleus.css?1623188515" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1623188515" rel="stylesheet">
+    <link href="/css/hybrid.css?1623188515" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1623188515" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1623188515" rel="stylesheet">
+    <link href="/css/auto-complete.css?1623188515" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1623188515" rel="stylesheet">
+    <link href="/css/theme.css?1623188515" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1623188515" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1622432535" rel="stylesheet">
+    <link href="/css/theme-mine.css?1623188515" rel="stylesheet">
     
-    <link href="/css/foo.css?1622432535" rel="stylesheet"><link href="/css/bar.css?1622432535" rel="stylesheet">
+    <link href="/css/foo.css?1623188515" rel="stylesheet"><link href="/css/bar.css?1623188515" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1622432535"></script>
+    <script src="/js/jquery-3.3.1.min.js?1623188515"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1622432535"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1622432535"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1623188515"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1623188515"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/omar2cloud.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1622432535"></script>
+<script type="text/javascript" src="/js/search.js?1623188515"></script>
 
     
   </div>
@@ -1814,6 +1814,7 @@
       <ul>
         <li><a href="#what-is-headless">What is Headless?</a></li>
         <li><a href="#my-rpi-does-not-boot-without-hdmi-connected">My RPI does not boot without HDMI connected!</a></li>
+        <li><a href="#conclusion">Conclusion:</a></li>
       </ul>
     </li>
   </ul>
@@ -1867,6 +1868,27 @@
 <pre><code>sudo nano /boot/firmware/config.txt
 </code></pre><p><img src="/images/RPI/headless/3.JPG?classes=shadow" alt="headless"></p>
 <p>The above process should allow the RPI to boot up without a monitor or keyboard. The resolution distortion should be resolved as well.</p>
+<h4 id="update-682021">Update (6/8/2021):</h4>
+<p>I recently provisioned a new RPI-4 to run Ubuntu Desktop 21.04. I also followed the same steps above to run the RPI-4 without a monitor; however, the RPI-4 had not worked  without a monitor. Therefore, I have done my research and the work around relies on the <strong>Config.txt</strong> file.</p>
+<p>Let&rsquo;s start by accessing the configuration text file using the following command on our terminal:</p>
+<pre><code>sudo nano /boot/firmware/config.txt
+</code></pre><p>Then, we will perform the following:</p>
+<p>1- Comment out <em>dtoverlay=vc4-kms-v3d</em></p>
+<p>2- Add the following:</p>
+<pre><code>    A. hdmi_force_hotplug=1
+    B. framebuffer_width=1920
+    C. framebuffer_height=1080
+</code></pre>
+<p>The Config.txt should like the image below:</p>
+<p><img src="/images/RPI/headless/3.JPG?classes=shadow" alt="headless"></p>
+<p>Finally, to save the file in the nano text editor:</p>
+<ol>
+<li>hold and click: CTRL-x</li>
+<li>type: y</li>
+<li>click: enter</li>
+</ol>
+<h3 id="conclusion">Conclusion:</h3>
+<p>Now, we are able to run Ubuntu 20.04 on RPI-4 without a need for a monitor. To access the RPI-4 remotely, refer to my tutorial about <a href="https://omar2cloud.github.io/rasp/pi/realvnc/">RealVNC</a>.</p>
 
 
 <footer class="footline">
@@ -2983,19 +3005,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1622432535"></script>
-    <script src="/js/perfect-scrollbar.min.js?1622432535"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1622432535"></script>
-    <script src="/js/jquery.sticky.js?1622432535"></script>
-    <script src="/js/featherlight.min.js?1622432535"></script>
-    <script src="/js/highlight.pack.js?1622432535"></script>
+    <script src="/js/clipboard.min.js?1623188515"></script>
+    <script src="/js/perfect-scrollbar.min.js?1623188515"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1623188515"></script>
+    <script src="/js/jquery.sticky.js?1623188515"></script>
+    <script src="/js/featherlight.min.js?1623188515"></script>
+    <script src="/js/highlight.pack.js?1623188515"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1622432535"></script>
-    <script src="/js/learn.js?1622432535"></script>
-    <script src="/js/hugo-learn.js?1622432535"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1623188515"></script>
+    <script src="/js/learn.js?1623188515"></script>
+    <script src="/js/hugo-learn.js?1623188515"></script>
     
         
-            <script src="/mermaid/mermaid.js?1622432535"></script>
+            <script src="/mermaid/mermaid.js?1623188515"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

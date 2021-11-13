@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Telegraf, InfluxDB and Grafana on My Journey</title>
+    <title>My Journey</title>
     <link>https://omar2cloud.github.io/rasp/pi/</link>
-    <description>Recent content in Telegraf, InfluxDB and Grafana on My Journey</description>
+    <description>Recent content on My Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://omar2cloud.github.io/rasp/pi/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Install InfluxDB 2.0 on RPI-4</title>
+      <title></title>
+      <link>https://omar2cloud.github.io/rasp/pi/_grafana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/pi/_grafana/</guid>
+      <description>What is Grafana? Grafana is an open source visualization, analytics and alerting platform. It turns time series database data into well designed graphs for visualizations on dashboards.
+To learn more about Grafana.
+Part 3: Install Grafana: 1- Installing Grafana from the APT repository allows it to automatically get updated when apt-get update is ran. Let&amp;rsquo;s install the latest OSS release:
+sudo apt-get install -y apt-transport-httpssudo apt-get install -y software-properties-common wgetwget -q -O - https://packages.</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://omar2cloud.github.io/rasp/pi/_influxdb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -18,7 +30,7 @@ Part 1: Install InfluxDB 2.</description>
     </item>
     
     <item>
-      <title>Install Telegraf</title>
+      <title></title>
       <link>https://omar2cloud.github.io/rasp/pi/_telegraf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -26,18 +38,6 @@ Part 1: Install InfluxDB 2.</description>
       <description>What is Telegraf? Telegraf is an open source server agent written in Go. It is built to collect metrics from a wide array of inputs and write them into a wide array of outputs.
 To learn more about Telegraf.
 Part 2: Install Telegraf: 1- We will install the latest version of Telegraf using the ap-get package manager. Firstly, let&amp;rsquo;s add the InfluxData repository by running the following commands (you could copy and paste all commands at once on the terminal, or one line at a time):</description>
-    </item>
-    
-    <item>
-      <title>Install Grafana</title>
-      <link>https://omar2cloud.github.io/rasp/pi/_grafana/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/rasp/pi/_grafana/</guid>
-      <description>What is Grafana? Grafana is an open source visualization, analytics and alerting platform. It turns time series database data into well designed graphs for visualizations on dashboards.
-To learn more about Grafana.
-Part 3: Install Grafana: 1- Installing Grafana from the APT repository allows it to automatically get updated when apt-get update is ran. Let&amp;rsquo;s install the latest OSS release:
-sudo apt-get install -y apt-transport-httpssudo apt-get install -y software-properties-common wgetwget -q -O - https://packages.</description>
     </item>
     
   </channel>

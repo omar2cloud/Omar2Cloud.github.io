@@ -15,10 +15,6 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/_influxdb/</loc>
-  </url>
-  
-  <url>
     <loc>https://omar2cloud.github.io/rasp/myrasp/</loc>
   </url>
   
@@ -55,10 +51,6 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/_telegraf/</loc>
-  </url>
-  
-  <url>
     <loc>https://omar2cloud.github.io/aws/portainer/</loc>
   </url>
   
@@ -72,10 +64,6 @@
   
   <url>
     <loc>https://omar2cloud.github.io/_template/</loc>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/_grafana/</loc>
   </url>
   
   <url>
@@ -137,10 +125,6 @@
   
   <url>
     <loc>https://omar2cloud.github.io/aws/prj3/</loc>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/</loc>
   </url>
   
   <url>
@@ -252,6 +236,22 @@
   
   <url>
     <loc>https://omar2cloud.github.io/rasp/_wprpi/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/rasp/pi/_grafana/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/rasp/pi/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/rasp/pi/_influxdb/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/rasp/pi/_telegraf/</loc>
   </url>
   
   <url>

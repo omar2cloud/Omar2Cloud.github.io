@@ -1,18 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My Raspberry Pi on My Journey</title>
+    <title>Telegraf, InfluxDB and Grafana on My Journey</title>
     <link>https://omar2cloud.github.io/rasp/pi/</link>
-    <description>Recent content in My Raspberry Pi on My Journey</description>
+    <description>Recent content in Telegraf, InfluxDB and Grafana on My Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://omar2cloud.github.io/rasp/pi/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Install x11vnc VNC Server on Ubuntu 20.04 for Remote Access</title>
-      <link>https://omar2cloud.github.io/rasp/pi/_x11vnc/</link>
+      <title>Install InfluxDB 2.0 on RPI-4</title>
+      <link>https://omar2cloud.github.io/rasp/pi/_influxdb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://omar2cloud.github.io/rasp/pi/_x11vnc/</guid>
-      <description>What is a X11VNC Server? The Virtual Network Computing (VNC) allows to view and interact with devices remotely with any VNC viewer. When working with multiple RPIs, having VNC servers give us access all our RPIs from one device. There are many VNC servers and X11VNC is one of them. On another tutorial, we will install RealVNC, which is another vnc server. I will go over why do we need to install X11VNC on Ubuntu and RealVNC on RPI OS.</description>
+      <guid>https://omar2cloud.github.io/rasp/pi/_influxdb/</guid>
+      <description>What is InfluxDB? InfluxDB is a time series database. It&amp;rsquo;s engineered to build IoT, analytics and monitoring. It is built to ingest millions of data points per second produced by sensors, systems, applications and infrastructure. By the end of this tutorial, we would have installed InfluxDB to monitor our Raspberry Pi 4 system&amp;rsquo;s metrics such as CPU, Disk space and memory.
+To learn more about InfluxDB.
+Part 1: Install InfluxDB 2.</description>
+    </item>
+    
+    <item>
+      <title>Install Telegraf</title>
+      <link>https://omar2cloud.github.io/rasp/pi/_telegraf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/pi/_telegraf/</guid>
+      <description>What is Telegraf? Telegraf is an open source server agent written in Go. It is built to collect metrics from a wide array of inputs and write them into a wide array of outputs.
+To learn more about Telegraf.
+Part 2: Install Telegraf: 1- We will install the latest version of Telegraf using the ap-get package manager. Firstly, let&amp;rsquo;s add the InfluxData repository by running the following commands (you could copy and paste all commands at once on the terminal, or one line at a time):</description>
+    </item>
+    
+    <item>
+      <title>Install Grafana</title>
+      <link>https://omar2cloud.github.io/rasp/pi/_grafana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/pi/_grafana/</guid>
+      <description>What is Grafana? Grafana is an open source visualization, analytics and alerting platform. It turns time series database data into well designed graphs for visualizations on dashboards.
+To learn more about Grafana.
+Part 3: Install Grafana: 1- Installing Grafana from the APT repository allows it to automatically get updated when apt-get update is ran. Let&amp;rsquo;s install the latest OSS release:
+sudo apt-get install -y apt-transport-httpssudo apt-get install -y software-properties-common wgetwget -q -O - https://packages.</description>
     </item>
     
   </channel>

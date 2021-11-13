@@ -17,11 +17,22 @@
     </item>
     
     <item>
-      <title>My First Raspberry Pi</title>
-      <link>https://omar2cloud.github.io/rasp/pi/myrasp/</link>
+      <title>Install InfluxDB 2.0 on RPI-4</title>
+      <link>https://omar2cloud.github.io/rasp/pi/_influxdb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://omar2cloud.github.io/rasp/pi/myrasp/</guid>
+      <guid>https://omar2cloud.github.io/rasp/pi/_influxdb/</guid>
+      <description>What is InfluxDB? InfluxDB is a time series database. It&amp;rsquo;s engineered to build IoT, analytics and monitoring. It is built to ingest millions of data points per second produced by sensors, systems, applications and infrastructure. By the end of this tutorial, we would have installed InfluxDB to monitor our Raspberry Pi 4 system&amp;rsquo;s metrics such as CPU, Disk space and memory.
+To learn more about InfluxDB.
+Part 1: Install InfluxDB 2.</description>
+    </item>
+    
+    <item>
+      <title>My First Raspberry Pi</title>
+      <link>https://omar2cloud.github.io/rasp/myrasp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/myrasp/</guid>
       <description>What is Raspberry Pi (RPI)? The Raspberry Pi is a small single-board computer capable of doing almost everything that an ordinary Linux-based computer can do. Once it connects to an HDMI display, a keyboard, and a mouse, we have have a fully functional computer for a pice of $35 (or even way less for the Raspberry Pi Zero). The Raspberry Pi is widely known and used for home lab environments, where anyone can experiment safely.</description>
     </item>
     
@@ -36,10 +47,10 @@
     
     <item>
       <title>How to Remote into Ubuntu</title>
-      <link>https://omar2cloud.github.io/rasp/pi/vino/</link>
+      <link>https://omar2cloud.github.io/rasp/vino/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://omar2cloud.github.io/rasp/pi/vino/</guid>
+      <guid>https://omar2cloud.github.io/rasp/vino/</guid>
       <description>What is a Virtual Network Computing (VNC)? VNC is a graphical desktop sharing system that allows you to remotely control the desktop interface from another computer or mobile device (running VNC Viewer). VNC Viewer transmits the keyboard and the mouse events to VNC Server, and receives updates to the screen in return. Setting up a VNC Server on our RPI 4 is very beneficial to gain access to it from another device.</description>
     </item>
     
@@ -51,6 +62,17 @@
       <guid>https://omar2cloud.github.io/aws/portainer/portainer/portainer/</guid>
       <description>What is Portainer? Portainer is the definitive open source container management tool for Kubernetes, Docker, Docker Swarm and Azure ACI. It allows anyone to deploy and manage containers without the need to write codes. To learn more about Portainer.
 Updating the Operating System Now, we have a secured connection with our instance, let&amp;rsquo;s update and upgrade the operating system. Updating and upgrading the operating system of the instance is always a good habit to have.</description>
+    </item>
+    
+    <item>
+      <title>Install Telegraf</title>
+      <link>https://omar2cloud.github.io/rasp/pi/_telegraf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/pi/_telegraf/</guid>
+      <description>What is Telegraf? Telegraf is an open source server agent written in Go. It is built to collect metrics from a wide array of inputs and write them into a wide array of outputs.
+To learn more about Telegraf.
+Part 2: Install Telegraf: 1- We will install the latest version of Telegraf using the ap-get package manager. Firstly, let&amp;rsquo;s add the InfluxData repository by running the following commands (you could copy and paste all commands at once on the terminal, or one line at a time):</description>
     </item>
     
     <item>
@@ -74,6 +96,18 @@ sudo apt autoremoveA public folder will be generated, containing all static con
     </item>
     
     <item>
+      <title>Install Grafana</title>
+      <link>https://omar2cloud.github.io/rasp/pi/_grafana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/pi/_grafana/</guid>
+      <description>What is Grafana? Grafana is an open source visualization, analytics and alerting platform. It turns time series database data into well designed graphs for visualizations on dashboards.
+To learn more about Grafana.
+Part 3: Install Grafana: 1- Installing Grafana from the APT repository allows it to automatically get updated when apt-get update is ran. Let&amp;rsquo;s install the latest OSS release:
+sudo apt-get install -y apt-transport-httpssudo apt-get install -y software-properties-common wgetwget -q -O - https://packages.</description>
+    </item>
+    
+    <item>
       <title>Install Unified CloudWatch Agent</title>
       <link>https://omar2cloud.github.io/aws/cloudwatch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -85,10 +119,10 @@ The unified CloudWatch agent enables you to do the following: 1- Collect more sy
     
     <item>
       <title>Install x11vnc Server on Ubuntu 20.04 for Remote Access</title>
-      <link>https://omar2cloud.github.io/rasp/pi/x11vnc/</link>
+      <link>https://omar2cloud.github.io/rasp/x11vnc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://omar2cloud.github.io/rasp/pi/x11vnc/</guid>
+      <guid>https://omar2cloud.github.io/rasp/x11vnc/</guid>
       <description>What is a X11VNC Server? The Virtual Network Computing (VNC) allows to view and interact with devices remotely with any VNC viewer. When working with multiple RPIs, having VNC servers give us access all our RPIs from one device. There are many VNC servers and X11VNC is one of them. On another tutorial, we will install RealVNC, which is another vnc server, and I will go over the differences between X11VNC and RealVNC.</description>
     </item>
     
@@ -104,10 +138,10 @@ As part of this tutorial, we will install and configure MySQL on Ubuntu 20.04 LT
     
     <item>
       <title>Install RealVNC Server on Ubuntu 20.04 for Remote Access</title>
-      <link>https://omar2cloud.github.io/rasp/pi/realvnc/</link>
+      <link>https://omar2cloud.github.io/rasp/realvnc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://omar2cloud.github.io/rasp/pi/realvnc/</guid>
+      <guid>https://omar2cloud.github.io/rasp/realvnc/</guid>
       <description>What is a RealVNC Server? RealVNC allows us to interact with our Raspberry Pis graphically via Virtual Network Computing (VNC). The RealVNC server comes preinstalled with the Raspberry Pi OS. It&amp;rsquo;s extremely secure, convenient and reliable. Until the moment of writing this tutorial, 5/15/2021, RealVNC allows us to have up to 5 subscribed devices to remote into via cloud connectivity for FREE. By using this feature, we can remote into our devices from anywhere in the world without a VPN, a port-forwarding or a firewall configuration.</description>
     </item>
     
@@ -121,21 +155,11 @@ As part of this tutorial, we will install and configure MySQL on Ubuntu 20.04 LT
     </item>
     
     <item>
-      <title>Docker on Ubuntu Raspberry Pi 4</title>
-      <link>https://omar2cloud.github.io/rasp/pi/rpidock/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/rasp/pi/rpidock/</guid>
-      <description>Updating the Operating System Now, we have a secured connection with our instance, let&amp;rsquo;s update and upgrade the operating system. Updating and upgrading the operating system of the instance is always a good habit to have. We will run the following update/upgrade commands. The -y in the end of the command line will automatically enters &amp;ldquo;yes&amp;rdquo; as a confirmation before installing the updates.
-sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -yCleaning up after an update If this is not the packages first time to run an update, there might have some unnecessary packages left for cleaning.</description>
-    </item>
-    
-    <item>
       <title>Setting UP RPI to Run Headless</title>
-      <link>https://omar2cloud.github.io/rasp/pi/headless/</link>
+      <link>https://omar2cloud.github.io/rasp/headless/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://omar2cloud.github.io/rasp/pi/headless/</guid>
+      <guid>https://omar2cloud.github.io/rasp/headless/</guid>
       <description>What is Headless? Headless is the term used when we run our RPI without a monitor or a keyboard. I like to setup and configure my RPI using a monitor at least for the first time only, but if we are hosting a server with no desktop GUI on a RPI, setting up headless is the way to go.
 Please, refer to Raspberry Pi Foundation for information on how to setup RPI headless</description>
     </item>
@@ -151,11 +175,21 @@ However, there is an exciting feature by which the target group can contain a la
     </item>
     
     <item>
-      <title>How To Reset My Portainer Password</title>
-      <link>https://omar2cloud.github.io/rasp/pi/psswd/</link>
+      <title>Docker on Ubuntu Raspberry Pi 4</title>
+      <link>https://omar2cloud.github.io/rasp/rpidock/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://omar2cloud.github.io/rasp/pi/psswd/</guid>
+      <guid>https://omar2cloud.github.io/rasp/rpidock/</guid>
+      <description>Updating the Operating System Now, we have a secured connection with our instance, let&amp;rsquo;s update and upgrade the operating system. Updating and upgrading the operating system of the instance is always a good habit to have. We will run the following update/upgrade commands. The -y in the end of the command line will automatically enters &amp;ldquo;yes&amp;rdquo; as a confirmation before installing the updates.
+sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -yCleaning up after an update If this is not the packages first time to run an update, there might have some unnecessary packages left for cleaning.</description>
+    </item>
+    
+    <item>
+      <title>How To Reset My Portainer Password</title>
+      <link>https://omar2cloud.github.io/rasp/psswd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/psswd/</guid>
       <description>Resetting Admin password in Portainer running as container Portainer does not have a password reset feature. We will have to you use a password container helper.
 1- Firstly, we will stop the Portainer container.
 docker container stop portainer2- We will run the helper using the same bind-mount/volume for the data volume
@@ -165,15 +199,24 @@ docker run --rm -v portainer_data:/data portainer/helper-reset-passwordThe resp
     
     <item>
       <title>Basic Docker Commands</title>
-      <link>https://omar2cloud.github.io/rasp/pi/docker-on-ec2/</link>
+      <link>https://omar2cloud.github.io/rasp/docker-on-ec2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://omar2cloud.github.io/rasp/pi/docker-on-ec2/</guid>
+      <guid>https://omar2cloud.github.io/rasp/docker-on-ec2/</guid>
       <description>Basic Commands of Docker The heart of the Docker echo system consists of two parameters: the images and the containers.
 To list out the docker processors:
 ps -ef | grep [d]ockerTo list out all images on the local machine:
 docker imagesTo check for any running containers/processors:
 docker ps -aDocker run reference - Foreground vs. Detached Foreground In foreground mode, docker run can start the process in the container and attach the console to the process’s standard input, output, and standard error.</description>
+    </item>
+    
+    <item>
+      <title>AWS DynamoDB on Raspberry Pi 4 Running Ubuntu 21.04</title>
+      <link>https://omar2cloud.github.io/rasp/dynamodb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/dynamodb/</guid>
+      <description>What Is Amazon DynamoDB? Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. With DynamoDB, you can create database tables that can store and retrieve any amount of data and serve any level of request traffic. In addition to the Amazon DynamoDB web service, AWS provides a downloadable version of DynamoDB that we can run on our computers and is perfect for development and testing of our code.</description>
     </item>
     
     <item>
@@ -334,10 +377,10 @@ Finally, we will deploy the architecture using AWS CloudFormation to automate th
     
     <item>
       <title></title>
-      <link>https://omar2cloud.github.io/rasp/pi/_wprpi/</link>
+      <link>https://omar2cloud.github.io/rasp/_wprpi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://omar2cloud.github.io/rasp/pi/_wprpi/</guid>
+      <guid>https://omar2cloud.github.io/rasp/_wprpi/</guid>
       <description>What is WordPress? WordPress is an open source software, which is widely used to create a beautiful website, blog, or app. To learn more about Wordpress.
 We will install Wordpress as a Docker image using Portainer. The most interesting part is we will install WP as a stack including MySQL database using Docker-Compose stack.
 version: &#39;2&#39;services:db:image: mysql/mysql-server:latestvolumes:- db_data:/var/lib/mysqlrestart: alwaysenvironment:MYSQL_ROOT_PASSWORD: ${MYSQL_DATABASE_PASSWORD}MYSQL_DATABASE: wordpressMYSQL_USER: wordpressMYSQL_PASSWORD: wordpresswordpress:image: wordpress:latestports:- 8095:80restart: alwaysenvironment:WORDPRESS_DB_HOST: db:3306WORDPRESS_DB_USER: wordpressWORDPRESS_DB_PASSWORD: wordpressvolumes:db_data:</description>

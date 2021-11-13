@@ -15,7 +15,11 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/myrasp/</loc>
+    <loc>https://omar2cloud.github.io/rasp/pi/_influxdb/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/rasp/myrasp/</loc>
   </url>
   
   <url>
@@ -43,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/vino/</loc>
+    <loc>https://omar2cloud.github.io/rasp/vino/</loc>
   </url>
   
   <url>
@@ -51,11 +55,11 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/aws/portainer/</loc>
+    <loc>https://omar2cloud.github.io/rasp/pi/_telegraf/</loc>
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/rasp/</loc>
+    <loc>https://omar2cloud.github.io/aws/portainer/</loc>
   </url>
   
   <url>
@@ -71,11 +75,19 @@
   </url>
   
   <url>
+    <loc>https://omar2cloud.github.io/rasp/pi/_grafana/</loc>
+  </url>
+  
+  <url>
     <loc>https://omar2cloud.github.io/aws/cloudwatch/</loc>
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/x11vnc/</loc>
+    <loc>https://omar2cloud.github.io/rasp/x11vnc/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/rasp/</loc>
   </url>
   
   <url>
@@ -83,7 +95,7 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/realvnc/</loc>
+    <loc>https://omar2cloud.github.io/rasp/realvnc/</loc>
   </url>
   
   <url>
@@ -96,11 +108,7 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/rpidock/</loc>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/headless/</loc>
+    <loc>https://omar2cloud.github.io/rasp/headless/</loc>
   </url>
   
   <url>
@@ -108,11 +116,19 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/psswd/</loc>
+    <loc>https://omar2cloud.github.io/rasp/rpidock/</loc>
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/docker-on-ec2/</loc>
+    <loc>https://omar2cloud.github.io/rasp/psswd/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/rasp/docker-on-ec2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/rasp/dynamodb/</loc>
   </url>
   
   <url>
@@ -121,6 +137,10 @@
   
   <url>
     <loc>https://omar2cloud.github.io/aws/prj3/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/rasp/pi/</loc>
   </url>
   
   <url>
@@ -231,7 +251,7 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/rasp/pi/_wprpi/</loc>
+    <loc>https://omar2cloud.github.io/rasp/_wprpi/</loc>
   </url>
   
   <url>

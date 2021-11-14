@@ -11,21 +11,21 @@
     <title>AWS DynamoDB on Raspberry Pi 4 Running Ubuntu 21.04 - My Journey</title>
 
     
-    <link href="/css/nucleus.css?1636840937" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1636840937" rel="stylesheet">
-    <link href="/css/hybrid.css?1636840937" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1636840937" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1636840937" rel="stylesheet">
-    <link href="/css/auto-complete.css?1636840937" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1636840937" rel="stylesheet">
-    <link href="/css/theme.css?1636840937" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1636840937" rel="stylesheet">
+    <link href="/css/nucleus.css?1636865259" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1636865259" rel="stylesheet">
+    <link href="/css/hybrid.css?1636865259" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1636865259" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1636865259" rel="stylesheet">
+    <link href="/css/auto-complete.css?1636865259" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1636865259" rel="stylesheet">
+    <link href="/css/theme.css?1636865259" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1636865259" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1636840937" rel="stylesheet">
+    <link href="/css/theme-mine.css?1636865259" rel="stylesheet">
     
-    <link href="/css/foo.css?1636840937" rel="stylesheet"><link href="/css/bar.css?1636840937" rel="stylesheet">
+    <link href="/css/foo.css?1636865259" rel="stylesheet"><link href="/css/bar.css?1636865259" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1636840937"></script>
+    <script src="/js/jquery-3.3.1.min.js?1636865259"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1636840937"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1636840937"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1636865259"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1636865259"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/omar2cloud.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1636840937"></script>
+<script type="text/javascript" src="/js/search.js?1636865259"></script>
 
     
   </div>
@@ -1938,9 +1938,9 @@
         <li><a href="#step-1-creating-folders">Step 1: Creating Folders</a></li>
         <li><a href="#step-2-composing-docker-composeyml-file">Step 2: Composing Docker-Compose.yml File</a></li>
         <li><a href="#step-3-run-docker-compose">Step 3: Run Docker-Compose</a></li>
-        <li><a href="#step-3-access-dynamodb-admin-ui">Step 3: Access DynamoDB-Admin UI</a></li>
-        <li><a href="#step-4-install-and-configure-aws-cli-and-boto3">Step 4: Install and Configure AWS CLI and Boto3</a></li>
-        <li><a href="#step-5-getting-started-developing-with-python-and-dynamodb">Step 5: Getting Started Developing with Python and DynamoDB</a></li>
+        <li><a href="#step-4-access-dynamodb-admin-ui">Step 4: Access DynamoDB-Admin UI</a></li>
+        <li><a href="#step-5-install-and-configure-aws-cli-and-boto3">Step 5: Install and Configure AWS CLI and Boto3</a></li>
+        <li><a href="#step-6-getting-started-developing-with-python-and-dynamodb">Step 6: Getting Started Developing with Python and DynamoDB</a></li>
         <li><a href="#conclusion">Conclusion:</a></li>
       </ul>
     </li>
@@ -1969,26 +1969,26 @@
 
 
 <h2 id="what-is-amazon-dynamodb">What Is Amazon DynamoDB?</h2>
-<p>Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. With DynamoDB, you can create database tables that can store and retrieve any amount of data and serve any level of request traffic. In addition to the Amazon DynamoDB web service, AWS provides a downloadable version of DynamoDB that we can run on our computers and is perfect for development and testing of our code.</p>
-<p>This tutorial will walk you through how to deploy DynamoDB locally on a Raspberry Pi 4 using Docker-Compose. We will also deploy DynamoDB-Admin, which is a GUI (Graphical User Interface) for DynamoDB. It&rsquo;s a great tool to interact with DynamoDB visually and is built by <a href="https://github.com/aaronshaf">Aaron Shafovaloff</a>. For more information about Dynamodb-Admin, here is the link to the <a href="https://github.com/aaronshaf/dynamodb-admin">GitHub</a> repo. And, for more information about Amazon Dynamodb Docker image, here is the link to the <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html">Amazon Documentation</a>.</p>
+<p>Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. With DynamoDB, we can create database tables that can store and retrieve any amount of data and serve any level of request traffic. In addition to the Amazon DynamoDB web service, AWS provides a downloadable version of DynamoDB that we can run on our computers and is perfect for development and testing of our code.</p>
+<p>This tutorial will walk you through how to deploy DynamoDB locally on a Raspberry Pi 4 running Ubuntu 21.04 using Docker-Compose version 3. We will also deploy DynamoDB-Admin, which is a GUI (Graphical User Interface) for DynamoDB. It&rsquo;s a great tool to interact with DynamoDB visually and is built by <a href="https://github.com/aaronshaf">Aaron Shafovaloff</a>. For more information about Dynamodb-Admin, here is the link to the <a href="https://github.com/aaronshaf/dynamodb-admin">GitHub</a> repo. And, for more information about Amazon DynamoDB-local Docker image, here is the link to <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html">Amazon Documentation</a>.</p>
 
-<div class="notices note" ><p>If you don&rsquo;t have Docker, Docker-Compose and Portainer installed on your RPI-4, I&rsquo;d suggest you install them first. Please follow this <a href="https://omar2cloud.github.io/rasp/pi/rpidock/">Tutorial</a>.</p>
+<div class="notices note" ><p>If you don&rsquo;t have Docker, Docker-Compose and Portainer installed on your RPI-4, I&rsquo;d suggest you install them first. Please, refer to this <a href="https://omar2cloud.github.io/rasp/pi/rpidock/">Tutorial</a>.</p>
 </div>
 
 <h2 id="installing-dynamodb-and-dynamodb-admin-locally-using-docker-compose-v3">Installing DynamoDB and DynamoDB-Admin locally using Docker-Compose v3:</h2>
-<p>There is more than one way to skin a cat (I&rsquo;ve always wondered why does it have to be a poor cat). I have tried to spin a docker container for DynamoDB on my RPI-4, and then installed the DynamoDB-Admin locally. I have also tried to run a Docker-Compose for DynamoDB and DynamoDB-Admin images using Portainer. However, bear in mind that you might face some hiccups because the community version of Portainer currently does not support Docker-Compose 3 (as of writing this tutorial 11/14/21).</p>
-<p>Although there are multiple ways to install the DynamoDB locally on our RPI-4, I have found the best way that fits my needs is by using Docker-Compose version 3 (locally by creating a yml file). The following steps will walk you through how to run DynamoDB and DynamoDB-Admin locally using Docker-Compose version 3. This method works great for me.</p>
+<p>There is more than one way to skin a cat (I&rsquo;ve always wondered why does it have to be a poor cat). I have tried to spin a docker container for DynamoDB on my RPI-4, and then installed the DynamoDB-Admin locally on my RPI-4 (not a container). I have also tried to run a Docker-Compose for DynamoDB and DynamoDB-Admin images using Portainer. However, I had faced some hiccups because the community version of Portainer currently does not support Docker-Compose 3 (as of writing this tutorial 11/14/21).</p>
+<p>Although there are multiple ways to install the DynamoDB locally on our RPI-4, I have found the best way that fits my needs is by using Docker-Compose version 3 (by creating a yml file). The following steps will walk you through how to run DynamoDB and DynamoDB-Admin locally using Docker-Compose version 3. This method works great for me. Then, we will interact with DynamoDB using AWS Python SDK - Boto3 and create a table.</p>
 <h3 id="step-1-creating-folders">Step 1: Creating Folders</h3>
 <ol>
-<li>Create a <strong>DynamoDB</strong> folder on your RPI-4 Desktop or any other directory of your choosing.</li>
-<li>Create a folder inside the DynamoDB folder and name it <strong>dynamodb-volume</strong>.</li>
-<li>Create a file named <strong>docker-compose.yml</strong> inside the DynamoDB  (not inside the dynamodb-volume).</li>
+<li>Create a <strong>DynamoDB</strong> folder on your RPI-4 Desktop or on any other directory of your choosing. This would be our project folder.</li>
+<li>Create a folder inside the DynamoDB folder and name it <strong>dynamodb-volume</strong>. We will use this folder to host our DynamoDB database down the road.</li>
+<li>Create a file named <strong>docker-compose.yml</strong> inside the DynamoDB (not inside the dynamodb-volume). We will run this file to spin our containers later.</li>
 </ol>
-<p>You have the option to create these folders and docker-compose file programmatically using the CLI (Command Line Interface) or using the GUI (Graphical User Interface) and text editor. The hierarchy should look like the below image.</p>
+<p>You have the option to create these folders and docker-compose file programmatically using the CLI (Command Line Interface) or using the GUI (Graphical User Interface) and any text editor of your choosing. The hierarchy should look like the below image.</p>
 <p><img src="/images/RPI/dynamoDB/Docker-Compose_1.JPG?classes=shadow" alt="dynamodb"></p>
 <h3 id="step-2-composing-docker-composeyml-file">Step 2: Composing Docker-Compose.yml File</h3>
 <ol>
-<li>Add the below text to the Docker-Compose.yml file and read the below discussion prior to saving the file.</li>
+<li>Add this text to the Docker-Compose.yml file and read the below discussion prior to saving the file.</li>
 </ol>
 <pre><code>version: '3.8'
 services:
@@ -2020,10 +2020,10 @@ services:
 
 <p>Prior to moving to the next step, let&rsquo;s have a brief discussion about the parameters of this file.</p>
 <ul>
-<li>Although we don&rsquo;t have to add the <strong>command</strong> variables, I have added them just in case we need to modify them in the future such as changing the port number.</li>
-<li>To have data persistency and database accessability, we have added a persistent volume <strong>(dynamodb-volume)</strong>. By doing so, we have ensured that our DynamoDB tables won&rsquo;t get deleted if we delete the DynamoDB container. Moreover, we have ensured that we do have access to the database in case we decide to move it to a different host. For my case, it ideal and better than creating a Docker volume for it.</li>
-<li>The current <a href="https://hub.docker.com/r/aaronshaf/dynamodb-admin/tags">DynamoDB-Admin</a> image is an <strong>amd64</strong> architecture which is incompatible with RPI-4s <strong>arm64</strong> architecture. Therefore, I had to build a RPI-4 compatible image (omarcloud20/dynamodb-admin-arm64) for the DynamoDB-Admin application.</li>
-<li>The environment variables AWS_REGION, AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are required dummy variables to run the Docker-Compose but are not required to be valid AWS keys for you to access DynamoDB Local.</li>
+<li>Although we don&rsquo;t have to add the <strong>command</strong> variables, We have added them just in case we need to modify them in the future such as changing the port number.</li>
+<li>To have data persistency and database accessability, we have added a persistent volume <strong>(dynamodb-volume)</strong>. By doing so, we have ensured that our DynamoDB tables won&rsquo;t get deleted if we delete the DynamoDB container. Moreover, we have access to the database in case we decide to move it to a different host. For my case, it&rsquo;s ideal and better than creating a Docker volume for it.</li>
+<li>The current <a href="https://hub.docker.com/r/aaronshaf/dynamodb-admin/tags">DynamoDB-Admin</a> image is <strong>amd64</strong> architecture which is incompatible with our RPI-4 <strong>arm64</strong> architecture. Therefore, I had to build a RPI-4 compatible image (omarcloud20/dynamodb-admin-arm64) for the DynamoDB-Admin application.</li>
+<li>The environment variables AWS_REGION, AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are required dummy variables to run the Docker-Compose but are not required to be valid AWS keys to access DynamoDB Local.</li>
 <li>By default, the DynamoDB local is listening on port 8000 and the DynamoDB-Admin is on port 8001.</li>
 </ul>
 <h3 id="step-3-run-docker-compose">Step 3: Run Docker-Compose</h3>
@@ -2033,50 +2033,50 @@ services:
 </ol>
 <pre><code>docker-compose up -d
 </code></pre><p><img src="/images/RPI/dynamoDB/Docker-Compose_2_1.JPG?classes=shadow" alt="dynamodb"></p>
-<h3 id="step-3-access-dynamodb-admin-ui">Step 3: Access DynamoDB-Admin UI</h3>
+<h3 id="step-4-access-dynamodb-admin-ui">Step 4: Access DynamoDB-Admin UI</h3>
 <ol>
-<li>When we open a browser on the RPI-4 and type in <strong>http://localhost:8001</strong>, we should be able to see the DynamoDB-Admin UI. We could also access the DynamoDB-Admin UI from any other device on the same network by typing in the browser the IP address of the RPI-4 and port 8001, <strong>http://rpi4-ip-address:8001</strong>.</li>
+<li>Let&rsquo;s open a browser on the RPI-4 and type in <strong>http://localhost:8001</strong>, we should be able to see the DynamoDB-Admin UI. We could also access the DynamoDB-Admin UI from any other device on the same network by typing in the browser the IP address of the RPI-4 and port 8001, <strong>http://rpi4-ip-address:8001</strong>. For example, <em>http://192.168.1.131:8000</em></li>
 </ol>
 <p><img src="/images/RPI/dynamoDB/Docker-Compose_3_1.JPG?classes=shadow" alt="dynamodb"></p>
 <ol start="2">
 <li>We could also verify the status of the DynamoDB and DynamoDB-Admin from Portainer as shown below.</li>
 </ol>
 <p><img src="/images/RPI/dynamoDB/Docker-Compose_4.JPG?classes=shadow" alt="dynamodb"></p>
-<h3 id="step-4-install-and-configure-aws-cli-and-boto3">Step 4: Install and Configure AWS CLI and Boto3</h3>
+<h3 id="step-5-install-and-configure-aws-cli-and-boto3">Step 5: Install and Configure AWS CLI and Boto3</h3>
 <ol>
 <li>Let&rsquo;s install AWS CLI on our RPI-4:</li>
 </ol>
 <pre><code>sudo apt install awscli -y
 </code></pre>
-<div class="notices note" ><p>If you would like to install AWS CLI version 2, here is the link to <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Amazon installation document</a>.</p>
+<div class="notices note" ><p>If you would like to install AWS CLI version 2 instead of version 1, here is the link to <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Amazon installation document</a>.</p>
 </div>
 
 <ol start="2">
-<li>Now, we need to to configure AWS CLI by adding running the below command:</li>
+<li>Now, we need to to configure AWS CLI by running the below command:</li>
 </ol>
 <pre><code>aws configure
-</code></pre><p>We will be asked for the following:</p>
+</code></pre><p>As part of the configuration process, we will be prompted for the following:</p>
 <ul>
-<li>AWS Access Key ID: local</li>
-<li>AWS Secret Access Key: local</li>
-<li>Default region name: us-east-1</li>
+<li>AWS Access Key ID: type <strong>local</strong></li>
+<li>AWS Secret Access Key: type <strong>local</strong></li>
+<li>Default region name: type <strong>us-east-1</strong></li>
 <li>Default output format: &ldquo;leave empty and hit enter&rdquo;</li>
 </ul>
 <p><img src="/images/RPI/dynamoDB/Docker-Compose_5.JPG?classes=shadow" alt="dynamodb"></p>
 <ol start="3">
-<li><strong>Boto3</strong> is the AWS SDK for Python. We will use it to write a Python code to interact with our locally hosted DynamoDB. For more information about <a href="https://aws.amazon.com/sdk-for-python/">Boto3</a>. 
-Let&rsquo;s run the following command to install boto3.</li>
+<li>The AWS SDK for Python is called <strong>Boto3</strong>. We will use it to write a Python code to interact with our locally hosted DynamoDB. For more information about <a href="https://aws.amazon.com/sdk-for-python/">Boto3</a>. 
+Now, let&rsquo;s run the following command to install boto3 on our RPI-4.</li>
 </ol>
 <pre><code>pip install boto3
 </code></pre><p>or</p>
 <pre><code>pip3 install boto3
 </code></pre>
-<div class="notices note" ><p>If you don&rsquo;t have pip installed, you could follow <a href="https://pip.pypa.io/en/stable/installation/">pip installation</a> instructions.</p>
+<div class="notices note" ><p>If you encountered any issues, run this command to find out whether or not you have pip installed: <code>pip --version</code> or <code>pip3 --version</code>. If you don&rsquo;t have pip installed, please refer to <a href="https://pip.pypa.io/en/stable/installation/">pip installation</a> instructions.</p>
 </div>
 
-<h3 id="step-5-getting-started-developing-with-python-and-dynamodb">Step 5: Getting Started Developing with Python and DynamoDB</h3>
+<h3 id="step-6-getting-started-developing-with-python-and-dynamodb">Step 6: Getting Started Developing with Python and DynamoDB</h3>
 <ol>
-<li>Let&rsquo;s write a simple Python code to create a table called <strong>Movies</strong>. Again, you have the option to create the Python file using the CLI or via the GUI. 
+<li>Let&rsquo;s write a simple Python code to create a table called <strong>Movies</strong>. Once again, you have the option to create the Python file using the CLI or the GUI. 
 Let&rsquo;s use the CLI and cd into our <strong>DynamoDB</strong> folder. Then, let&rsquo;s use <strong>nano</strong> text editor to create a Python file name <strong>MoviesCreateTable.py</strong>.</li>
 </ol>
 <pre><code>nano MoviesCreateTable.py
@@ -2135,11 +2135,11 @@ if __name__ == '__main__':
 </code></pre><p><img src="/images/RPI/dynamoDB/Docker-Compose_7.JPG?classes=shadow" alt="dynamodb"></p>
 <ol start="4">
 <li>
-<p>If we refresh the browser, you shall see our newly created table on the DynamoDB-Admin UI as shown below.
+<p>If we refresh the browser, you shall see our newly created table on the DynamoDB-Admin UI as shown below. Hooryah. 
 <img src="/images/RPI/dynamoDB/Docker-Compose_8.JPG?classes=shadow" alt="dynamodb"></p>
 </li>
 <li>
-<p>We can also create a DynamoDB table from the DynamoDB-Admin UI.</p>
+<p>We can also create a DynamoDB table from the DynamoDB-Admin UI. Let&rsquo;s create one.</p>
 </li>
 </ol>
 <p><img src="/images/RPI/dynamoDB/Docker-Compose_9.JPG?classes=shadow" alt="dynamodb"> 
@@ -2151,11 +2151,12 @@ if __name__ == '__main__':
 </code></pre><p><img src="/images/RPI/dynamoDB/Docker-Compose_12.JPG?classes=shadow" alt="dynamodb"></p>
 <p>Note that the <strong>Movies</strong> table was created by running the Python code using boto3 and the <strong>Omar_Table</strong> was created on the DynamoDB-Admin UI.</p>
 
-<div class="notices note" ><p>For more about developing with Python and DynamoDB, please refer to <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Python.html">Amazon documentation</a>.</p>
+<div class="notices note" ><p>For more about developing with Python and DynamoDB such as loading data, query and scan tables, please refer to <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Python.html">Amazon documentation</a>.</p>
 </div>
 
 <h3 id="conclusion">Conclusion:</h3>
-<p>By the end of this tutorial, we have successfully ran Docker containers for AWS DynamoDB-local and DynamoDB-Admin application using Docker-Compose on our RPI 4 running Ubuntu 21.04. We have also created DynamoDB tables using AWS Python SDK (boto3) and DynamoDB-Admin UI. This concludes our tutorials. Learning never stops, cheers.</p>
+<p>By the end of this tutorial, we have successfully configured Docker containers for AWS DynamoDB-local and DynamoDB-Admin application using Docker-Compose version 3 on our RPI 4 running Ubuntu 21.04 OS. 
+We have also created DynamoDB tables using AWS Python SDK (boto3) and DynamoDB-Admin UI. This concludes our tutorial and remember learning never stops, cheers.</p>
 
 
 <footer class="footline">
@@ -3354,19 +3355,19 @@ if __name__ == '__main__':
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1636840937"></script>
-    <script src="/js/perfect-scrollbar.min.js?1636840937"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1636840937"></script>
-    <script src="/js/jquery.sticky.js?1636840937"></script>
-    <script src="/js/featherlight.min.js?1636840937"></script>
-    <script src="/js/highlight.pack.js?1636840937"></script>
+    <script src="/js/clipboard.min.js?1636865259"></script>
+    <script src="/js/perfect-scrollbar.min.js?1636865259"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1636865259"></script>
+    <script src="/js/jquery.sticky.js?1636865259"></script>
+    <script src="/js/featherlight.min.js?1636865259"></script>
+    <script src="/js/highlight.pack.js?1636865259"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1636840937"></script>
-    <script src="/js/learn.js?1636840937"></script>
-    <script src="/js/hugo-learn.js?1636840937"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1636865259"></script>
+    <script src="/js/learn.js?1636865259"></script>
+    <script src="/js/hugo-learn.js?1636865259"></script>
     
         
-            <script src="/mermaid/mermaid.js?1636840937"></script>
+            <script src="/mermaid/mermaid.js?1636865259"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

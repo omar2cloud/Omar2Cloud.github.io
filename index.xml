@@ -182,7 +182,7 @@ docker ps -aDocker run reference - Foreground vs. Detached Foreground In foregr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://omar2cloud.github.io/rasp/dynamodb/</guid>
-      <description>What Is Amazon DynamoDB? Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. With DynamoDB, you can create database tables that can store and retrieve any amount of data and serve any level of request traffic. In addition to the Amazon DynamoDB web service, AWS provides a downloadable version of DynamoDB that we can run on our computers and is perfect for development and testing of our code.</description>
+      <description>What Is Amazon DynamoDB? Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. With DynamoDB, we can create database tables that can store and retrieve any amount of data and serve any level of request traffic. In addition to the Amazon DynamoDB web service, AWS provides a downloadable version of DynamoDB that we can run on our computers and is perfect for development and testing of our code.</description>
     </item>
     
     <item>

@@ -141,13 +141,13 @@ However, there is an exciting feature by which the target group can contain a la
     </item>
     
     <item>
-      <title>Docker on Ubuntu Raspberry Pi 4</title>
+      <title>Docker on Ubuntu 20.04 Raspberry Pi 4</title>
       <link>https://omar2cloud.github.io/rasp/rpidock/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://omar2cloud.github.io/rasp/rpidock/</guid>
-      <description>Updating the Operating System Now, we have a secured connection with our instance, let&amp;rsquo;s update and upgrade the operating system. Updating and upgrading the operating system of the instance is always a good habit to have. We will run the following update/upgrade commands. The -y in the end of the command line will automatically enters &amp;ldquo;yes&amp;rdquo; as a confirmation before installing the updates.
-sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -yCleaning up after an update If this is not the packages first time to run an update, there might have some unnecessary packages left for cleaning.</description>
+      <description>As of 11/25/21, if you were unable to install Docker on RPI-4 running Ubuntu 21.10, you may need to install extra kernel modules by running the following command $ sudo apt install linux-modules-extra-raspi
+Updating the Operating System Now, we have a secured connection with our instance, let&amp;rsquo;s update and upgrade the operating system. Updating and upgrading the operating system of the instance is always a good habit to have.</description>
     </item>
     
     <item>

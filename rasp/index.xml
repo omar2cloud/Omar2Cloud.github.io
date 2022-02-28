@@ -98,6 +98,16 @@ docker ps -aDocker run reference - Foreground vs. Detached Foreground In foregr
     </item>
     
     <item>
+      <title>GitLab Runner on RPI-4 (Build, Push Docker images to Docker Hub using GitLab Runner on GitLab)</title>
+      <link>https://omar2cloud.github.io/rasp/gitlab_runner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/rasp/gitlab_runner/</guid>
+      <description>What is GitLab Runner GitLab Runner is an agent that runs GitLab CI/CD (Continues Integration/Continuous Deployment) jobs in a pipeline. It&amp;rsquo;s heavily utilized in the world of DevOps to provision and configure infrastructure. The GitLab Runner can be installed as a binary on Linux, MacOS or Windows. It can also be installed as a container.
+On this tutorial, I will walk through installing and configuring GitLab Runner as a container using a Docker image on a RPI-4.</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://omar2cloud.github.io/rasp/_wprpi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

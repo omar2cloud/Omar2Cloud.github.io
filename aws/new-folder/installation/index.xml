@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My Journey</title>
+    <title>Learning With Omar</title>
     <link>https://omar2cloud.github.io/aws/new-folder/installation/</link>
-    <description>Recent content on My Journey</description>
+    <description>Recent content on Learning With Omar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://omar2cloud.github.io/aws/new-folder/installation/index.xml" rel="self" type="application/rss+xml" />
   </channel>

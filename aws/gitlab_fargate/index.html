@@ -8,7 +8,7 @@
 <meta name="author" content="Omar A Omar">
 
     <link rel="icon" href="/images/favicon.ico" type="image/png">
-    <title>Docker Image on ECS Fargate - My Journey</title>
+    <title>Autoscaling GitLab Runner on AWS Fargate - My Journey</title>
 
     
     <link href="/css/nucleus.css?1656983791" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/aws/prj3/">
+  <body class="" data-url="/aws/gitlab_fargate/">
     <nav id="sidebar" class="">
 
 
@@ -469,7 +469,7 @@
  
   
     
-      <li data-nav-id="/aws/prj3/" title="Docker Image on ECS Fargate" class="dd-item active">
+      <li data-nav-id="/aws/prj3/" title="Docker Image on ECS Fargate" class="dd-item ">
         <a href="/aws/prj3/">
         <b> </b>AWS ECS Fargate
         
@@ -595,7 +595,7 @@
  
   
     
-      <li data-nav-id="/aws/gitlab_fargate/" title="Autoscaling GitLab Runner on AWS Fargate" class="dd-item ">
+      <li data-nav-id="/aws/gitlab_fargate/" title="Autoscaling GitLab Runner on AWS Fargate" class="dd-item active">
         <a href="/aws/gitlab_fargate/">
         <b> </b>Serverless GitLab Runner on AWS Fargate
         
@@ -1938,7 +1938,7 @@
             
           
           
-            <a href='/'>Learning with Omar</a> > <a href='/aws/'>AWS Tutorials</a> > Docker Image on ECS Fargate
+            <a href='/'>Learning with Omar</a> > <a href='/aws/'>AWS Tutorials</a> > Autoscaling GitLab Runner on AWS Fargate
           
         
           
@@ -1953,12 +1953,22 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#a-sample-web-application-containerized-as-a-docker-image-deployed-on-aws-ecs-fargate">A Sample Web Application Containerized as a Docker image Deployed on AWS ECS Fargate</a></li>
-    <li><a href="#architecture-implementation---tutorial-scenario">Architecture Implementation - Tutorial Scenario:</a></li>
-    <li><a href="#step-1-create-a-docker-image">Step 1: Create a Docker image</a></li>
-    <li><a href="#step-2-push-the-packaged-web-application-docker-image-to-docker-hub">Step 2: Push the Packaged Web Application Docker Image to Docker Hub</a></li>
-    <li><a href="#step-3-create-an-aws-ecs-cluster-to-run-the-docker-image">Step 3: Create an AWS ECS cluster to run the Docker image</a></li>
-    <li><a href="#step-4-verification-of-running-container-on-ecs-fargate">Step 4: Verification of Running Container on ECS Fargate</a></li>
+    <li><a href="#what-is-gitlab-runner">What is GitLab Runner</a></li>
+    <li><a href="#what-is-aws-fargate">What is AWS Fargate</a></li>
+    <li><a href="#why-running-gitlab-runner-on-aws-fargate">Why Running GitLab Runner on AWS Fargate</a></li>
+    <li><a href="#learning-outcomes">Learning Outcomes:</a></li>
+    <li><a href="#what-you-do-you-need-to-complete-the-tutorial">What you do you need to complete the tutorial:</a></li>
+    <li><a href="#step-1-building-a-gitlab-runner-and-fargate-driver-container-image">Step 1: Building a GitLab Runner and Fargate Driver Container Image</a></li>
+    <li><a href="#step-2-create-aws-identity-and-access-management-iam-user">Step 2: Create AWS Identity and Access Management (IAM) user</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#step-3-create-a-terraform-sample-template-to-spin-an-aws-ec2">Step 3: Create a Terraform Sample Template to Spin an AWS EC2</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
     <li><a href="#conclusion">Conclusion:</a></li>
   </ul>
 </nav>
@@ -1977,173 +1987,196 @@
           
             <h1>
               
-              Docker Image on ECS Fargate
+              Autoscaling GitLab Runner on AWS Fargate
             </h1>
           
 
         
 
 
-<h2 id="a-sample-web-application-containerized-as-a-docker-image-deployed-on-aws-ecs-fargate">A Sample Web Application Containerized as a Docker image Deployed on AWS ECS Fargate</h2>
-<p>In this tutorial, we will package and containerize a sample web application as a <a href="https://www.docker.com/">Docker</a> image running on <a href="http://tomcat.apache.org/">Apache Tomcat</a> having <a href="https://www.oracle.com/java/technologies/javase/jre8-readme.html#:~:text=Environment%20Version%208-,READ%20ME%20Java%E2%84%A2%20Platform%2C%20Standard%20Edition%20Runtime%20Environment%20Version,to%20use%20with%20their%20applications.&amp;text=For%20development%20tools%2C%20see%20the,Development%20Kit%20(JDK%E2%84%A2).">JRE-8</a> as a runtime. Then, we will push this new Docker image to our public repository at <a href="https://hub.docker.com/">Dockerhub</a>. The web application, which is packaged into a Docker image will be deployed on <a href="https://aws.amazon.com/fargate/?whats-new-cards.sort-by=item.additionalFields.postDateTime&amp;whats-new-cards.sort-order=desc&amp;fargate-blogs.sort-by=item.additionalFields.createdDate&amp;fargate-blogs.sort-order=desc">AWS ECS Fargate</a> cluster. 
-Finally, to view and access our web application cluster, we will utilize a DNS of a load balancer.</p>
-<p>The below diagram is our design architecture for this tutorial.</p>
-<p><img src="/images/aws/prj3/AD.png?classes=shadow" alt="prj3"></p>
+<h2 id="what-is-gitlab-runner">What is GitLab Runner</h2>
+<p>GitLab Runner is an application that works with GitLab CI/CD <code>Continues Integration/Continuous Deployment</code> method. Once GitLab Runner is installed and registered, it can run jobs in a pipeline. It&rsquo;s an open source and written in <a href="https://www.terraform.io/intro/index.html">Go</a> language.</p>
+<p>For more information about <a href="https://docs.gitlab.com/runner/">GitLab Runner</a>, refer to GitLab&rsquo;s official documentations.</p>
+<h2 id="what-is-aws-fargate">What is AWS Fargate</h2>
+<p>AWS Fargate is a serverless technology that you can use with Amazon ECS to run containers without managing servers or clusters of AWS EC2 instances.</p>
+<p>For more information about <a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/what-is-fargate.html">AWS Fargate</a>, refer to AWS&rsquo;s official documentations.</p>
+<h2 id="why-running-gitlab-runner-on-aws-fargate">Why Running GitLab Runner on AWS Fargate</h2>
+<p>If you have a team of engineers working on several projects and they are heavily utilizing your GitLab runner, there might be limitations with the numbers of the jobs running concurrently. Majority of the time, engineers would have to wait in line for the runner to complete a task prior to executing the next task in the pipeline. <code>AWS Fargate custom executer driver</code> for GitLab Runner comes very handy to resolve this dilemma. It will automatically autoscale and launch containers on AWS ECS to execute each GitLab task without negatively affect the performance. This solution generates an efficient and cost effective scaling capacity.</p>
+<p>GitLab has a well documented process of using and implementing the <a href="https://docs.gitlab.com/runner/configuration/runner_autoscale_aws_fargate/">AWS Fargate custom executor driver</a>. The purpose of this tutorial is to simplify the process.</p>
+<p>Note, GitLab Runner provides several options for different types of <a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/what-is-fargate.html">executors</a> based on different scenarios. For this tutorial, I have chosen to work with the AWS Fargate executor driver; however, you may find a different executor that suites your needs best.</p>
+<h2 id="learning-outcomes">Learning Outcomes:</h2>
+<ol>
+<li>GitLab Runner basic understating.</li>
+<li></li>
+<li>XXXX</li>
+<li>XXXXX</li>
+</ol>
+<h2 id="what-you-do-you-need-to-complete-the-tutorial">What you do you need to complete the tutorial:</h2>
+<ol>
+<li><a href="https://gitlab.com/users/sign_up">GitLab</a> account. It&rsquo;s free to signup for GitLab account.</li>
+<li><a href="https://aws.amazon.com/">AWS</a> account to create and configure EC2, ECS and ECR resources.</li>
+<li>Knowledge on how to create and push a Docker image.</li>
+</ol>
+<h2 id="step-1-building-a-gitlab-runner-and-fargate-driver-container-image">Step 1: Building a GitLab Runner and Fargate Driver Container Image</h2>
+<p>As of writing of this tutorial (2/27/22), AWS Fargate does not support running containers in <strong>privileged mode</strong>. As a result, customers can&rsquo;t build container images inside Fargate containers as AWS imposes security best practices. To read more about this topic, refer to AWS&rsquo;s <a href="https://aws.amazon.com/blogs/containers/building-container-images-on-amazon-ecs-on-aws-fargate/">Building container images on Amazon ECS on AWS Fargate</a> article, dated 31st of March, 2021.</p>
+<p><a href="https://github.com/GoogleContainerTools/kaniko">Kaniko</a> is a tool to build container images from a <code>Dockerfile</code> inside a container without the need to have privileged mode. Kaniko resolves the AWS Fargate constrained environment of building a container image inside Fargate containers.</p>
+<ol>
+<li>First of all, if you&rsquo;d like to check your device&rsquo;s architecture, run the following command:</li>
+</ol>
+<pre><code>uname -a
+</code></pre><p><img src="/images/aws/Terraform/1_2.JPG?classes=shadow" alt="Terraform"></p>
+<ol start="2">
+<li>Navigate to <a href="https://www.terraform.io/downloads.html">Terraform download page</a> and download the proper package for your operating system and architecture. In my case, I chose to download the Linux package arm64 to my RPI-4.</li>
+</ol>
+<p><img src="/images/aws/Terraform/1.png?classes=shadow" alt="Terraform"></p>
+<p>Now, let navigate to the folder where the package is downloaded and unzip it using the unzip utility. If you don&rsquo;t have the unzip utility, use the following command to install it.</p>
+<pre><code>sudo apt install zip -y
+</code></pre><p>Now, let&rsquo;s unzip the package as shown below:</p>
+<p><img src="/images/aws/Terraform/2.png?classes=shadow" alt="Terraform"></p>
+<ol start="3">
+<li>We will run the following commands to move the Terraform zip file to our <em>PATH</em>. Firstly, we need to find the <em>PATH</em>.</li>
+</ol>
+<pre><code>echo $PATH
+</code></pre><p>Then, we will move the Terraform zip file to our main PATH, which is <em>/usr/local/bin/</em>. This will allow us to run Terraform commands from any location without any restrictions.</p>
+<pre><code>sudo mv terraform /usr/local/bin/
+</code></pre><p>Then, we will <strong>cd</strong> into the the <strong>bin</strong> folder as shown below:</p>
+<p><img src="/images/aws/Terraform/4.png?classes=shadow" alt="Terraform"></p>
+<p>Now, let&rsquo;s run the command <strong>terraform</strong>. If the results as shown below, we have installed Terraform successfully.</p>
+<pre><code>terraform
+</code></pre><p>The results should be as shown below:</p>
+<p><img src="/images/aws/Terraform/5.JPG?classes=shadow" alt="Terraform"></p>
+<h2 id="step-2-create-aws-identity-and-access-management-iam-user">Step 2: Create AWS Identity and Access Management (IAM) user</h2>
+<h4 id="part-1">Part 1:</h4>
+<ol>
+<li>Navigate to AWS console.</li>
+<li>Go to IAM and click on Users on the left hand side menu.</li>
+<li>Click on Add user and then add a user name and select access type as <strong>Programmatic access</strong> as shown below. Then, click on Next.</li>
+</ol>
+<p><img src="/images/aws/Terraform/10.JPG?classes=shadow" alt="Terraform"></p>
+<ol start="4">
+<li>On Set permissions, click on Attach existing policies directly. search for XX policy and check it. Then, click Next.</li>
+</ol>
+<p><img src="/images/aws/Terraform/11.JPG?classes=shadow" alt="Terraform"></p>
+<ol start="5">
+<li>On Add tags, it&rsquo;s a best practice to use tags; therefore, adda key and value as shown below. Then, click Next.</li>
+</ol>
+<p><img src="/images/aws/Terraform/12.JPG?classes=shadow" alt="Terraform"></p>
+<ol start="6">
+<li>Finally, review the add user details and permissions summary and then click on Create user.</li>
+</ol>
+<p><img src="/images/aws/Terraform/13.JPG?classes=shadow" alt="Terraform"></p>
+<ol start="7">
+<li>Now, we have obtained the <strong>Access Key ID</strong> and <strong>Secret Access Key</strong>, let&rsquo;s download the csv file and save it in a secure location for future reference.</li>
+</ol>
+<p><img src="/images/aws/Terraform/14.JPG?classes=shadow" alt="Terraform"></p>
+<h4 id="part-2">Part 2:</h4>
+<p>Install the latest <a href="https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html">AWS Command Line Interface - CLI version 2</a> for Linux ARM architecture since my Raspberry Pi 4 is an arm64 architecture. However, you shall Choose the appropriate package for your operating system and device architecture.</p>
+<pre><code>curl &quot;https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip&quot; -o &quot;awscliv2.zip&quot;
+</code></pre><pre><code>unzip awscliv2.zip
+</code></pre><pre><code>sudo ./aws/install
+</code></pre><p><img src="/images/aws/Terraform/7.JPG?classes=shadow" alt="Terraform"> 
+<img src="/images/aws/Terraform/8.JPG?classes=shadow" alt="Terraform"></p>
+<p>We will configure the aws on our device (RPI-4 in my case), which is the fastest way to set up our AWS CLI installation. When you enter this <em>aws configure</em> command, the AWS CLI prompts you for four pieces of information:</p>
+<ol>
+<li>Access key ID</li>
+<li>Secret access key</li>
+<li>AWS Region</li>
+<li>Output format</li>
+</ol>
 
-<div class="notices note" ><p>It&rsquo;s optional to either utilize Ubuntu EC2 instance or your own device to package and push the Docker image to Dockerhub. I expect that you have Docker installed on your instance or device, if not, please refer to my previous tutorial <a href="http://localhost:1313/aws/portainer/portainer/portainer/#step-1-install-docker">install Docker</a>.</p>
+<div class="notices note" ><p>The access keys consist of an access key ID and a secret access key, which are used to sign programmatic requests that you make to AWS. If you don&rsquo;t have access keys, you can create them from the AWS Management Console. As a best practice, do not use the AWS account root user access keys for any task where it&rsquo;s not required.</p>
 </div>
 
-<h2 id="architecture-implementation---tutorial-scenario">Architecture Implementation - Tutorial Scenario:</h2>
+<p>Let&rsquo;s start with aws configuration by using the following command in our CLI.</p>
+<p>Example:</p>
+<pre><code>aws configure --profile [your profile name]
+</code></pre><p>Actual:</p>
+<pre><code>aws configure --profile Terraform
+</code></pre><p><img src="/images/aws/Terraform/9.png?classes=shadow" alt="Terraform"></p>
+<p>To Check if the CLI and profile have been configured properly, run the following command which will lists all of your AWS EC2 instance resources using credentials and settings, which we have defined in the [your profile name] profile</p>
+<pre><code>aws ec2 describe-instances --profile [your profile name]
+</code></pre><h2 id="step-3-create-a-terraform-sample-template-to-spin-an-aws-ec2">Step 3: Create a Terraform Sample Template to Spin an AWS EC2</h2>
+<h4 id="terraform-commands">Terraform Commands</h4>
+<table>
+<thead>
+<tr>
+<th>Commands</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>terraform init</td>
+<td>Download any plugins required to run templates</td>
+</tr>
+<tr>
+<td>terraform plan</td>
+<td>Will give you a list of resources that will be created/deleted</td>
+</tr>
+<tr>
+<td>terraform apply</td>
+<td>WIll create/delete resources</td>
+</tr>
+<tr>
+<td>terraform destroy</td>
+<td>Will delete all the resources created by Terraform</td>
+</tr>
+<tr>
+<td>terraform fmt</td>
+<td>Will format the file with proper indentation</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: you could always reference <a href="https://registry.terraform.io/browse/providers">Terraform Providers</a> for more commands per provider.</em></p>
+<h4 id="creating-a-terraform-sample-template">Creating a Terraform Sample Template</h4>
 <ol>
-<li>Download the WAR file from my <a href="https://github.com/OmarCloud20/aws-tutorials/raw/main/prj3/HelloWorld.war">GitHub</a></li>
-<li>Web application needs to be packaged as a Docker image running on Tomcat having JRE8 - you will have to write a Dockerfile</li>
-<li>Once the image is created, run and verify image by accessing web application using ec2 instance public-ip</li>
-<li>Sign up for docker hub and create public repository.</li>
-<li>Tag the image appropriately and push to Docker Hub Repository.</li>
-<li>Using AWS ECS Fargate create a cluster, task and service(s).</li>
+<li>Utilize any Shell script environment or text/code editor of your choice to start the Terraform language code for Terraform sample template as shown below and save the file with a <strong>.tf</strong> extension:</li>
 </ol>
-<h2 id="step-1-create-a-docker-image">Step 1: Create a Docker image</h2>
-<ol>
-<li>Navigate to folder /opt and create helloworld folder.</li>
+<pre><code>provider &quot;aws&quot; {
+    profile = &quot;Terraform&quot;
+    region = &quot;us-east-1&quot;
+    
+}
+
+resource &quot;aws_instance&quot; &quot;demo_instance&quot; {
+   
+    ami = &quot;ami-042e8287309f5df03&quot;
+    instance_type = &quot;t2.micro&quot;
+    
+    tags = {
+        Name = &quot;Terraform_Demo&quot;
+        
+          }
+    
+}
+</code></pre><p><img src="/images/aws/Terraform/16.png?classes=shadow" alt="Terraform"></p>
+<p><em>Note: every AMI has a unique ID and the Ubuntu 20.04 LTS we have chosen has the following AMI ID: <strong>ami-042e8287309f5df03</strong>. If you would like to spin a different AMI, replace the AMI ID.</em>
+<em>Also, don&rsquo;t forget to replace the profile name with the name of AWS profile which we have created earlier (in my case is Terraform).</em></p>
+<p><img src="/images/aws/Terraform/15.JPG?classes=shadow" alt="Terraform"></p>
+<ol start="2">
+<li>Now, we are ready to run Terraform command. Let&rsquo;s start with running <strong>terraform init</strong>, where we have the Template file saved.</li>
 </ol>
-<pre><code>sudo chown ubuntu:ubuntu -R /opt
-cd /opt
-mkdir helloworld
-cd helloworld/
-</code></pre><ol start="2">
-<li>Download the War file from my <a href="https://github.com/OmarCloud20/aws-tutorials/raw/main/prj3/HelloWorld.war">GitHub</a> to /opt/helloworld</li>
+<pre><code>terraform init
+</code></pre><ol start="3">
+<li>The <strong>terraform plan</strong> command will inspect the template for resources.</li>
 </ol>
-<pre><code>wget https://github.com/OmarCloud20/aws-tutorials/raw/main/prj3/HelloWorld.war
-</code></pre><p><img src="/images/aws/prj3/1.JPG?classes=shadow" alt="prj3"></p>
-<ol start="3">
-<li>Create a Docker file in the <strong>helloworld</strong> folder.</li>
+<pre><code>terraform plan
+</code></pre><ol start="4">
+<li>Finally, we are ready to apply changes. Let&rsquo;s run <strong>terraform apply</strong>. You will be prompted to enter <strong>yes</strong> to apply the changes requested by the template. Then, the resources requested will be created as shown below.</li>
 </ol>
-<pre><code>cd /opt/helloworld/
-sudo nano Dockerfile
-</code></pre><p>Then, add or type the following sentences into the Dockerfile. <em>Note, you could add your name and email address as a maintainer.</em></p>
-<pre><code>FROM tomcat:jre8
-MAINTAINER [your name]
-COPY HelloWorld.war /usr/local/tomcat/webapps
-</code></pre><p><img src="/images/aws/prj3/2.JPG?classes=shadow" alt="prj3"></p>
-<p><em>Note: to save the file in <strong>nano</strong> text editor, hold <strong>^x</strong>, type <strong>yes</strong> and click <strong>enter</strong>.</em></p>
-<ul>
-<li>Verify that the file is created.</li>
-</ul>
-<pre><code>ls -al
-</code></pre><p><img src="/images/aws/prj3/3.JPG?classes=shadow" alt="prj3"></p>
-<ol start="4">
-<li>Build the Docker image using the Docker build command:</li>
+<pre><code>terraform apply
+</code></pre><p><img src="/images/aws/Terraform/22.png?classes=shadow" alt="Terraform"></p>
+<ol start="5">
+<li>We will head to AWS console to verify the status of our newly spun EC2. Let&rsquo;s pay close attention to the name of the instance and the AMI ID which should match the names we chose in our Terraform sample template.</li>
 </ol>
-<pre><code>docker build -t helloworld .
-</code></pre><p><em>Note: if you receive any permission error during the build, add <strong>sudo</strong> to the command line</em></p>
-<pre><code>sudo docker build -t helloworld .
-</code></pre><ol start="5">
-<li>Run the image created above using the command given below. We will use <strong>-p</strong> to port mapping port 8080 of the container to port 80 of the host:</li>
-</ol>
-<pre><code>docker run -d -p 80:8080 helloworld
-</code></pre><p><img src="/images/aws/prj3/5.JPG?classes=shadow" alt="prj3"></p>
-<ul>
-<li>Let&rsquo;s check whether or not our container is running:</li>
-</ul>
-<pre><code>docker ps -a
-</code></pre><p><img src="/images/aws/prj3/6.JPG?classes=shadow" alt="prj3"></p>
+<p><img src="/images/aws/Terraform/19.JPG?classes=shadow" alt="Terraform"></p>
 <ol start="6">
-<li>
-<p>Now, let&rsquo;s verify that our application can be accessed from the device using the URL:</p>
-<p>&lt;<em>public IP address of instance&gt;/HelloWorld</em>&gt;</p>
-</li>
+<li>Once we have completed the tutorial, we can utilize <strong>terraform destroy</strong> command to terminate the resources we have created and spun by our sample template. This command will only destroy the resources built by Terraform.</li>
 </ol>
-<p><img src="/images/aws/prj3/7.JPG?classes=shadow" alt="prj3"></p>
-<h2 id="step-2-push-the-packaged-web-application-docker-image-to-docker-hub">Step 2: Push the Packaged Web Application Docker Image to Docker Hub</h2>
-<ol>
-<li>Create a new free account at <a href="https://hub.docker.com/">Docker Hub</a>.</li>
-<li>Create a new public repository in your Dockerhub account.</li>
-</ol>
-<p><img src="/images/aws/prj3/8.JPG?classes=shadow" alt="prj3"></p>
-<ol start="3">
-<li>Login to the Dockerhub account from the CLI using the command below:</li>
-</ol>
-<p>Example:</p>
-<pre><code>docker login --username=&lt;DockerHub username&gt;
-</code></pre><p>Actual:</p>
-<pre><code>docker login --username=omarcloud20
-</code></pre><p><em>Note: you will be prompted to enter your password.</em></p>
-<p><img src="/images/aws/prj3/10.JPG?classes=shadow" alt="prj3"></p>
-<ol start="4">
-<li>We will need to tag the image which we will upload to Docker hub using the <strong>Image ID</strong>, then we will use the <strong>tag</strong> command as shown below:</li>
-</ol>
-<p>To find the Image ID:</p>
-<pre><code>docker images
-</code></pre><p>Then, we use the tag command:</p>
-<p>Example:</p>
-<pre><code>docker tag &lt;image id&gt; &lt;dockerhub username&gt;/&lt;repository name&gt;:latest
-</code></pre><p>Actual:</p>
-<pre><code>docker tag c0bd35d35ced omarcloud20/project3:latest
-</code></pre><p><img src="/images/aws/prj3/11.JPG?classes=shadow" alt="prj3"></p>
-<ol start="5">
-<li>Finally, we will <strong>push</strong> the image to Dockerhub:</li>
-</ol>
-<p>Example:</p>
-<pre><code>docker push &lt;image id&gt; &lt;dockerhub username&gt;/&lt;repository name&gt;:latest
-</code></pre><p>Actual:</p>
-<pre><code>docker push c0bd35d35ced omarcloud20/project3:latest
-</code></pre><p><img src="/images/aws/prj3/12.JPG?classes=shadow" alt="prj3"></p>
-<ul>
-<li>Verfiy that the image is uploaded to your public dockerhub account.</li>
-</ul>
-<p><img src="/images/aws/prj3/13.JPG?classes=shadow" alt="prj3"></p>
-<h2 id="step-3-create-an-aws-ecs-cluster-to-run-the-docker-image">Step 3: Create an AWS ECS cluster to run the Docker image</h2>
-<ol>
-<li>
-<p>Navigate to the ECS service in your AWS account and click <em>Get Started.</em></p>
-</li>
-<li>
-<p>Under Container and Task Definitions, select Custom-&gt;Configure, and enter the following values:</p>
-<p>A. Container name. Mine is <strong>project3.</strong></p>
-<p>B. Image location: <strong>docker.io/dockerhub username/dockerhub repository:latest</strong></p>
-<p>C. Memory Limits: Soft limit - 256MB</p>
-<p>D. Port mappings: 8080 - tcp</p>
-<p>E. Click update and hen Next</p>
-</li>
-</ol>
-<p><img src="/images/aws/prj3/14.JPG?classes=shadow" alt="prj3"></p>
-<p><img src="/images/aws/prj3/15.png?classes=shadow" alt="prj3"></p>
-<ol start="3">
-<li>On the defining the Service, select <em>Application Load Balancer</em> and click Next.</li>
-</ol>
-<p><img src="/images/aws/prj3/16.png?classes=shadow" alt="prj3"></p>
-<ol start="3">
-<li>On the defining the Cluster, enter a Cluster name and click Next.</li>
-</ol>
-<p><img src="/images/aws/prj3/17.png?classes=shadow" alt="prj3"></p>
-<ol start="4">
-<li>On the final review, click Create.</li>
-</ol>
-<p><img src="/images/aws/prj3/18.png?classes=shadow" alt="prj3"></p>
-<ol start="5">
-<li>AWS ECS Fargate will create all necessary services and the cluster on your behalf. If you have encounter any errors, you may need to repeat the process one more time.</li>
-</ol>
-<p><img src="/images/aws/prj3/19.png?classes=shadow" alt="prj3"></p>
-<h2 id="step-4-verification-of-running-container-on-ecs-fargate">Step 4: Verification of Running Container on ECS Fargate</h2>
-<ol>
-<li>
-<p>Navigate to EC2 using the Services Menu.</p>
-</li>
-<li>
-<p>Navigate to Load balancer.</p>
-</li>
-<li>
-<p>Select the Load Balancer that has been created by the ECS Cluster.</p>
-</li>
-<li>
-<p>Take note of the DNS of the load balancer and visit the below URL to verify that the ECS cluster is running the container:</p>
-<p>&lt;<em>DNS of load balancer</em>&gt;<em>:8080/HelloWorld</em></p>
-</li>
-</ol>
-<p><img src="/images/aws/prj3/20.JPG?classes=shadow" alt="prj3"></p>
-<p><img src="/images/aws/prj3/21.JPG?classes=shadow" alt="prj3"></p>
+<pre><code>terraform destroy
+</code></pre><p><img src="/images/aws/Terraform/20.JPG?classes=shadow" alt="Terraform"></p>
 <h2 id="conclusion">Conclusion:</h2>
-<p>Congratulations, we have successfully packaged a sample web application into a Docker image utilizing Apache Tomcat and JRE-8 runtime. From our newly created Dockerhub public account, we pushed the new image to AWS ECS Fargate cluster.</p>
+<p>Congratulations!! We have created a Terraform sample template and ran it to spin an AWS EC2 instance successfully from the Command Line Interface (CLI) on a Raspberry Pi 4.</p>
 
 
 <footer class="footline">
@@ -2412,26 +2445,6 @@ COPY HelloWorld.war /usr/local/tomcat/webapps
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -2523,6 +2536,23 @@ COPY HelloWorld.war /usr/local/tomcat/webapps
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -2530,6 +2560,9 @@ COPY HelloWorld.war /usr/local/tomcat/webapps
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3342,10 +3375,10 @@ COPY HelloWorld.war /usr/local/tomcat/webapps
 	 
 	 
 		
-			<a class="nav nav-prev" href="/aws/prj2/" title="Invoice Processing Application"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/aws/s3/" title="Create a Static Sample Website on S3 Utilizing AWS CloudFormation"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/aws/rekognition/" title="Image Analysis with AWS Rekognition" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cloudflare/" title="Cloudflare Tutorials" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

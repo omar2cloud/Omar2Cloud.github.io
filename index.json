@@ -477,7 +477,7 @@
 },
 {
 	"uri": "https://omar2cloud.github.io/shortcodes/",
-	"title": "Learn with Omar",
+	"title": "Learning with Omar",
 	"tags": [],
 	"description": "",
 	"content": "/*this page is a copy of the original index */\nOmar\u0026rsquo;s Tutorials There are thousdands and thousands\nLet\u0026rsquo;s take this journey and learn together.\nThis theme is a partial porting of the Learn theme of Grav,\nLearn theme works with a page tree structure to organize content : All contents are pages, which belong to other pages. read more about this\n\rMain features  Automatic Search Multilingual mode Unlimited menu levels Automatic next/prev buttons to navigate through menu entries Image resizing, shadow\u0026hellip; Attachments files List child pages Mermaid diagram (flowchart, sequence, gantt) Customizable look and feel and themes variants Buttons, Tip/Note/Info/Warning boxes, Expand  Contribute to this documentation Feel free to update this content, just click the Edit this page link displayed on top right of each page, and pullrequest it\nYour modification will be deployed automatically when merged.\n\rDocumentation website This current documentation has been statically generated with Hugo with a simple command : hugo -t hugo-theme-learn \u0026ndash; source code is available here at GitHub\nAutomatically published and hosted thanks to Netlify. Read more about Automated HUGO deployments with Netlify\n\r"

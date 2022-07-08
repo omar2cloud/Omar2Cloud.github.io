@@ -27,6 +27,10 @@
   </url>
   
   <url>
+    <loc>https://omar2cloud.github.io/aws/portainer/wordpress/</loc>
+  </url>
+  
+  <url>
     <loc>https://omar2cloud.github.io/aws/portainer/spin-ubuntu-instance/ec2-ubuntu/</loc>
   </url>
   
@@ -48,6 +52,10 @@
   
   <url>
     <loc>https://omar2cloud.github.io/aws/portainer/portainer/portainer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/aws/portainer/wordpress/_wordpress/</loc>
   </url>
   
   <url>
@@ -84,6 +92,10 @@
   
   <url>
     <loc>https://omar2cloud.github.io/rasp/realvnc/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/rasp/wprpi/</loc>
   </url>
   
   <url>
@@ -152,8 +164,20 @@
   </url>
   
   <url>
+    <loc>https://omar2cloud.github.io/aws/codecommit/</loc>
+  </url>
+  
+  <url>
     <loc>https://omar2cloud.github.io/cont/markdown/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/aws/gitlab_fargate/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/aws/patchmanager/</loc>
   </url>
   
   <url>
@@ -220,10 +244,6 @@
   
   <url>
     <loc>https://omar2cloud.github.io/aws/new-folder/style-customization/</loc>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/rasp/_wprpi/</loc>
   </url>
   
   <url>

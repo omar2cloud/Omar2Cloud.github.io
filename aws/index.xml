@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AWS Tutorials on Learning With Omar</title>
+    <title>AWS Tutorials on Learn With Omar</title>
     <link>https://omar2cloud.github.io/aws/</link>
-    <description>Recent content in AWS Tutorials on Learning With Omar</description>
+    <description>Recent content in AWS Tutorials on Learn With Omar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://omar2cloud.github.io/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -100,6 +100,35 @@ Learning Outcomes and Tutorial Scenario: In this tutorial, we will create a two-
       <guid>https://omar2cloud.github.io/aws/terraform/</guid>
       <description>What is Terraform? Terraform is an Infrastructure as a Code - IaaC- service. It is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and popular service providers as well as custom in-house solutions. For more information about Terraform.
 During this tutorial, we will create a sample Terraform template to spin an AWS EC2 instance from the Command Line Interface (CLI) on a Raspberry Pi 4.</description>
+    </item>
+    
+    <item>
+      <title>Create a Simple AWS CodePipeline from CodeCommit and Elastic Beanstalk</title>
+      <link>https://omar2cloud.github.io/aws/codecommit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/codecommit/</guid>
+      <description>AWS CodeCommit, Elastic Beanstalk and CodePipeline AWS CodeCommit is a fully-managed source control service that hosts secure Git-based repositories. It makes it easy for teams to collaborate on code in a secure and highly scalable ecosystem. CodeCommit eliminates the need to operate your own source control system or worry about scaling its infrastructure. You can use CodeCommit to securely store anything from source code to binaries, and it works seamlessly with your existing Git tools.</description>
+    </item>
+    
+    <item>
+      <title>Autoscaling GitLab Runner on AWS Fargate</title>
+      <link>https://omar2cloud.github.io/aws/gitlab_fargate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/gitlab_fargate/</guid>
+      <description>What is GitLab Runner GitLab Runner is an application that works with GitLab CI/CD Continues Integration/Continuous Deployment method. Once GitLab Runner is installed and registered, it can run jobs in a pipeline. It&amp;rsquo;s an open source and written in Go language.
+For more information about GitLab Runner, refer to GitLab&amp;rsquo;s official documentations.
+What is AWS Fargate AWS Fargate is a serverless technology that you can use with Amazon ECS to run containers without managing servers or clusters of AWS EC2 instances.</description>
+    </item>
+    
+    <item>
+      <title>Patching Model using AWS Systems Manager - Patch Manager</title>
+      <link>https://omar2cloud.github.io/aws/patchmanager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/patchmanager/</guid>
+      <description>Table of Contents  Patching Model using AWS Systems Manager - Patch Manager  AWS Systems Manager Patch Manager  What is the Patch Baseline? How Patch Baseline Rules Work on Amazon Linux 2   Patching Model Solution Architecture   Architecture Diagram   How to Create a Patching Model for a Single Managed Amazon Linux 2 EC2 Instance - Step by Step  Prerequisites  How to Create SSM Documents Create IAM Service Role for Maintenance Window  Create a policy Create IAM resource role   Create and add inline policies to the EC2 IAM instance profile   Step 1: Create a Custom Patch Baseline Step 2: Tagging the EC2 Instance with the Patch Group Key-Value Step 3: Assigning a Patch Group to the Patch Baseline Step 4: Creating a Maintenance Window Step 5: Registering Targets to the Maintenance Window Step 6: Assigning Tasks to the Maintenance Window   Conclusion     July 8th, 2022 AWS Systems Manager Patch Manager Patch Manager is a capability of AWS Systems Manager.</description>
     </item>
     
   </channel>

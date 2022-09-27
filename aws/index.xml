@@ -112,23 +112,21 @@ During this tutorial, we will create a sample Terraform template to spin an AWS 
     </item>
     
     <item>
-      <title>Autoscaling GitLab Runner on AWS Fargate</title>
-      <link>https://omar2cloud.github.io/aws/gitlab_fargate/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/aws/gitlab_fargate/</guid>
-      <description>What is GitLab Runner GitLab Runner is an application that works with GitLab CI/CD Continues Integration/Continuous Deployment method. Once GitLab Runner is installed and registered, it can run jobs in a pipeline. It&amp;rsquo;s an open source and written in Go language.
-For more information about GitLab Runner, refer to GitLab&amp;rsquo;s official documentations.
-What is AWS Fargate AWS Fargate is a serverless technology that you can use with Amazon ECS to run containers without managing servers or clusters of AWS EC2 instances.</description>
-    </item>
-    
-    <item>
       <title>Patching Model using AWS Systems Manager - Patch Manager</title>
       <link>https://omar2cloud.github.io/aws/patchmanager/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://omar2cloud.github.io/aws/patchmanager/</guid>
       <description>Table of Contents  Patching Model using AWS Systems Manager - Patch Manager  AWS Systems Manager Patch Manager  What is the Patch Baseline? How Patch Baseline Rules Work on Amazon Linux 2   Patching Model Solution Architecture   Architecture Diagram   How to Create a Patching Model for a Single Managed Amazon Linux 2 EC2 Instance - Step by Step  Prerequisites  How to Create SSM Documents Create IAM Service Role for Maintenance Window  Create a policy Create IAM resource role   Create and add inline policies to the EC2 IAM instance profile   Step 1: Create a Custom Patch Baseline Step 2: Tagging the EC2 Instance with the Patch Group Key-Value Step 3: Assigning a Patch Group to the Patch Baseline Step 4: Creating a Maintenance Window Step 5: Registering Targets to the Maintenance Window Step 6: Assigning Tasks to the Maintenance Window   Conclusion     July 8th, 2022 AWS Systems Manager Patch Manager Patch Manager is a capability of AWS Systems Manager.</description>
+    </item>
+    
+    <item>
+      <title>CDK for Terraform (CDKTF) on AWS</title>
+      <link>https://omar2cloud.github.io/aws/cdktf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://omar2cloud.github.io/aws/cdktf/</guid>
+      <description>Table of Contents  Introduction Step 1: Required Prerequisites Step 2: Initializing First CDKTF Project using Python Template Step 3: Configuring an S3 Remote Backend  Option 1: Utilize an existing S3 bucket and DynamoDB to configure the S3 Remote Backend Option 2: Create an S3 Bucket and DynamoDB Table for the S3 Remote Backend using CDKTF   Step 4: Learn How to Use Construct Hub and AWS Provider Submodules  Scenario 1: S3 Bucket Scenario 2: ECS Cluster CDKTF Commands   Step 5: Deploying a Lambda Function URL using CDKTF Conclusion   Sept 26th, 2022 How to Configure an S3 Remote Backend and Deploy a Lambda Function URL using Python on Ubuntu 20.</description>
     </item>
     
   </channel>

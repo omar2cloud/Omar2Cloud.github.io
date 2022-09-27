@@ -126,7 +126,7 @@ During this tutorial, we will create a sample Terraform template to spin an AWS 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://omar2cloud.github.io/aws/cdktf/</guid>
-      <description>Table of Contents  Introduction Step 1: Required Prerequisites Step 2: Initializing First CDKTF Project using Python Template Step 3: Configuring an S3 Remote Backend  Option 1: Utilize an existing S3 bucket and DynamoDB to configure the S3 Remote Backend Option 2: Create an S3 Bucket and DynamoDB Table for the S3 Remote Backend using CDKTF   Step 4: Learn How to Use Construct Hub and AWS Provider Submodules  Scenario 1: S3 Bucket Scenario 2: ECS Cluster CDKTF Commands   Step 5: Deploying a Lambda Function URL using CDKTF Conclusion   Sept 26th, 2022 How to Configure an S3 Remote Backend and Deploy a Lambda Function URL using Python on Ubuntu 20.</description>
+      <description>Table of Contents  Introduction Step 1: Required Prerequisites Step 2: Initializing First CDKTF Project using Python Template Step 3: Configuring an S3 Remote Backend  Option 1: Utilize an existing S3 bucket and DynamoDB to configure the S3 Remote Backend Option 2: Create an S3 Bucket and DynamoDB Table for the S3 Remote Backend using CDKTF   Step 4: Learn How to Use Construct Hub and AWS Provider Submodules  Scenario 1: S3 Bucket Scenario 2: ECS Cluster CDKTF Commands   Step 5: Deploying a Lambda Function URL using CDKTF Conclusion   Sept 27th, 2022 How to Configure an S3 Remote Backend and Deploy a Lambda Function URL using Python on Ubuntu 20.</description>
     </item>
     
   </channel>

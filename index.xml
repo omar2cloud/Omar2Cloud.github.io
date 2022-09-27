@@ -264,96 +264,16 @@ During this tutorial, we will create a sample Terraform template to spin an AWS 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://omar2cloud.github.io/aws/cdktf/</guid>
-      <description>Table of Contents  Introduction Step 1: Required Prerequisites Step 2: Initializing First CDKTF Project using Python Template Step 3: Configuring an S3 Remote Backend  Option 1: Utilize an existing S3 bucket and DynamoDB to configure the S3 Remote Backend Option 2: Create an S3 Bucket and DynamoDB Table for the S3 Remote Backend using CDKTF   Step 4: Learn How to Use Construct Hub and AWS Provider Submodules  Scenario 1: S3 Bucket Scenario 2: ECS Cluster CDKTF Commands   Step 5: Deploying a Lambda Function URL using CDKTF Conclusion   Sept 26th, 2022 How to Configure an S3 Remote Backend and Deploy a Lambda Function URL using Python on Ubuntu 20.</description>
+      <description>Table of Contents  Introduction Step 1: Required Prerequisites Step 2: Initializing First CDKTF Project using Python Template Step 3: Configuring an S3 Remote Backend  Option 1: Utilize an existing S3 bucket and DynamoDB to configure the S3 Remote Backend Option 2: Create an S3 Bucket and DynamoDB Table for the S3 Remote Backend using CDKTF   Step 4: Learn How to Use Construct Hub and AWS Provider Submodules  Scenario 1: S3 Bucket Scenario 2: ECS Cluster CDKTF Commands   Step 5: Deploying a Lambda Function URL using CDKTF Conclusion   Sept 27th, 2022 How to Configure an S3 Remote Backend and Deploy a Lambda Function URL using Python on Ubuntu 20.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://omar2cloud.github.io/cont/archetypes/</link>
+      <link>https://omar2cloud.github.io/shortcodes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://omar2cloud.github.io/cont/archetypes/</guid>
+      <guid>https://omar2cloud.github.io/shortcodes/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://omar2cloud.github.io/cont/icons/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/cont/icons/</guid>
-      <description>The Learn theme for Hugo loads the Font Awesome library, allowing you to easily display any icon or logo available in the Font Awesome free collection.
-Finding an icon Browse through the available icons in the Font Awesome Gallery. Notice that the free filter is enabled, as only the free icons are available by default.
-Once on the Font Awesome page for a specific icon, for example the page for the heart, copy the HTML reference and paste into the markdown content.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://omar2cloud.github.io/cont/markdown/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/cont/markdown/</guid>
-      <description>This page is a shameful copy of the great Grav original page. Only difference is information about image customization (resizing, add CSS classes&amp;hellip;)
-Let&amp;rsquo;s face it: Writing content for the Web is tiresome. WYSIWYG editors help alleviate this task, but they generally result in horrible code, or worse yet, ugly web pages.
-Markdown is a better way to write HTML, without all the complexities and ugliness that usually accompanies it.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://omar2cloud.github.io/cont/menushortcuts/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/cont/menushortcuts/</guid>
-      <description>You can define additional menu entries or shortcuts in the navigation menu without any link to content.
-Basic configuration Edit the website configuration config.toml and add a [[menu.shortcuts]] entry for each link your want to add.
-Example from the current website:
-[[menu.shortcuts]] name = &amp;quot;&amp;lt;i class=&#39;fab fa-github&#39;&amp;gt;&amp;lt;/i&amp;gt; Github repo&amp;quot;identifier = &amp;quot;ds&amp;quot;url = &amp;quot;https://github.com/matcornic/hugo-theme-learn&amp;quot;weight = 10[[menu.shortcuts]]name = &amp;quot;&amp;lt;i class=&#39;fas fa-camera&#39;&amp;gt;&amp;lt;/i&amp;gt; Showcases&amp;quot;url = &amp;quot;/showcase&amp;quot;weight = 11[[menu.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://omar2cloud.github.io/cont/syntaxhighlight/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/cont/syntaxhighlight/</guid>
-      <description>Learn theme uses highlight.js to provide code syntax highlighting.
-Markdown syntax Wrap the code block with three backticks and the name of the language. Highlight will try to auto detect the language if one is not provided.
-```json [ { &amp;#34;title&amp;#34;: &amp;#34;apples&amp;#34;, &amp;#34;count&amp;#34;: [12000, 20000], &amp;#34;description&amp;#34;: {&amp;#34;text&amp;#34;: &amp;#34;...&amp;#34;, &amp;#34;sensitive&amp;#34;: false} }, { &amp;#34;title&amp;#34;: &amp;#34;oranges&amp;#34;, &amp;#34;count&amp;#34;: [17500, null], &amp;#34;description&amp;#34;: {&amp;#34;text&amp;#34;: &amp;#34;...&amp;#34;, &amp;#34;sensitive&amp;#34;: false} } ] ``` Renders to:
-[ { &amp;#34;title&amp;#34;: &amp;#34;apples&amp;#34;, &amp;#34;count&amp;#34;: [12000, 20000], &amp;#34;description&amp;#34;: {&amp;#34;text&amp;#34;: &amp;#34;.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://omar2cloud.github.io/cont/tags/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/cont/tags/</guid>
-      <description>Learn theme support one default taxonomy of gohugo: the tag feature.
-Configuration Just add tags to any page:
---- date: 2018-11-29T08:41:44+01:00 title: Theme tutorial weight: 15 tags: [&amp;#34;tutorial&amp;#34;, &amp;#34;theme&amp;#34;] --- Behavior The tags are displayed at the top of the page, in their insertion order.
-Each tag is a link to a Taxonomy page displaying all the articles with the given tag.
-List all the tags In the config.toml file you can add a shortcut to display all the tags</description>
-    </item>
-    
-    <item>
-      <title>Attachments</title>
-      <link>https://omar2cloud.github.io/shortcodes/attachments/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/shortcodes/attachments/</guid>
-      <description>The Attachments shortcode displays a list of files attached to a page.
-AttachmentsBachGavotteShort.mp3(357 kb)Carroll_AliceAuPaysDesMerveilles.pdf(175 kb)adivorciarsetoca00cape.pdf(361 kb)hugo.png(17 kb)movieselectricsheep-flock-244-32500-2.mp4(340 kb)Usage The shortcurt lists files found in a specific folder. Currently, it support two implementations for pages
-  If your page is a markdown file, attachements must be placed in a folder named like your page and ending with .</description>
-    </item>
-    
-    <item>
-      <title>Button</title>
-      <link>https://omar2cloud.github.io/shortcodes/button/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/shortcodes/button/</guid>
-      <description>A button is a just a clickable button with optional icon.
-{{% button href=&amp;quot;https://getgrav.org/&amp;quot; %}}Get Grav{{% /button %}}{{% button href=&amp;quot;https://getgrav.org/&amp;quot; icon=&amp;quot;fas fa-download&amp;quot; %}}Get Grav with icon{{% /button %}}{{% button href=&amp;quot;https://getgrav.org/&amp;quot; icon=&amp;quot;fas fa-download&amp;quot; icon-position=&amp;quot;right&amp;quot; %}}Get Grav with icon right{{% /button %}}Get GravGet Grav with iconGet Grav with icon right</description>
     </item>
     
     <item>
@@ -368,113 +288,12 @@ Packages and libraries  mermaid - generation of diagram and flowchart from text 
     </item>
     
     <item>
-      <title>Expand</title>
-      <link>https://omar2cloud.github.io/shortcodes/expand/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/shortcodes/expand/</guid>
-      <description>The Expand shortcode displays an expandable/collapsible section of text on your page. Here is an example
-Expand me...Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</description>
-    </item>
-    
-    <item>
-      <title>Learning with Omar</title>
-      <link>https://omar2cloud.github.io/shortcodes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/shortcodes/</guid>
-      <description>/*this page is a copy of the original index */
-Omar&amp;rsquo;s Tutorials There are thousands and thousands
-Let&amp;rsquo;s take this journey and learn together.
-This theme is a partial porting of the Learn theme of Grav,
-Learn theme works with a page tree structure to organize content : All contents are pages, which belong to other pages. read more about this
-Main features  Automatic Search Multilingual mode Unlimited menu levels Automatic next/prev buttons to navigate through menu entries Image resizing, shadow&amp;hellip; Attachments files List child pages Mermaid diagram (flowchart, sequence, gantt) Customizable look and feel and themes variants Buttons, Tip/Note/Info/Warning boxes, Expand  Contribute to this documentation Feel free to update this content, just click the Edit this page link displayed on top right of each page, and pullrequest it</description>
-    </item>
-    
-    <item>
-      <title>Mermaid</title>
-      <link>https://omar2cloud.github.io/shortcodes/mermaid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/shortcodes/mermaid/</guid>
-      <description>Mermaid is a library helping you to generate diagram and flowcharts from text, in a similar manner as Markdown.
-Just insert your mermaid code in the mermaid shortcode and that&amp;rsquo;s it.
-Flowchart example {{&amp;lt;mermaid align=&amp;quot;left&amp;quot;&amp;gt;}}graph LR;A[Hard edge] --&amp;gt;|Link text| B(Round edge)B --&amp;gt; C{Decision}C --&amp;gt;|One| D[Result one]C --&amp;gt;|Two| E[Result two]{{&amp;lt; /mermaid &amp;gt;}} renders as
-graph LR;A[Hard edge] --|Link text| B(Round edge)B -- C{Decision}C --|One| D[Result one]C --|Two| E[Result two]Sequence example {{&amp;lt; mermaid &amp;gt;}}sequenceDiagramparticipant Aliceparticipant BobAlice-&amp;gt;&amp;gt;John: Hello John, how are you?</description>
-    </item>
-    
-    <item>
-      <title>Notice</title>
-      <link>https://omar2cloud.github.io/shortcodes/notice/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/shortcodes/notice/</guid>
-      <description>The notice shortcode shows 4 types of disclaimers to help you structure your page.
-Note {{% notice note %}}A notice disclaimer{{% /notice %}}renders as
-A notice disclaimer
-Info {{% notice info %}}An information disclaimer{{% /notice %}}renders as
-An information disclaimer
-Tip {{% notice tip %}}A tip disclaimer{{% /notice %}}renders as
-A tip disclaimer
-Warning {{% notice warning %}}A warning disclaimer{{% /notice %}}renders as</description>
-    </item>
-    
-    <item>
-      <title>page test</title>
-      <link>https://omar2cloud.github.io/shortcodes/children/test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/shortcodes/children/test/</guid>
-      <description>This is a test demo child page</description>
-    </item>
-    
-    <item>
-      <title>page test</title>
-      <link>https://omar2cloud.github.io/shortcodes/children/test.fr/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/shortcodes/children/test.fr/</guid>
-      <description>Ceci est une page de demo</description>
-    </item>
-    
-    <item>
-      <title>page test 3</title>
-      <link>https://omar2cloud.github.io/shortcodes/children/children-2/test3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/shortcodes/children/children-2/test3/</guid>
-      <description>This is a test 3 demo child page</description>
-    </item>
-    
-    <item>
-      <title>page test 3</title>
-      <link>https://omar2cloud.github.io/shortcodes/children/children-2/test3.fr/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/shortcodes/children/children-2/test3.fr/</guid>
-      <description>Ceci est une page de demo test 3</description>
-    </item>
-    
-    <item>
       <title>Showcase</title>
       <link>https://omar2cloud.github.io/showcase/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://omar2cloud.github.io/showcase/</guid>
       <description>TAT by OVH Tshark.dev by Ross Jacobs inteliver by Amir Lavasani </description>
-    </item>
-    
-    <item>
-      <title>Site param</title>
-      <link>https://omar2cloud.github.io/shortcodes/siteparam/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://omar2cloud.github.io/shortcodes/siteparam/</guid>
-      <description>siteparam shortcode is used to help you print values of site params.
-For instance, in this current site, the editURL variable is used in config.toml
-[params] editURL = &amp;#34;https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/&amp;#34; Use the siteparam shortcode to display its value.
-`editURL` Value : {{% siteparam &amp;quot;editURL&amp;quot; %}}is displayed as
-editURL Value :</description>
     </item>
     
   </channel>

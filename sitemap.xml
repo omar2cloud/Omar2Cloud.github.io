@@ -87,11 +87,6 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/cont/pages/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://omar2cloud.github.io/aws/lambda/</loc>
   </url>
   
@@ -132,15 +127,6 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/cont/</loc>
-    <lastmod>2020-06-01T13:31:12+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/cont/archetypes/</loc>
-  </url>
-  
-  <url>
     <loc>https://omar2cloud.github.io/aws/rekognition/</loc>
   </url>
   
@@ -161,60 +147,11 @@
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/cont/markdown/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://omar2cloud.github.io/aws/patchmanager/</loc>
   </url>
   
   <url>
-    <loc>https://omar2cloud.github.io/cont/syntaxhighlight/</loc>
-    <lastmod>2020-06-01T13:31:12+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://omar2cloud.github.io/aws/cdktf/</loc>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/cont/menushortcuts/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/cont/icons/</loc>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/cont/i18n/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/cont/tags/</loc>
-    <lastmod>2018-11-29T08:41:44+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/</loc>
-    <lastmod>2020-06-01T13:31:12+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/tags/documentation/</loc>
-    <lastmod>2018-11-29T08:41:44+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/tags/</loc>
-    <lastmod>2018-11-29T08:41:44+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://omar2cloud.github.io/tags/tutorial/</loc>
-    <lastmod>2018-11-29T08:41:44+01:00</lastmod>
   </url>
   
   <url>
@@ -231,6 +168,51 @@
   
   <url>
     <loc>https://omar2cloud.github.io/aws/new-folder/style-customization/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/cont/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/cont/archetypes/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/cont/i18n/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/cont/icons/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/cont/markdown/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/cont/menushortcuts/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/cont/pages/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/cont/syntaxhighlight/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/cont/tags/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -260,6 +242,10 @@
   
   <url>
     <loc>https://omar2cloud.github.io/shortcodes/expand/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/</loc>
   </url>
   
   <url>
@@ -328,6 +314,10 @@
   
   <url>
     <loc>https://omar2cloud.github.io/shortcodes/siteparam/</loc>
+  </url>
+  
+  <url>
+    <loc>https://omar2cloud.github.io/tags/</loc>
   </url>
   
 </urlset>
